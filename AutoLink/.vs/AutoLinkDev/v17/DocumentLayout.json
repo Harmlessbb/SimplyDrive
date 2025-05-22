@@ -1,0 +1,268 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "L:\\AutoLinkDev\\AutoLink\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\viewmodel\\newbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\newbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\view\\newbookingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\newbookingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\view\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\view\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\viewmodel\\logonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\logonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\model\\vehicledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:model\\vehicledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\autolinkdev\\autolink\\model\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:model\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\View\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainPage.xaml.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\View\\MainPage.xaml.cs",
+              "RelativeToolTip": "View\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T18:36:16.185Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\View\\MainPage.xaml",
+              "RelativeDocumentMoniker": "View\\MainPage.xaml",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\View\\MainPage.xaml",
+              "RelativeToolTip": "View\\MainPage.xaml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-29T17:19:02.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewBookingsPage.xaml",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\View\\NewBookingsPage.xaml",
+              "RelativeDocumentMoniker": "View\\NewBookingsPage.xaml",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\View\\NewBookingsPage.xaml",
+              "RelativeToolTip": "View\\NewBookingsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-28T20:35:25.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewBookingsViewModel.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\ViewModel\\NewBookingsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\NewBookingsViewModel.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\ViewModel\\NewBookingsViewModel.cs",
+              "RelativeToolTip": "ViewModel\\NewBookingsViewModel.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwB0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T15:51:13.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPageViewModel.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\ViewModel\\MainPageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MainPageViewModel.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\ViewModel\\MainPageViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MainPageViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAD4vycAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T20:32:10.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LogonViewModel.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\ViewModel\\LogonViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LogonViewModel.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\ViewModel\\LogonViewModel.cs",
+              "RelativeToolTip": "ViewModel\\LogonViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T20:33:25.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:33:23.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\Service\\VehicleService.cs",
+              "RelativeDocumentMoniker": "Service\\VehicleService.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\Service\\VehicleService.cs",
+              "RelativeToolTip": "Service\\VehicleService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAUwCgAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T20:44:52.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-24T18:52:39.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-15T19:53:48.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\View\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LoginPage.xaml.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\View\\LoginPage.xaml.cs",
+              "RelativeToolTip": "View\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:40:13.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\Service\\LoginService.cs",
+              "RelativeDocumentMoniker": "Service\\LoginService.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\Service\\LoginService.cs",
+              "RelativeToolTip": "Service\\LoginService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwEQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T20:43:07.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\View\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "View\\LoginPage.xaml",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\View\\LoginPage.xaml",
+              "RelativeToolTip": "View\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T20:25:11.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "VehicleDetails.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\Model\\VehicleDetails.cs",
+              "RelativeDocumentMoniker": "Model\\VehicleDetails.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\Model\\VehicleDetails.cs",
+              "RelativeToolTip": "Model\\VehicleDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T20:36:47.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserDetails.cs",
+              "DocumentMoniker": "L:\\AutoLinkDev\\AutoLink\\Model\\UserDetails.cs",
+              "RelativeDocumentMoniker": "Model\\UserDetails.cs",
+              "ToolTip": "L:\\AutoLinkDev\\AutoLink\\Model\\UserDetails.cs",
+              "RelativeToolTip": "Model\\UserDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T11:10:43.152Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
