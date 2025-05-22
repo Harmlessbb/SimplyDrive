@@ -16,7 +16,7 @@ It will provide live updates as their car gets worked on.
 
 (Waiting Customer Arrival -> Car In Workshop -> Is Problems? YES -> Report Problems to Customer NO -> Inform the customer the car is ready to be collected)
 
-
+We are a completely independent team, and we are not affiliated with any car dealerships or manufacturers. We are not responsible for any damages or issues that may arise from the use of this application.
 
 Authors: Dawid Hojdysz, Aiden Lewis-Baker
 
