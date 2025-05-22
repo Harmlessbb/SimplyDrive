@@ -19,6 +19,7 @@ It will provide live updates as their car gets worked on.
 We are a completely independent team, and we are not affiliated with any car dealerships or manufacturers. We are not responsible for any damages or issues that may arise from the use of this application.
 
 Authors: Dawid Hojdysz, Aiden Lewis-Baker
+© SimplyDrive 2025. All rights reserved.
 
 Acronyms:
 

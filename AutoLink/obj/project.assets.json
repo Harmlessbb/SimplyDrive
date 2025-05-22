@@ -27275,11 +27275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "L:\\AutoLinkDev\\AutoLink\\AutoLink.csproj",
+      "projectUniqueName": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
       "projectName": "AutoLink",
-      "projectPath": "L:\\AutoLinkDev\\AutoLink\\AutoLink.csproj",
+      "projectPath": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
       "packagesPath": "C:\\Users\\aiden\\.nuget\\packages\\",
-      "outputPath": "L:\\AutoLinkDev\\AutoLink\\obj\\",
+      "outputPath": "L:\\SimplyDrive\\AutoLink\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
