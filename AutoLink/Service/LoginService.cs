@@ -17,7 +17,7 @@ namespace AutoLink.Service
     public class LoginService
     {
 
-        private string connectionString = "Host=86.133.77.238;Port=5432;Username=postgres;Password=Liverpool22!;Timeout=10;SslMode=Prefer";
+        private string connectionString = "Host=192.168.1.254;Port=5432;Username=postgres;Password=Liverpool22!;Timeout=10;SslMode=Prefer";
 
         private UserDetails? userDetails;
 

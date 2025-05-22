@@ -38,7 +38,7 @@ namespace AutoLink.Service
 
         }
 
-        private string connectionString = "Host=86.133.77.238;Port=5432;Username=postgres;Password=Liverpool22!;Timeout=10;SslMode=Prefer";
+        private string connectionString = "Host=192.168.1.254;Port=5432;Username=postgres;Password=Liverpool22!;Timeout=10;SslMode=Prefer";
 
 
         public async Task<VehicleDetails> GetVehicleInfo(MainPageViewModel mainPageViewModel, NewBookingsViewModel newBookingsViewModel) //get the login info from the database and set all local variables to the values in the database. 
