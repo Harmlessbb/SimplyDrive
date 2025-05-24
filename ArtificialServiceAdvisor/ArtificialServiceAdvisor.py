@@ -10,7 +10,7 @@ import psycopg2
 connection = psycopg2.connect(
     user="postgres",           
     password="Liverpool22!",    
-    host="86.133.77.238", 
+    host="192.168.1.213", 
     port="5432"                    
 )
 
@@ -40,7 +40,7 @@ hoursAvaialableAM = float
 
 def refreshTicket ():
 
-    global isHandlingTickets
+    global isHandlingTickets #Flag to make sure we are only handling one ticket at a time
 
 
     cursor = connection.cursor()
@@ -65,6 +65,7 @@ def setVariables():
         cursor.execute("SELECT * FROM ticketTracker")
         ticketRefreshReturn = cursor.fetchall()
 
+        # Set the local variables to the ticket data from the database table
 
         ticketID = ticketRefreshReturn[0][0]
         userID = ticketRefreshReturn[0][1]
@@ -109,7 +110,7 @@ def updateDiary(requestedDate, dealerID, requestedHours, timeRequested):
         cursor.execute(updateLine, (newHoursAvailable, requestedDate, dealerID))
 
 def destroyCurrentTicket():
-
+    #Self explanatory.
     cursor = connection.cursor()
     deleteLine = "DELETE FROM ticketTracker WHERE ticketID = %s"
     cursor.execute(deleteLine, (ticketID,))
@@ -125,30 +126,38 @@ def createJob(userID, dealerID, vehicleID, requestedDate, timeRequested, jobType
     connection.commit()
     print("Attempted To Insert: ", userID, dealerID, vehicleID, requestedDate, timeRequested, jobType, requestedHours)
 
+    #This function will be important later. Will need access to dealership DMS.
+
 while isRunning:    
 
+#Printing onto screen so we can see what is happening
     print("Refreshing Tickets!")
     refreshTicket()
 
 
 
-    
+    #If a ticket is found...
     if isHandlingTickets == True:
 
+        #Set all local variabes to the ones in the ticket
         print("\nSetting Local Variables to Ticket Data!")
         setVariables()
         print("\nVariables Retuned: ", ticketID, userID, dealerID, vehicleID, requestedHours, requestedDate, requestSent,jobType,timeRequested)
 
+        #Check the availability of the requested date from the user against the dealership diary
         print("\nNow Checking Availability!")
         checkAvailability(requestedDate, dealerID)
 
+        #Attempt to update the diary and create the job, if the hours available fall below 5, we will not proceed with booking the job
         print("Now Updating the Diary! and Creating the Job! ")
         if timeRequested == "AM" and hoursAvaialableAM >= 5 or timeRequested == "PM" and hoursAvaialablePM >= 5:
+            #Update the diary and create the job
             updateDiary(requestedDate, dealerID, requestedHours, timeRequested)
             createJob(userID, dealerID, vehicleID, requestedDate, timeRequested, jobType, requestedHours)
         else: 
             print("ERROR! - No Hours Available for Requested Time!")
 
+        #Delete the ticket, the user will have to retry if their request failed.
         destroyCurrentTicket()
         
  
