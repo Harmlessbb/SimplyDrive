@@ -6,6 +6,7 @@ using AutoLink.ViewModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Diagnostics;
 using AutoLink.Model;
+using AutoLink.View;
 
 public partial class LogonViewModel : ContentPage
 {
@@ -90,6 +91,12 @@ public partial class LogonViewModel : ContentPage
         }
     }
 
+    [RelayCommand]
+
+    async Task GoToSignUpScreen() 
+    {
+        await Shell.Current.GoToAsync($"//{nameof(SignUpPage)}");
+    }
 
 
 }

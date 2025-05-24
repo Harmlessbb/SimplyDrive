@@ -22,7 +22,7 @@
         </Border>
         <Grid ColumnDefinitions="auto,200,auto" RowDefinitions="auto" Grid.Row="2" Grid.Column="1" Padding="10" ColumnSpacing="10">
             <Button Text="Login" HeightRequest="10" Grid.Row="1" Grid.Column="1" WidthRequest="90" Command="{Binding AttemptLoginCommand}"></Button>
-            <Button Text="PlaceHolder" HeightRequest="10" Grid.Row="1" Grid.Column="2" WidthRequest="90"></Button>
+            <Button Text="Sign-Up" HeightRequest="10" Grid.Row="1" Grid.Column="2" WidthRequest="90" Command="{Binding GoToSignUpScreenCommand}"></Button>
 
         </Grid>
 

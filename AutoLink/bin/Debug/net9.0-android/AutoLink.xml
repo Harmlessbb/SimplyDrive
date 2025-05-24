@@ -6,12 +6,19 @@
     <members>
         <member name="T:AutoLink.ViewModel.LogonViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="F:AutoLink.ViewModel.LogonViewModel.attemptLoginCommand">
             <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand"/>.</summary>
         </member>
         <member name="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.AttemptLogin"/>.</summary>
+        </member>
+        <member name="F:AutoLink.ViewModel.LogonViewModel.goToSignUpScreenCommand">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.GoToSignUpScreenCommand"/>.</summary>
+        </member>
+        <member name="P:AutoLink.ViewModel.LogonViewModel.GoToSignUpScreenCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.GoToSignUpScreen"/>.</summary>
         </member>
         <member name="T:AutoLink.ViewModel.MainPageViewModel">
             <inheritdoc/>

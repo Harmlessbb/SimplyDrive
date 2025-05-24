@@ -8,11 +8,20 @@
     Title="AutoLink"
     Shell.FlyoutBehavior="Disabled">
     
+
+
     <ShellContent
-        Title="LoginPage"
+        Title="SignUpPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" 
         />
+
+    <ShellContent
+        Title="SignUpPage"
+        ContentTemplate="{DataTemplate views:SignUpPage}"
+        Route="SignUpPage" 
+        />
+
 
     <TabBar>
 

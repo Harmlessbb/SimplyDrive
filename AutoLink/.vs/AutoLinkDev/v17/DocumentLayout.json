@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "L:\\SimplyDrive\\AutoLink\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\viewmodel\\logonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\logonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,40 +51,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
-              "RelativeDocumentMoniker": "Service\\LoginService.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
-              "RelativeToolTip": "Service\\LoginService.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwBMAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T09:21:49.834Z",
+              "Title": "SignUpPage.xaml",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml",
+              "RelativeDocumentMoniker": "View\\SignUpPage.xaml",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml",
+              "RelativeToolTip": "View\\SignUpPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-24T12:40:16.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-24T12:39:24.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-24T12:39:23.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "View\\LoginPage.xaml",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
+              "RelativeToolTip": "View\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-22T22:51:39.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\VehicleService.cs",
+              "RelativeDocumentMoniker": "Service\\VehicleService.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\VehicleService.cs",
+              "RelativeToolTip": "Service\\VehicleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:26:06.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LogonViewModel.cs",
               "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\LogonViewModel.cs",
               "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
               "RelativeToolTip": "ViewModel\\LogonViewModel.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwGEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T09:21:16.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "View\\LoginPage.xaml",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
-              "RelativeToolTip": "View\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-22T22:51:39.773Z",
+              "DocumentIndex": 6,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
+              "RelativeDocumentMoniker": "Service\\LoginService.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
+              "RelativeToolTip": "Service\\LoginService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwFQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:21:49.834Z",
               "EditorCaption": ""
             }
           ]
