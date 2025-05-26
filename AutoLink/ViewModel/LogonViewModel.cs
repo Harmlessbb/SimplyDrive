@@ -108,4 +108,13 @@ public partial class LogonViewModel : ContentPage
     }
 
 
+    [RelayCommand]
+
+    async Task ByPassLogin() //Remove this
+    {
+        await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+    }
+
+
+
 }
