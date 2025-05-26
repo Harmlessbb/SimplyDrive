@@ -24,12 +24,17 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     private string displayRegistration = "";
 
+    [ObservableProperty]
+    private string displayName = "";
+
+
     public MainPageViewModel(LoginService loginService, VehicleService vehicleService)
     {
         this.vehicleService = vehicleService;
         this.loginService = loginService;
         this.logonViewModel = new LogonViewModel(loginService);
         InitializeUserDetails();
+
     }
 
     private bool isBookedIn;
@@ -38,15 +43,17 @@ public partial class MainPageViewModel : ObservableObject
     private async Task InitializeUserDetails()
     {
         userDetails = await loginService.GetLoginInfo(logonViewModel);
-        vehicleDetails = await vehicleService.GetVehicleInfo(this,null);
+        vehicleDetails = await vehicleService.GetVehicleInfo(this, null);
     }
+
 
     [RelayCommand]
     public async Task DisplayAllUserInfo()
     {
         if (vehicleDetails != null)
         {
-            await Shell.Current.DisplayAlert("Userdetails Retrieved! ", $"{vehicleDetails.vehicleModel}", "Yay!");
+
+            await Shell.Current.DisplayAlert("User Details Retrieved! ", $"{userDetails.UserFirstName}", "Yay!");
         }
 
         await Task.CompletedTask;
@@ -60,7 +67,7 @@ public partial class MainPageViewModel : ObservableObject
         if (vehicleDetails != null)
         {
             Debug.WriteLine($"Setting the Display Registration to Database Registration which is {vehicleDetails.vehicleRegistration}");
-
+            DisplayName = userDetails.UserFirstName;
             DisplayRegistration = vehicleDetails.vehicleRegistration;
             isBookedIn = vehicleDetails.isBookedIn;
         }

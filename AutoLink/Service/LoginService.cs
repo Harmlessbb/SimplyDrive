@@ -16,14 +16,15 @@ namespace AutoLink.Service
 
     public class LoginService
     {
-
+        //This string cannot be leaked at all costs! Must be encrypted ! 
         private string connectionString = "Host=192.168.1.213;Port=5432;Username=postgres;Password=Liverpool22!;Timeout=10;SslMode=Prefer";
 
         private UserDetails? userDetails;
 
 
-        public async Task <UserDetails> GetLoginInfo(LogonViewModel logonViewModel) //get the login info from the database and set all local variables to the values in the database. 
+        public async Task <UserDetails> GetLoginInfo(LogonViewModel logonViewModel)
         {   
+            
             if(userDetails != null)
             {
                 return userDetails;
@@ -39,23 +40,25 @@ namespace AutoLink.Service
                     await connect.OpenAsync();
                     Debug.WriteLine("Connection Established!");
 
-                    var cmd = new NpgsqlCommand($"SELECT * FROM userDetails WHERE userEmail = @username", connect);
+                    //Find an account in the Database using the username provided by the user in the logonViewModel.
+                    var cmd = new NpgsqlCommand($"SELECT * FROM userDetails WHERE useremail = @username", connect);
                     cmd.Parameters.AddWithValue("@username", logonViewModel.userInputUsername);
 
-                    Debug.WriteLine("Found Account in Database");
+
+                    Debug.WriteLine("Login Service Has Found Account in Database");
                     var reader = await cmd.ExecuteReaderAsync();
                     Debug.WriteLine("Query Executed");
 
-                    if (await reader.ReadAsync())
+                    if (await reader.ReadAsync()) // If we find one, set local variables to the values in the database.
                     {
                         userDetails.UserId = (int)reader.GetInt64(0);
-                        //Debug.WriteLine($"USER ID IS: {userDetails.UserId}" );
+                        Debug.WriteLine($"USER ID IS: {userDetails.UserId}" );
                         userDetails.Username = reader.GetString(1);
-                        //Debug.WriteLine("USERNAMEOK!");
+                        Debug.WriteLine("USERNAMEOK!");
                         userDetails.Password = reader.GetString(2);
-                        //Debug.WriteLine("PasswordOK!");
+                        Debug.WriteLine("PasswordOK!");
                         userDetails.UserFirstName = reader.GetString(3);
-                        //Debug.WriteLine("firstNameOK!");
+                        Debug.WriteLine("firstNameOK!");
                         userDetails.UserLastName = reader.GetString(4);
                         //Debug.WriteLine("lastNameOK!");
                         userDetails.UserStreetName = reader.GetString(5);
@@ -71,6 +74,7 @@ namespace AutoLink.Service
                     }
                     else
                     {
+                        // If we don't find an account with existing email, do nothing. 
                         Debug.WriteLine("No User Found!");
                     }
 

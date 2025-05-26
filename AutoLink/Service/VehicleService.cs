@@ -37,7 +37,7 @@ namespace AutoLink.Service
             userDetails = await loginService.GetLoginInfo(logonViewModel);
 
         }
-
+        //This string cannot be leaked at all costs! Must be encrypted ! 
         private string connectionString = "Host=192.168.1.213;Port=5432;Username=postgres;Password=Liverpool22!;Timeout=10;SslMode=Prefer";
 
 
@@ -48,7 +48,7 @@ namespace AutoLink.Service
                 using (var connect = new NpgsqlConnection(connectionString))
                 {
                     await connect.OpenAsync();
-                    Debug.WriteLine("Connection Established!");
+                    Debug.WriteLine("Connection Established through VehicleService...");
 
 
 
@@ -58,12 +58,14 @@ namespace AutoLink.Service
                     if (userDetails != null)
                     {
                         cmd.Parameters.AddWithValue("@userID", userDetails.UserId);
-
+                        Debug.WriteLine($"Searching for Vehicles owned by ID: {userDetails.UserId}");
                     }
+
                     else
                     {
                         Debug.WriteLine("UserDetails is null");
                     }
+
                     if (await reader.ReadAsync())
                     {
                         vehicleID = (int)reader.GetInt64(1);
@@ -72,7 +74,7 @@ namespace AutoLink.Service
 
 
 
-                        var vehcmd = new NpgsqlCommand("SELECT * FROM VehicleDB WHERE id = @vehicleID", connect);
+                        var vehcmd = new NpgsqlCommand("SELECT * FROM VehicleDB WHERE id = @vehicleID", connect); //"SELECT * FROM VehicleDB WHERE id = @vehicleID" && isSelected = true
                         vehcmd.Parameters.AddWithValue("@vehicleID", vehicleID );
                         var vehreader = await vehcmd.ExecuteReaderAsync();
                         if (await vehreader.ReadAsync())

@@ -28,6 +28,9 @@
         <member name="P:AutoLink.ViewModel.MainPageViewModel.DisplayRegistration">
             <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.displayRegistration"/>
         </member>
+        <member name="P:AutoLink.ViewModel.MainPageViewModel.DisplayName">
+            <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.displayName"/>
+        </member>
         <member name="F:AutoLink.ViewModel.MainPageViewModel.displayAllUserInfoCommand">
             <summary>The backing field for <see cref="P:AutoLink.ViewModel.MainPageViewModel.DisplayAllUserInfoCommand"/>.</summary>
         </member>
@@ -49,6 +52,29 @@
         <member name="P:AutoLink.ViewModel.NewBookingsViewModel.toggleServiceCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.NewBookingsViewModel.toggleService"/>.</summary>
         </member>
+        <member name="T:AutoLink.ViewModel.SignUpViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:AutoLink.ViewModel.SignUpViewModel.attemptSignUpPhase1Command">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase1Command"/>.</summary>
+        </member>
+        <member name="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase1Command">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase1"/>.</summary>
+        </member>
+        <member name="F:AutoLink.ViewModel.SignUpViewModel.attemptSignUpPhase2Command">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase2Command"/>.</summary>
+        </member>
+        <member name="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase2Command">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase2"/>.</summary>
+        </member>
+        <member name="F:AutoLink.ViewModel.SignUpViewModel.returnToMenuCommand">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.SignUpViewModel.ReturnToMenuCommand"/>.</summary>
+        </member>
+        <member name="P:AutoLink.ViewModel.SignUpViewModel.ReturnToMenuCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.SignUpViewModel.ReturnToMenu"/>.</summary>
+        </member>
         <member name="T:AutoLink.Resource">
             <summary>
             Android Resource Designer class.
@@ -64,6 +90,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayRegistration">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayRegistration" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayName" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -72,6 +101,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayRegistration">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayRegistration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayName" generated properties.</summary>
         </member>
     </members>
 </doc>
