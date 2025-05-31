@@ -37,8 +37,8 @@ namespace AutoLink.ViewModel
 
         private async Task InitializeUserDetails()
         {
-            userDetails = await loginService.GetLoginInfo(logonViewModel);
-            vehicleDetails = await vehicleService.GetVehicleInfo(null, this);
+            //userDetails = await loginService.GetLoginInfo(logonViewModel);
+            //vehicleDetails = await vehicleService.GetVehicleInfo(null, this);
         }
 
         [RelayCommand]

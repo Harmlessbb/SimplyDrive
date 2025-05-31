@@ -147,46 +147,14 @@ public partial class SignUpViewModel : ObservableObject
 
     [RelayCommand]
     async Task AttemptSignUpPhase1()
-     {
-        SignUpPhase1 = true;
-        Debug.WriteLine("Attempting SignUp Phase 1");
-
-
-        //Make sure that the user actually inputted information 
-        if (string.IsNullOrWhiteSpace(userInputUsername) && string.IsNullOrWhiteSpace(userInputPassword))
-        {
-            await Shell.Current.DisplayAlert("Error! ", "No Input", "Ok");
-            return;
-        }
-        //Using EmailAddressAttribute, validate that the user has inputted an Email Address
-        var emailValidator = new EmailAddressAttribute();
-        if (!emailValidator.IsValid(userInputUsername))
-        {
-            await Shell.Current.DisplayAlert("Error! ", $"Please Enter a Valid Email Address.", "Ok");
-            return;
-        }
-        //Make sure the passwords match
-        if (userInputPassword != userInputPasswordConfirm)
-        {
-            await Shell.Current.DisplayAlert("Error! ", $"Passwords do not match, please try again", "Ok");
-            return;
-        }
-
-        //TODO Add Checks To Make Sure Users Use strong passwords! Add checks to make sure the Email Doesnt already exist! 
-
-        //All Checks for Phase 1 Complete
-        SignUpPhase1 = false;
-        SignUpPhase2 = true; 
+    { 
 
     }
 
     [RelayCommand]
     async Task AttemptSignUpPhase2()
     {
-        //This Command will actually create the account. 
-        await _signUpService.CreateNewUser(this);
-        await Shell.Current.DisplayAlert("Success!", "Account Created Please Restart The App To Login", "Ok");
-        await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+       
     }
 
     [RelayCommand]

@@ -56,52 +56,13 @@ public partial class LogonViewModel : ContentPage
 
 	[RelayCommand]
 	async Task AttemptLogin()
-	{
-        if (!string.IsNullOrWhiteSpace(userInputUsername) && !string.IsNullOrWhiteSpace(userInputPassword))
-        {
-            Debug.WriteLine("Attempting Login... ");
-            if (isBusy == true)
-            {
-                return;
-            }
-
-            try
-            {
-                Debug.WriteLine($"User Input Password: {userInputPassword}... Attempting Logon to User ");
-                IsBusy = true;
-                userDetails = await LoginService.GetLoginInfo(this);
-
-                Debug.WriteLine($"userDetails.password: {userDetails.Password} userDetails.username {userDetails.Username}");
-
-                if (userInputPassword == userDetails.Password && userInputUsername == userDetails.Username)
-                {
-                    Debug.WriteLine($"USER ID IS: {userDetails.UserId}");
-                    Debug.WriteLine($"USERNAMEOK! {userDetails.Username}");
-                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
-                    IsBusy = false;
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Could Not Log In", "Incorrect Username or Password", "Try Again");
-                    IsBusy = false;
-                }
-            }
-
-            catch (Exception ex)
-            {
-                await Shell.Current.DisplayAlert("Error!", $"{ex.Message}", "ok");
-                isBusy = false;
-            }
-        }
-        else
-        {
-            await Shell.Current.DisplayAlert("Error!", $"No Input", "ok");
-
-        }
+    {
+        Debug.WriteLine("Attempt Login Function Called");
+        await LoginService.RetrieveDBInfo();
     }
 
-    [RelayCommand]
 
+    [RelayCommand]
     async Task GoToSignUpScreen() 
     {
         await Shell.Current.GoToAsync($"//{nameof(SignUpPage)}");
@@ -110,7 +71,7 @@ public partial class LogonViewModel : ContentPage
 
     [RelayCommand]
 
-    async Task ByPassLogin() //Remove this
+    async Task ByPassLogin() //Remove this once login is implimented
     {
         await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
     }

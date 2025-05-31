@@ -42,8 +42,7 @@ public partial class MainPageViewModel : ObservableObject
 
     private async Task InitializeUserDetails()
     {
-        userDetails = await loginService.GetLoginInfo(logonViewModel);
-        vehicleDetails = await vehicleService.GetVehicleInfo(this, null);
+        //userDetails = await loginService.GetLoginInfo(logonViewModel.);
     }
 
 

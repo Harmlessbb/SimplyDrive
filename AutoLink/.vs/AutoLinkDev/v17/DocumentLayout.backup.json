@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "L:\\SimplyDrive\\AutoLink\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -11,48 +19,44 @@
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\logonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\viewmodel\\newbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\newbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\model\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:model\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\signupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\signupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\autolink.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:autolink.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\viewmodel\\newbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\newbookingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\model\\attemptlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:model\\attemptlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\model\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:model\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\viewmodel\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:viewmodel\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\autolink.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:autolink.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\model\\vehicledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:model\\vehicledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|l:\\simplydrive\\autolink\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -74,21 +78,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VehicleService.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\VehicleService.cs",
-              "RelativeDocumentMoniker": "Service\\VehicleService.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\VehicleService.cs",
-              "RelativeToolTip": "Service\\VehicleService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T09:26:06.987Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -99,81 +90,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserDetails.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Model\\UserDetails.cs",
-              "RelativeDocumentMoniker": "Model\\UserDetails.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Model\\UserDetails.cs",
-              "RelativeToolTip": "Model\\UserDetails.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T17:45:18.484Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "View\\LoginPage.xaml",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
+              "RelativeToolTip": "View\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-22T22:51:39.773Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "NewBookingsViewModel.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\NewBookingsViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\NewBookingsViewModel.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\NewBookingsViewModel.cs",
-              "RelativeToolTip": "ViewModel\\NewBookingsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Title": "LogonViewModel.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LogonViewModel.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
+              "RelativeToolTip": "ViewModel\\LogonViewModel.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T15:51:06.776Z",
+              "WhenOpened": "2025-05-24T09:21:16.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
+              "RelativeDocumentMoniker": "Service\\LoginService.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
+              "RelativeToolTip": "Service\\LoginService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA1wCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:21:49.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
-              "RelativeDocumentMoniker": "View\\MainPage.xaml",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
-              "RelativeToolTip": "View\\MainPage.xaml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAG4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-25T13:36:58.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "MainPageViewModel.cs",
               "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\MainPageViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainPageViewModel.cs",
               "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\MainPageViewModel.cs",
               "RelativeToolTip": "ViewModel\\MainPageViewModel.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAEUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAswEQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:47:19.244Z"
+              "WhenOpened": "2025-05-26T11:47:19.244Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\MainPage.xaml.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml.cs",
-              "RelativeToolTip": "View\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "SignUpViewModel.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\SignUpViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\SignUpViewModel.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\SignUpViewModel.cs",
+              "RelativeToolTip": "ViewModel\\SignUpViewModel.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAqwJwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:59:43.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AutoLink",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
-              "RelativeDocumentMoniker": "AutoLink.csproj",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
-              "RelativeToolTip": "AutoLink.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-25T14:02:17.815Z"
+              "WhenOpened": "2025-05-25T10:02:05.088Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "UserDetails.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Model\\UserDetails.cs",
+              "RelativeDocumentMoniker": "Model\\UserDetails.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Model\\UserDetails.cs",
+              "RelativeToolTip": "Model\\UserDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T17:45:18.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NewBookingsViewModel.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\NewBookingsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\NewBookingsViewModel.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\NewBookingsViewModel.cs",
+              "RelativeToolTip": "ViewModel\\NewBookingsViewModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvxcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T15:51:06.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "SignUpPage.xaml",
               "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml",
               "RelativeDocumentMoniker": "View\\SignUpPage.xaml",
@@ -185,58 +188,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SignUpViewModel.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\SignUpViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\SignUpViewModel.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\SignUpViewModel.cs",
-              "RelativeToolTip": "ViewModel\\SignUpViewModel.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAkwMAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T10:02:05.088Z"
+              "DocumentIndex": 4,
+              "Title": "AutoLink",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
+              "RelativeDocumentMoniker": "AutoLink.csproj",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
+              "RelativeToolTip": "AutoLink.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-25T14:02:17.815Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainPage.xaml.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml.cs",
+              "RelativeToolTip": "View\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T14:59:43.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AttemptLogin.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Model\\AttemptLogin.cs",
+              "RelativeDocumentMoniker": "Model\\AttemptLogin.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Model\\AttemptLogin.cs",
+              "RelativeToolTip": "Model\\AttemptLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T12:42:25.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
+              "RelativeDocumentMoniker": "View\\MainPage.xaml",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
+              "RelativeToolTip": "View\\MainPage.xaml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAG4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-25T13:36:58.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T20:35:41.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VehicleDetails.cs",
+              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Model\\VehicleDetails.cs",
+              "RelativeDocumentMoniker": "Model\\VehicleDetails.cs",
+              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Model\\VehicleDetails.cs",
+              "RelativeToolTip": "Model\\VehicleDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T20:40:54.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "SignUpPage.xaml.cs",
               "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml.cs",
               "RelativeDocumentMoniker": "View\\SignUpPage.xaml.cs",
               "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml.cs",
               "RelativeToolTip": "View\\SignUpPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T10:06:17.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T10:06:17.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignUpService.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\SignUpService.cs",
-              "RelativeDocumentMoniker": "Service\\SignUpService.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\SignUpService.cs",
-              "RelativeToolTip": "Service\\SignUpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T17:44:29.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "View\\LoginPage.xaml",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\View\\LoginPage.xaml",
-              "RelativeToolTip": "View\\LoginPage.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAACPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-22T22:51:39.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "App.xaml",
               "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -248,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -257,32 +292,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-24T12:39:24.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
-              "RelativeDocumentMoniker": "Service\\LoginService.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
-              "RelativeToolTip": "Service\\LoginService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T09:21:49.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LogonViewModel.cs",
-              "DocumentMoniker": "L:\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\LogonViewModel.cs",
-              "ToolTip": "L:\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
-              "RelativeToolTip": "ViewModel\\LogonViewModel.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAIwG8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T09:21:16.042Z",
-              "EditorCaption": ""
             }
           ]
         }
