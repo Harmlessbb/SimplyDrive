@@ -3,6 +3,7 @@ using AutoLink.Service;
 using AutoLink.ViewModel;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using CommunityToolkit.Maui;
 
 namespace AutoLink;
 
@@ -14,12 +15,14 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("RAJDHANI-REGULAR.ttf", "Rajdhani");
 
-			});
+            });
 
 
 	   //Build the ViewModels

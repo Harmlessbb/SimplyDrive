@@ -3,7 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AutoLink.MainPage"
              xmlns:ViewModel ="clr-namespace:AutoLink.ViewModel"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:DataType="ViewModel:MainPageViewModel"
              Title=""  BackgroundColor="White">
-   
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#343152"/>
+    </Page.Behaviors>
+    <Grid ColumnDefinitions="*,auto" RowDefinitions="40,20">
+
+        <BoxView 
+            Color="#343152" 
+            Grid.Row="0" 
+            Grid.Column="0"
+            BackgroundColor="#FFFFFF"/>
+
+        <Label Text="Hello World!"
+            TextColor="#FFFFFF"
+            FontSize="40"
+            FontFamily="Rajdhani"/>
+
+
+    </Grid>
+
 </ContentPage>

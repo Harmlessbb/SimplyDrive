@@ -5,8 +5,10 @@
   <key>UIAppFonts</key>
   <array>
 	<string>FluentUI.cs</string>
+	<string>MauiInfo.plist</string>
 	<string>OpenSans-Regular.ttf</string>
 	<string>OpenSans-Semibold.ttf</string>
+	<string>RAJDHANI-REGULAR.TTF</string>
   </array>
 
 </dict>
