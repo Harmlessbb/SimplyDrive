@@ -9,7 +9,7 @@
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="#343152"/>
     </Page.Behaviors>
-    <Grid ColumnDefinitions="*,auto" RowDefinitions="40,20">
+    <Grid ColumnDefinitions="*,10,auto" RowDefinitions="40,20">
 
         <BoxView 
             Color="#343152" 
