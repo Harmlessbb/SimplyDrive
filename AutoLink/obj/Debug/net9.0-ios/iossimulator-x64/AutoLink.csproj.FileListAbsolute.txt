@@ -902,11 +902,8 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\MauiInfo.plist
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\MauiSplash.storyboard
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.stamp
-C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
-C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
-C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
-C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\renaultcliosideprof.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\renaultlogo.png
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\renaultcliosideprof.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -919,6 +916,12 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\hamburger_bar@3x.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\hamburger_bar@2x.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\hamburger_bar.jpg
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.stamp
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.outputs
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist

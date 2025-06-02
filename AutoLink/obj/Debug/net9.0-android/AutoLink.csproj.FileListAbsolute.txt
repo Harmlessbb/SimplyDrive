@@ -3281,3 +3281,17 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-and
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\hamburger_bar.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\resizetizer\r\drawable-xxhdpi\hamburger_bar.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\hamburger_bar.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\resizetizer\r\drawable-hdpi\hamburger_bar.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\resizetizer\r\drawable-mdpi\hamburger_bar.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.ll
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\environment.arm64-v8a.ll
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.ll
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.o
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\environment.arm64-v8a.o
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.o
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so

@@ -5,7 +5,7 @@
              xmlns:ViewModel ="clr-namespace:AutoLink.ViewModel"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:DataType="ViewModel:MainPageViewModel"
-             Title=""  BackgroundColor="White">
+             Title=""  BackgroundColor="#000000">
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="#343152"/>
     </Page.Behaviors>
@@ -17,10 +17,15 @@
             Grid.Column="0"
             BackgroundColor="#FFFFFF"/>
 
-        <Label Text="Hello World!"
+        <Label Text="Hello, Bob!"
             TextColor="#FFFFFF"
-            FontSize="40"
-            FontFamily="Rajdhani"/>
+            FontSize="32"
+            FontFamily="RAJDHANI-REGULAR.TTF"
+            Padding="40,0"/>
+
+        <Image Source="hamburger_bar.jpg" 
+            Grid.Row="0" 
+            Grid.Column="0" />
 
 
     </Grid>
