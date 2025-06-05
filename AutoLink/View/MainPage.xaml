@@ -5,29 +5,77 @@
              xmlns:ViewModel ="clr-namespace:AutoLink.ViewModel"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:DataType="ViewModel:MainPageViewModel"
-             Title=""  BackgroundColor="#000000">
+             Title=""  BackgroundColor="#FFFFFF">
     <Page.Behaviors>
-        <mct:StatusBarBehavior StatusBarColor="#343152"/>
+        <mct:StatusBarBehavior StatusBarColor="#211D4A"/>
     </Page.Behaviors>
-    <Grid ColumnDefinitions="*,10,auto" RowDefinitions="40,20">
 
-        <BoxView 
-            Color="#343152" 
-            Grid.Row="0" 
-            Grid.Column="0"
-            BackgroundColor="#FFFFFF"/>
+    <Grid ColumnDefinitions="*" RowDefinitions="1*,11*,1*">
 
-        <Label Text="Hello, Bob!"
-            TextColor="#FFFFFF"
-            FontSize="32"
-            FontFamily="RAJDHANI-REGULAR.TTF"
-            Padding="40,0"/>
+        <Grid ColumnDefinitions="*,40,10" RowDefinitions="*,0,0" Grid.Row="0" Grid.Column="0">
 
-        <Image Source="hamburger_bar.jpg" 
-            Grid.Row="0" 
-            Grid.Column="0" />
+            <BoxView 
+                Color="#211D4A" 
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#211D4A"/>
+        
+            <Label Text="Hello, Bob!"
+                TextColor="#FFFFFF"
+                FontSize="32"
+                Grid.Row="0"
+                Grid.Column="0"   
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                Margin="10,10"/>
+
+            <Image Source="bell_transparent.png" 
+                Grid.Row="0" 
+                Grid.Column="1" 
+                WidthRequest="999"
+                HeightRequest="40"/>
+        </Grid>
+        
+        <Grid ColumnDefinitions="2*,2*,2*" RowDefinitions="2*,2*,2*" Grid.Row="1" Grid.Column="0">
+
+        </Grid>
+
+        <Grid ColumnDefinitions="1*,1*,1*,1*" RowDefinitions="*" Grid.Row="2" Grid.Column="0" BackgroundColor="#FFFFFF">
+            <Border 
+                 Grid.Row="0"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="4"
+                 BackgroundColor="#FFFFFF"/>
+                   
+            <Image Source="home_icon.png" 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                WidthRequest="999"
+                HeightRequest="40"/>
+
+            <Image Source="sedan_car.png" 
+                 Grid.Row="0" 
+                 Grid.Column="1" 
+                 WidthRequest="999"
+                 HeightRequest="60"/>
+
+            <Image Source="person_icon.png" 
+                 Grid.Row="0" 
+                 Grid.Column="2" 
+                 WidthRequest="999"
+                 HeightRequest="40"/>
+
+            <Image Source="settings_wheel.png" 
+                 Grid.Row="0" 
+                 Grid.Column="3" 
+                 WidthRequest="999"
+                 HeightRequest="40"/>
+
+
+
+        </Grid>
+
 
 
     </Grid>
-
 </ContentPage>

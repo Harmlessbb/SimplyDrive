@@ -18,16 +18,20 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dawid\\.nuget\\packages\\microsoft.maui.resizetizer\\9.0.70\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\view\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,11 +57,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "VehicleService.cs",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\Service\\VehicleService.cs",
               "RelativeDocumentMoniker": "Service\\VehicleService.cs",
@@ -82,6 +86,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-05T22:44:37.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Microsoft.Maui.Resizetizer.After.targets",
               "DocumentMoniker": "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.maui.resizetizer\\9.0.70\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
@@ -90,7 +107,8 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\9.0.70\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-06-02T00:32:50.154Z"
+              "WhenOpened": "2025-06-02T00:32:50.154Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -102,7 +120,8 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:51:58.637Z"
+              "WhenOpened": "2025-06-01T17:51:58.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -112,7 +131,7 @@
               "RelativeDocumentMoniker": "AutoLink.csproj",
               "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\AutoLink.csproj",
               "RelativeToolTip": "AutoLink.csproj",
-              "ViewState": "AgIAACAAAAAAAAAAAAAjwDUAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAjwDkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-06-02T00:09:43.551Z",
               "EditorCaption": ""
@@ -125,14 +144,14 @@
               "RelativeDocumentMoniker": "View\\MainPage.xaml",
               "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
               "RelativeToolTip": "View\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-25T13:36:58.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SignUpPage.xaml",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml",
               "RelativeDocumentMoniker": "View\\SignUpPage.xaml",
@@ -140,11 +159,12 @@
               "RelativeToolTip": "View\\SignUpPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-24T12:40:16.816Z"
+              "WhenOpened": "2025-05-24T12:40:16.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "SignUpPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\SignUpPage.xaml.cs",
               "RelativeDocumentMoniker": "View\\SignUpPage.xaml.cs",
@@ -152,11 +172,12 @@
               "RelativeToolTip": "View\\SignUpPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T10:06:17.45Z"
+              "WhenOpened": "2025-05-25T10:06:17.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "SignUpService.cs",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\Service\\SignUpService.cs",
               "RelativeDocumentMoniker": "Service\\SignUpService.cs",
@@ -168,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -180,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LoginService.cs",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\Service\\LoginService.cs",
               "RelativeDocumentMoniker": "Service\\LoginService.cs",
@@ -192,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LogonViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\ViewModel\\LogonViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\LogonViewModel.cs",
