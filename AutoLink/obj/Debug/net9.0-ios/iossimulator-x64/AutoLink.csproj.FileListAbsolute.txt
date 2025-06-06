@@ -951,7 +951,6 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.pdb
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.genruntimeconfig.cache
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\ref\AutoLink.dll
-C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\hamburger_bar.jpg
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\bell_transparent@3x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\bell_transparent@2x.png
