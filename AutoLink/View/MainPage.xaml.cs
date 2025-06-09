@@ -17,7 +17,6 @@ namespace AutoLink
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            viewModel.LoadCommand.Execute(null);
         }
 
     }

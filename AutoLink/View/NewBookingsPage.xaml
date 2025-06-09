@@ -10,7 +10,7 @@
 
 
     <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*">
-        <Button Grid.Row="1" Grid.Column="1" Text="MakeBooking"></Button>
+        <Label Text="{Binding}"></Label>
     </Grid>
 
 </ContentPage>

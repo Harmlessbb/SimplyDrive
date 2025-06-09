@@ -1,4 +1,8 @@
-﻿namespace AutoLink
+﻿using AutoLink.Model;
+using AutoLink.Service;
+using AutoLink.ViewModel;
+
+namespace AutoLink
 {
     public partial class App : Application
     {

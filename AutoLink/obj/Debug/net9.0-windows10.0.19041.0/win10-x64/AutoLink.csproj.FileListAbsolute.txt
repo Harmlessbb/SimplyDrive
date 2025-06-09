@@ -850,6 +850,9 @@ L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\WebView2L
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
+L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.Projection.dll
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.UI.pri
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.UI.Xaml.Controls.pri

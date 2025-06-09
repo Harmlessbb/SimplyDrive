@@ -1,3 +1,5 @@
+using AutoLink.Model;
+using AutoLink.Service;
 using AutoLink.ViewModel;
 
 namespace AutoLink
@@ -8,6 +10,12 @@ namespace AutoLink
         {
             InitializeComponent();
             BindingContext = viewModel;
+            AttemptLoginAsync(viewModel);
+
+        }
+        private async Task AttemptLoginAsync(LogonViewModel viewModel)
+        {
+            await viewModel.AttemptLogin();
         }
     }
 }

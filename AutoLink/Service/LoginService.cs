@@ -1,46 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AutoLink.Model;
 using AutoLink.ViewModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System.Net.Http.Json;
+using Microsoft.Maui.Authentication;
 
 namespace AutoLink.Service
 {
 
-
-
     public class LoginService
     {
 
+        public string authCode { get; private set; } = string.Empty;
 
-        public async Task RetrieveDBInfo()
+        public async Task attemptLogin()
         {
-            using var httpClient = new HttpClient();
 
-            try
+
+
+#pragma warning disable CA1416
+            if (DeviceInfo.Platform != DevicePlatform.WinUI)
             {
-                if (DeviceInfo.Platform == DevicePlatform.Android)
+                string authUrl = "http://10.0.2.2:8080/realms/SimplyDriveDev/protocol/openid-connect/auth" +
+                "?client_id=SimplyDriveCustomerApp" +
+                "&response_type=code" +
+                "&scope=openid%20profile%20email" +
+                "&redirect_uri=maui://callback";
+
+                string redirectUri = "maui://callback";
+
+
+
+                try
                 {
-                    var response = await httpClient.GetAsync("http://109.159.126.31:7270/api/UserDetails/Get%20userdetails");
-                    Debug.WriteLine($"Response: {response.StatusCode}");
-                    Debug.WriteLine("Running on Android");
+                    Debug.WriteLine("Attempting to authenticate...");
+
+                    WebAuthenticatorResult authResult = await WebAuthenticator.Default.AuthenticateAsync(
+                        
+                        new Uri(authUrl), 
+                        new Uri(redirectUri));
+                    
+                    Debug.WriteLine("Authentication Done");
+
+                    if(authResult is not null)
+                    {
+                        authCode = authResult.Properties["code"];
+
+                    }
+                    else
+                    {
+                        authCode = "Authentication Failed: Result is null";
+                    }
+
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    var response = await httpClient.GetAsync("http://109.159.126.31:7270/api/UserDetails/Get%20userdetails");
-                    Debug.WriteLine($"Response: {response.StatusCode}");
+                    authCode = $" EXCEPTION: {ex}";
                 }
+
 
             }
-
-            catch (Exception ex)
+            else
             {
-                Debug.WriteLine($"Error: {ex.Message}");
+                Debug.WriteLine("Cannot Logon On Windows! ");
             }
         }
 

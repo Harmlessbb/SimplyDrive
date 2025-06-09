@@ -5,7 +5,7 @@
              Title= ""
              xmlns:ViewModel ="clr-namespace:AutoLink.ViewModel"
              x:DataType="ViewModel:LogonViewModel"
-             >
+             BackgroundColor="#211D4A">
 
     <Grid ColumnDefinitions="*,auto,*" RowDefinitions="*,90,*" Padding="5">
 
@@ -13,18 +13,11 @@
 
             <Grid ColumnDefinitions="*,380,*" RowDefinitions="auto,auto,auto" Grid.Column="1" Grid.Row="1">
 
-
-                <Entry Placeholder="Email Address" Grid.Column="1" Grid.Row="1" HeightRequest="10" ReturnType="Next" Text="{Binding userInputUsername}"></Entry>
-                <Entry Placeholder="Password" Grid.Column="1" Grid.Row="2" HeightRequest="10" IsPassword="True" Text="{Binding userInputPassword}"></Entry>
+                <Label Text="{Binding Code}" Grid.Column="1" Grid.Row="1"></Label>
                 
             </Grid>
 
         </Border>
-        <Grid ColumnDefinitions="auto,200,auto" RowDefinitions="50,*,500" Grid.Row="2" Grid.Column="1" Padding="10" ColumnSpacing="10">
-            <Button Text="Login" HeightRequest="10" Grid.Row="0" Grid.Column="1" WidthRequest="100" Command="{Binding AttemptLoginCommand}"></Button>
-            <Button Text="Sign-Up" HeightRequest="10" Grid.Row="0" Grid.Column="2" WidthRequest="100" Command="{Binding GoToSignUpScreenCommand}"></Button>
-            <Button Text="AdminLogin" HeightRequest="10" Grid.Row="2" Grid.Column="1" WidthRequest="150" Command="{Binding ByPassLoginCommand}"></Button>
-        </Grid>
 
         <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Fill" VerticalOptions="Center" Grid.RowSpan="2" Grid.ColumnSpan="2" Color="White"></ActivityIndicator>
         

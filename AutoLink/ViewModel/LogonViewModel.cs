@@ -7,41 +7,15 @@ using CommunityToolkit.Mvvm.Input;
 using System.Diagnostics;
 using AutoLink.Model;
 using AutoLink.View;
+using CommunityToolkit.Mvvm.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 
-public partial class LogonViewModel : ContentPage
+public partial class LogonViewModel : ObservableObject
 {
     private bool isBusy = false;
 
-    //PASSWORD AND USERNAME HANDLING
-    private string passwordUpdate = "";
-
-    public string userInputPassword
-	{
-		get =>	passwordUpdate;
-		set
-		{
-            if (userInputPassword != value)
-            {
-                passwordUpdate = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
-    private string usernameUpdate = "";
-
-    public string userInputUsername
-    {
-        get => usernameUpdate;
-        set
-        {
-            if (userInputUsername != value)
-            {
-                usernameUpdate = value;
-                OnPropertyChanged();
-            }
-        }
-    }
+    [ObservableProperty]
+    private string code = "NULL1";
 
 
     UserDetails userDetails = new UserDetails();
@@ -49,24 +23,31 @@ public partial class LogonViewModel : ContentPage
 
 	public LogonViewModel(LoginService loginService)
 	{
-		Title = "AutoLink";
+
 		this.LoginService = loginService;
 	}
 
 
 	[RelayCommand]
-	async Task AttemptLogin()
+	public async Task AttemptLogin()
     {
         Debug.WriteLine("Attempt Login Function Called");
-        await LoginService.RetrieveDBInfo();
+        await LoginService.attemptLogin();
+        Code = LoginService.authCode;
+
+        if (LoginService.authCode is not null)
+        {
+            //If we get an access code, go to the main page
+            await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+        }
+        else
+        {
+            //If we don't, restart the login page which will call this function again.
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        }
     }
 
 
-    [RelayCommand]
-    async Task GoToSignUpScreen() 
-    {
-        await Shell.Current.GoToAsync($"//{nameof(SignUpPage)}");
-    }
 
 
     [RelayCommand]

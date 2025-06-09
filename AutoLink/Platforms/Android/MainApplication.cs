@@ -1,7 +1,10 @@
 ﻿using Android.App;
+using Android.Content.PM;
 using Android.Runtime;
 
 namespace AutoLink;
+
+
 
 [Application]
 public class MainApplication : MauiApplication
