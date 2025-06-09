@@ -967,3 +967,8 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\settings_wheel@3x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\settings_wheel@2x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\settings_wheel.png
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\cart@3x.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\cart@2x.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\cart.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\bin\Debug\net9.0-ios\iossimulator-x64\OnScreenSizeMarkup.Maui.dll
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature

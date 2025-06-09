@@ -495,6 +495,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.16.0.11": {
         "type": "package",
         "dependencies": {
@@ -2878,6 +2891,19 @@
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -5267,6 +5293,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.16.0.11": {
         "type": "package",
         "dependencies": {
@@ -7650,6 +7689,19 @@
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -10039,6 +10091,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.16.0.11": {
         "type": "package",
         "dependencies": {
@@ -12425,6 +12490,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.16.0.11": {
         "type": "package",
         "dependencies": {
@@ -14783,6 +14861,30 @@
             "related": ".xml"
           }
         }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-ios18.4/android-arm64": {
@@ -15248,6 +15350,30 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
         }
@@ -15719,6 +15845,30 @@
             "related": ".xml"
           }
         }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-ios18.4/iossimulator-x64": {
@@ -16184,6 +16334,30 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
         }
@@ -16655,6 +16829,30 @@
             "related": ".xml"
           }
         }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-ios18.4/win10-x64": {
@@ -17120,6 +17318,30 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
         }
@@ -17591,6 +17813,30 @@
             "related": ".xml"
           }
         }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-maccatalyst18.4/android-arm64": {
@@ -18056,6 +18302,30 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
         }
@@ -18527,6 +18797,30 @@
             "related": ".xml"
           }
         }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-maccatalyst18.4/iossimulator-x64": {
@@ -18992,6 +19286,30 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
         }
@@ -19463,6 +19781,30 @@
             "related": ".xml"
           }
         }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-maccatalyst18.4/win10-x64": {
@@ -19928,6 +20270,30 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
         }
@@ -20641,6 +21007,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "System.Speech/9.0.0": {
         "type": "package",
         "compile": {
@@ -21310,6 +21689,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "System.Speech/9.0.0": {
         "type": "package",
         "compile": {
@@ -21970,6 +22362,19 @@
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -22636,6 +23041,19 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "System.Speech/9.0.0": {
         "type": "package",
         "compile": {
@@ -23296,6 +23714,19 @@
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -23969,6 +24400,19 @@
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -26130,6 +26574,47 @@
         "postgresql.png"
       ]
     },
+    "OnScreenSizeMarkup.Maui/3.0.18": {
+      "sha512": "IXJwZjl79IsnhlOQfqIvPSh07aEdcx1qEHs5cBKSjw1seSBQtk8YgfjXZn9W9AnnRg6w4XdECJ25fiNyy7ghFg==",
+      "type": "package",
+      "path": "onscreensizemarkup.maui/3.0.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.md",
+        "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.dll",
+        "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.pdb",
+        "lib/net6.0-android31.0/OnScreenSizeMarkup.Maui.xml",
+        "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.dll",
+        "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.pdb",
+        "lib/net6.0-ios16.1/OnScreenSizeMarkup.Maui.xml",
+        "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.dll",
+        "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.pdb",
+        "lib/net6.0-maccatalyst16.1/OnScreenSizeMarkup.Maui.xml",
+        "lib/net6.0/OnScreenSizeMarkup.Maui.dll",
+        "lib/net6.0/OnScreenSizeMarkup.Maui.pdb",
+        "lib/net6.0/OnScreenSizeMarkup.Maui.xml",
+        "onscreensizemarkup.maui.3.0.18.nupkg.sha512",
+        "onscreensizemarkup.maui.nuspec"
+      ]
+    },
+    "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+      "sha512": "vq+81ZqZz9oHV6iWgGXFnxHAyO5xA73nfvDNu5LwymIK294is5bRo3P063VToAbDRyyc0qq/YFRYjHmiD6Cv8Q==",
+      "type": "package",
+      "path": "system.runtime.interopservices.nfloat.internal/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "ref/net6.0/System.Runtime.InteropServices.dll",
+        "ref/net6.0/System.Runtime.InteropServices.xml",
+        "system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
+        "system.runtime.interopservices.nfloat.internal.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Speech/9.0.0": {
       "sha512": "z8mvEVBfWSi0692vPOra8MougSEJCDzlaLj4g0aA87XDZpJoJD3BJTcJ0MuFbbN1fOT9Cr2ZFqXhZc+zzX0Gwg==",
       "type": "package",
@@ -28219,7 +28704,8 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
       "Microsoft.NET.ILLink.Tasks >= 9.0.5",
-      "Npgsql >= 9.0.3"
+      "Npgsql >= 9.0.3",
+      "OnScreenSizeMarkup.Maui >= 3.0.18"
     ],
     "net9.0-ios18.4": [
       "CommunityToolkit.Maui >= 11.2.0",
@@ -28227,7 +28713,8 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
       "Microsoft.NET.ILLink.Tasks >= 9.0.5",
-      "Npgsql >= 9.0.3"
+      "Npgsql >= 9.0.3",
+      "OnScreenSizeMarkup.Maui >= 3.0.18"
     ],
     "net9.0-maccatalyst18.4": [
       "CommunityToolkit.Maui >= 11.2.0",
@@ -28235,14 +28722,16 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
       "Microsoft.NET.ILLink.Tasks >= 9.0.5",
-      "Npgsql >= 9.0.3"
+      "Npgsql >= 9.0.3",
+      "OnScreenSizeMarkup.Maui >= 3.0.18"
     ],
     "net9.0-windows10.0.19041": [
       "CommunityToolkit.Maui >= 11.2.0",
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
-      "Npgsql >= 9.0.3"
+      "Npgsql >= 9.0.3",
+      "OnScreenSizeMarkup.Maui >= 3.0.18"
     ]
   },
   "packageFolders": {
@@ -28337,6 +28826,10 @@
           "Npgsql": {
             "target": "Package",
             "version": "[9.0.3, )"
+          },
+          "OnScreenSizeMarkup.Maui": {
+            "target": "Package",
+            "version": "[3.0.18, )"
           }
         },
         "imports": [
@@ -28388,6 +28881,10 @@
           "Npgsql": {
             "target": "Package",
             "version": "[9.0.3, )"
+          },
+          "OnScreenSizeMarkup.Maui": {
+            "target": "Package",
+            "version": "[3.0.18, )"
           }
         },
         "imports": [
@@ -28439,6 +28936,10 @@
           "Npgsql": {
             "target": "Package",
             "version": "[9.0.3, )"
+          },
+          "OnScreenSizeMarkup.Maui": {
+            "target": "Package",
+            "version": "[3.0.18, )"
           }
         },
         "imports": [
@@ -28485,6 +28986,10 @@
           "Npgsql": {
             "target": "Package",
             "version": "[9.0.3, )"
+          },
+          "OnScreenSizeMarkup.Maui": {
+            "target": "Package",
+            "version": "[3.0.18, )"
           }
         },
         "imports": [

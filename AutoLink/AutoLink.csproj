@@ -56,6 +56,7 @@
 		<MauiImage Update="Resources\Images\person_icon.png" Resize="True" BaseSize="376,678" />
 		<MauiImage Update="Resources\Images\sedan_car.png" Resize="True" BaseSize="300,185" />
 		<MauiImage Update="Resources\Images\settings_wheel.png" Resize="True" BaseSize="376,678" />
+		<MauiImage Update="Resources\Images\cart.jpg" Resize="True" BaseSize="1000,1000" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -84,6 +85,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.70" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
 		<PackageReference Include="Npgsql" Version="9.0.3" />
+		<PackageReference Include="OnScreenSizeMarkup.Maui" Version="3.0.18" />
 	</ItemGroup>
 
 	<ItemGroup>

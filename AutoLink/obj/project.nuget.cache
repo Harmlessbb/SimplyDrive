@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MOG+Zrrojuk=",
+  "dgSpecHash": "BGV6ojxDQTg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\AutoLink.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,8 @@
     "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250401001\\microsoft.windowsappsdk.1.7.250401001.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
+    "C:\\Users\\Dawid\\.nuget\\packages\\onscreensizemarkup.maui\\3.0.18\\onscreensizemarkup.maui.3.0.18.nupkg.sha512",
+    "C:\\Users\\Dawid\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\system.speech\\9.0.0\\system.speech.9.0.0.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
