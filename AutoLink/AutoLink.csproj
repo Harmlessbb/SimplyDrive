@@ -55,6 +55,11 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\bell_transparent.png" Resize="True" BaseSize="376,678" />
+		<MauiImage Update="Resources\Images\home_icon.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\person_icon.png" Resize="True" BaseSize="376,678" />
+		<MauiImage Update="Resources\Images\sedan_car.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\settings_wheel.png" Resize="True" BaseSize="376,678" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -74,12 +79,14 @@
 
 	<ItemGroup>
 	  <None Remove="hs_err_pid7984.log" />
+	  <None Remove="Resources\Fonts\RAJDHANI-REGULAR.TTF" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.70" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
 		<PackageReference Include="Npgsql" Version="9.0.3" />
 	</ItemGroup>
 
