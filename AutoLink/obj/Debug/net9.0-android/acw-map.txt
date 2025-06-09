@@ -4,11 +4,9 @@ autolink.MainActivity;crc642c49cafb7d90a8b2.MainActivity
 AutoLink.MainApplication, AutoLink;crc642c49cafb7d90a8b2.MainApplication
 AutoLink.MainApplication;crc642c49cafb7d90a8b2.MainApplication
 autolink.MainApplication;crc642c49cafb7d90a8b2.MainApplication
-<<<<<<< HEAD
 AutoLink.WebAuthenticationCallbackActivity, AutoLink;crc642c49cafb7d90a8b2.WebAuthenticationCallbackActivity
 AutoLink.WebAuthenticationCallbackActivity;crc642c49cafb7d90a8b2.WebAuthenticationCallbackActivity
 autolink.WebAuthenticationCallbackActivity;crc642c49cafb7d90a8b2.WebAuthenticationCallbackActivity
-=======
 CommunityToolkit.Maui.Behaviors.TouchBehavior+AccessibilityListener, CommunityToolkit.Maui;crc640fd0ddb16fe433d4.TouchBehavior_AccessibilityListener
 CommunityToolkit.Maui.Behaviors.TouchBehavior.AccessibilityListener;crc640fd0ddb16fe433d4.TouchBehavior_AccessibilityListener
 communitytoolkit.maui.behaviors.TouchBehavior_AccessibilityListener;crc640fd0ddb16fe433d4.TouchBehavior_AccessibilityListener
@@ -42,7 +40,6 @@ communitytoolkit.maui.core.views.MauiSemanticOrderView;crc64159f3caeb1269279.Mau
 CommunityToolkit.Maui.Core.Services.FragmentLifecycleManager, CommunityToolkit.Maui.Core;crc6436e425876cb621d9.FragmentLifecycleManager
 CommunityToolkit.Maui.Core.Services.FragmentLifecycleManager;crc6436e425876cb621d9.FragmentLifecycleManager
 communitytoolkit.maui.core.services.FragmentLifecycleManager;crc6436e425876cb621d9.FragmentLifecycleManager
->>>>>>> origin/XAML-TESTING-DAWID
 GoogleGson.IExclusionStrategy, GoogleGson;com.google.gson.ExclusionStrategy
 GoogleGson.IExclusionStrategy;com.google.gson.ExclusionStrategy
 com.google.gson.ExclusionStrategy;com.google.gson.ExclusionStrategy
