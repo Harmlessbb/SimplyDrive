@@ -12,9 +12,13 @@
     "deploy.supports.fastdev": "True",
     "deploy.systemapp": "False",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "deploy.duration.ms": "8155",
 =======
     "deploy.duration.ms": "15841",
+>>>>>>> origin/XAML-TESTING-DAWID
+=======
+    "deploy.duration.ms": "11240",
 >>>>>>> origin/XAML-TESTING-DAWID
     "pii.deploy.error": "",
     "pii.deploy.file": ""

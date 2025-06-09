@@ -92,6 +92,10 @@
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "OnScreenSizeMarkup.Maui": {
+              "target": "Package",
+              "version": "[3.0.18, )"
             }
           },
           "imports": [
@@ -143,6 +147,10 @@
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "OnScreenSizeMarkup.Maui": {
+              "target": "Package",
+              "version": "[3.0.18, )"
             }
           },
           "imports": [
@@ -194,6 +202,10 @@
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "OnScreenSizeMarkup.Maui": {
+              "target": "Package",
+              "version": "[3.0.18, )"
             }
           },
           "imports": [
@@ -240,6 +252,10 @@
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "OnScreenSizeMarkup.Maui": {
+              "target": "Package",
+              "version": "[3.0.18, )"
             }
           },
           "imports": [

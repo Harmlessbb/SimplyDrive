@@ -21,9 +21,11 @@
                 Grid.ColumnSpan="3"
                 BackgroundColor="#211D4A"
                 Shadow="#000000 0 0.1"/>
-        
+
+            <!-- Cool comment 
             <Label Text="Hello, Bob!"
                 TextColor="#FFFFFF"
+                FontAttributes="Bold"    
                 FontSize="32"
                 Grid.Row="0"
                 Grid.Column="0"   
@@ -37,10 +39,84 @@
                 WidthRequest="999"
                 HeightRequest="35"
                    VerticalOptions="Center"
-                />
+                /> -->
         </Grid>
         
-        <Grid ColumnDefinitions="2*,2*,2*" RowDefinitions="2*,2*,2*" Grid.Row="1" Grid.Column="0">
+        <Grid ColumnDefinitions="*" RowDefinitions="2*,1*,2*,2*,2*,1.5*" Grid.Row="1" Grid.Column="0">
+
+            <Border Stroke="#000000"
+                    BackgroundColor="Black"
+                StrokeThickness="3">
+                <Image Source="cart.jpg" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    Aspect="AspectFill"/>
+            </Border>
+
+            <Grid ColumnDefinitions="4*,1*,0.7*" RowDefinitions="1*,1*" Grid.Row="2" Grid.Column="0">
+
+                <!--    <Label Text="Due Appointments for "
+                    TextColor="#000000"
+                    FontAttributes="Bold"    
+                    FontSize="28"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="20,0"
+                       
+                    FontFamily="RAJDHANI-REGULAR.TTF"
+                      /> -->
+
+                <Border Grid.Row="0" Grid.Column="1">
+
+                    <!--    <Label Text="AB24CDE"
+                            TextColor="#000000"
+                            BackgroundColor="#FFFF00"   
+                            FontAttributes="Bold"    
+                            FontSize="28"
+                            FontFamily="RAJDHANI-REGULAR.TTF"
+                          /> -->
+
+                </Border>
+
+            </Grid>
+
+
+
+
+            <BoxView 
+                Color="#E1E0EB" 
+                Grid.Row="5"
+                Grid.Column="0"
+                BackgroundColor = "#E1E0EB"
+            />
+
+            <Grid ColumnDefinitions="*,2.6*,*" RowDefinitions="*,2.6*,*" Grid.Row="5" Grid.Column="0">
+
+
+                <BoxView 
+                    Color="#211D4A" 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor = "#E1E0EB"
+                    CornerRadius= "8"
+                    />
+
+                <!-- <Label Text="New Booking"
+                    TextColor="#FFFFFF"
+                    FontAttributes="Bold"    
+                    FontSize="30"
+                    Grid.Row="1"
+                    Grid.Column="1"   
+                    FontFamily="RAJDHANI-REGULAR.TTF"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"   /> -->
+
+
+
+
+            </Grid>
+
+
 
         </Grid>
 
@@ -58,11 +134,36 @@
                 WidthRequest="999"
                 HeightRequest="40"/>
 
+            <!-- <Label Text="Home"
+                TextColor="#000000"
+                FontAttributes="Bold"    
+                FontSize="13"
+                Grid.Row="0"
+                Grid.Column="0"   
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                Margin="10,0"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/> -->
+
+
+
             <Image Source="sedan_car.png" 
                  Grid.Row="0" 
                  Grid.Column="1" 
                  WidthRequest="999"
                  HeightRequest="60"/>
+
+            <!--  <Label Text="Check-in"
+                TextColor="#000000"
+                FontAttributes="Bold"    
+                FontSize="13"
+                Grid.Row="0"
+                Grid.Column="1"   
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                Margin="10,0"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/> -->
+
 
             <Image Source="person_icon.png" 
                  Grid.Row="0" 
@@ -70,13 +171,34 @@
                  WidthRequest="999"
                  HeightRequest="40"/>
 
+            <!--  <Label Text="Account"
+                TextColor="#000000"
+                FontAttributes="Bold"    
+                FontSize="13"
+                Grid.Row="0"
+                Grid.Column="2"   
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                Margin="10,0"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/> -->
+
+
             <Image Source="settings_wheel.png" 
                  Grid.Row="0" 
                  Grid.Column="3" 
                  WidthRequest="999"
                  HeightRequest="40"/>
 
-
+            <!-- <Label Text="Settings"
+                TextColor="#000000"
+                FontAttributes="Bold"    
+                FontSize="13"
+                Grid.Row="0"
+                Grid.Column="3"   
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                Margin="10,0"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/> -->
 
         </Grid>
 

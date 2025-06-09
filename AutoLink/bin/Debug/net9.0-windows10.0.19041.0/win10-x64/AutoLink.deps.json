@@ -14,6 +14,7 @@
           "Microsoft.Extensions.Logging.Debug": "9.0.5",
           "Microsoft.Maui.Controls": "9.0.70",
           "Npgsql": "9.0.3",
+          "OnScreenSizeMarkup.Maui": "3.0.18",
           "Microsoft.Maui.Controls.HotReload.Forms": "17.0.0.0",
           "Microsoft.VisualStudio.DesignTools.MobileTapContracts": "17.0.0.0",
           "Microsoft.VisualStudio.DesignTools.TapContract": "17.0.0.0",
@@ -512,6 +513,14 @@
           }
         }
       },
+      "OnScreenSizeMarkup.Maui/3.0.18": {
+        "runtime": {
+          "lib/net6.0/OnScreenSizeMarkup.Maui.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.18.27495"
+          }
+        }
+      },
       "System.Speech/9.0.0": {
         "runtime": {
           "runtimes/win/lib/net9.0/System.Speech.dll": {
@@ -761,6 +770,13 @@
       "sha512": "sha512-tPvY61CxOAWxNsKLEBg+oR646X4Bc8UmyQ/tJszL/7mEmIXQnnBhVJZrZEEUv0Bstu0mEsHZD5At3EO8zQRAYw==",
       "path": "npgsql/9.0.3",
       "hashPath": "npgsql.9.0.3.nupkg.sha512"
+    },
+    "OnScreenSizeMarkup.Maui/3.0.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IXJwZjl79IsnhlOQfqIvPSh07aEdcx1qEHs5cBKSjw1seSBQtk8YgfjXZn9W9AnnRg6w4XdECJ25fiNyy7ghFg==",
+      "path": "onscreensizemarkup.maui/3.0.18",
+      "hashPath": "onscreensizemarkup.maui.3.0.18.nupkg.sha512"
     },
     "System.Speech/9.0.0": {
       "type": "package",

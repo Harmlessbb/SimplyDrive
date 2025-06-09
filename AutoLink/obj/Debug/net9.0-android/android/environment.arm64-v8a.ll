@@ -113,9 +113,13 @@ target triple = "aarch64-unknown-linux-android21"
 	i32 6, ; uint32_t environment_variable_count
 	i32 0, ; uint32_t system_property_count
 <<<<<<< HEAD
+<<<<<<< HEAD
 	i32 320, ; uint32_t number_of_assemblies_in_apk
 =======
 	i32 322, ; uint32_t number_of_assemblies_in_apk
+>>>>>>> origin/XAML-TESTING-DAWID
+=======
+	i32 323, ; uint32_t number_of_assemblies_in_apk
 >>>>>>> origin/XAML-TESTING-DAWID
 	i32 68, ; uint32_t bundled_assembly_name_width
 	i32 40, ; uint32_t number_of_dso_cache_entries
@@ -1068,9 +1072,15 @@ target triple = "aarch64-unknown-linux-android21"
 @_XamarinAndroidBundledAssembly_name_140_140 = internal dso_local global [68 x i8] zeroinitializer, align 1
 @_XamarinAndroidBundledAssembly_file_name_141_141 = internal dso_local global [76 x i8] zeroinitializer, align 1
 @_XamarinAndroidBundledAssembly_name_141_141 = internal dso_local global [68 x i8] zeroinitializer, align 1
+@_XamarinAndroidBundledAssembly_file_name_142_142 = internal dso_local global [76 x i8] zeroinitializer, align 1
+@_XamarinAndroidBundledAssembly_name_142_142 = internal dso_local global [68 x i8] zeroinitializer, align 1
 
 ; Bundled assembly name buffers, all 68 bytes long
+<<<<<<< HEAD
 @bundled_assemblies = dso_local local_unnamed_addr global [322 x %struct.XamarinAndroidBundledAssembly] [
+>>>>>>> origin/XAML-TESTING-DAWID
+=======
+@bundled_assemblies = dso_local local_unnamed_addr global [323 x %struct.XamarinAndroidBundledAssembly] [
 >>>>>>> origin/XAML-TESTING-DAWID
 	%struct.XamarinAndroidBundledAssembly {
 		i32 -1, ; int32_t file_fd
@@ -3972,7 +3982,20 @@ target triple = "aarch64-unknown-linux-android21"
 		ptr null, ; uint8_t* data
 		i32 68, ; uint32_t name_length
 		ptr @_XamarinAndroidBundledAssembly_name_141_141; char* name
+<<<<<<< HEAD
 	} ; 321
+>>>>>>> origin/XAML-TESTING-DAWID
+=======
+	}, ; 321
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; int32_t file_fd
+		ptr @_XamarinAndroidBundledAssembly_file_name_142_142, ; char* file_name
+		i32 0, ; uint32_t data_offset
+		i32 0, ; uint32_t data_size
+		ptr null, ; uint8_t* data
+		i32 68, ; uint32_t name_length
+		ptr @_XamarinAndroidBundledAssembly_name_142_142; char* name
+	} ; 322
 >>>>>>> origin/XAML-TESTING-DAWID
 ], align 8
 

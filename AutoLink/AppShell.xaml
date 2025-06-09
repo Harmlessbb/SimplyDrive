@@ -26,12 +26,12 @@
         Route="MainPage"        
     />
 
-        <ShellContent
+        <!--  <ShellContent
             Title="NewBookingsPage"
             ContentTemplate="{DataTemplate views:NewBookingsPage}"
             Route="NewBookingsPage">
             
-        </ShellContent>
+        </ShellContent> -->
 
     </TabBar>
     

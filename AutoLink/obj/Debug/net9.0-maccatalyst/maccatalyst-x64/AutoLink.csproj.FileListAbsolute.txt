@@ -932,3 +932,7 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-mac
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\home_icon@3x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\home_icon@2x.png
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\home_icon.png
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\cart@3x.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\cart@2x.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\cart.jpg
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\OnScreenSizeMarkup.Maui.dll
