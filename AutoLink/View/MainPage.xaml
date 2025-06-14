@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AutoLink.MainPage"
              xmlns:ViewModel ="clr-namespace:AutoLink.ViewModel"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:DataType="ViewModel:MainPageViewModel"
              Title=""  BackgroundColor="#FFFFFF">
+    
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="#211D4A"/>
     </Page.Behaviors>
@@ -22,11 +22,6 @@
                 BackgroundColor="#211D4A"
                 Shadow="#000000 0 0.1"/>
 
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> origin/XAML-TESTING-DAWID
             <Label Text="Hello, Bob!"
                 TextColor="#FFFFFF"
                 FontAttributes="Bold"    
@@ -42,11 +37,9 @@
                 Grid.Column="1" 
                 WidthRequest="999"
                 HeightRequest="35"
-<<<<<<< HEAD
+
                    VerticalOptions="Center"></Image>
-=======
-                   VerticalOptions="Center"/>
->>>>>>> origin/XAML-TESTING-DAWID
+
 
         </Grid>
         
@@ -69,37 +62,24 @@
                     FontSize="28"
                     Grid.Row="0"
                     Grid.Column="1"
-                       VerticalOptions="End"
-                   
-                       
-<<<<<<< HEAD
+                    VerticalOptions="End"                                         
                     FontFamily="RAJDHANI-REGULAR.TTF"
                       />
+
                 <Border Grid.Row="0" Grid.Column="1">
 
-                    <Label Text="AB24CDE"
-=======
-                    FontFamily="RAJDHANI-REGULAR.TTF" ></Label>
 
-
-
-
-                <Label Text="AB24 CDE" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
->>>>>>> origin/XAML-TESTING-DAWID
+                    <Label Text="AB24 CDE" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
                             TextColor="#000000"
                             BackgroundColor="#FFFF00"   
                             MaxLines="1"
                             FontAttributes="Bold"    
                             FontSize="28"
                             FontFamily="RAJDHANI-REGULAR.TTF"
-<<<<<<< HEAD
                           />
 
                 </Border>
 
-=======
-                             VerticalOptions="End"/>
->>>>>>> origin/XAML-TESTING-DAWID
             </Grid>
 
 
@@ -127,11 +107,8 @@
                     CornerRadius= "8"
                     />
 
-<<<<<<< HEAD
-                <Label Text="New Booking"
-=======
                 <Label x:Name="label" Text="New Booking"
->>>>>>> origin/XAML-TESTING-DAWID
+
                     TextColor="#FFFFFF"
                     FontAttributes="Bold"    
                     FontSize="30"
@@ -139,17 +116,14 @@
                     Grid.Column="1"   
                     FontFamily="RAJDHANI-REGULAR.TTF"
                     VerticalOptions="Center"
-<<<<<<< HEAD
+
                     HorizontalOptions="Center"   />
-=======
-                    HorizontalOptions="Center"  />
+
 
                 <Button
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Clicked="OnButtonClicked" />
->>>>>>> origin/XAML-TESTING-DAWID
-
+                Command="{Binding attemptApiCallCommand}" />
 
 
 
@@ -173,11 +147,8 @@
                 WidthRequest="999"
                 HeightRequest="40"/>
 
-<<<<<<< HEAD
-            <Label Text="Home"
-=======
         <Label Text="Home"
->>>>>>> origin/XAML-TESTING-DAWID
+
                 TextColor="#000000"
                 FontAttributes="Bold"    
                 FontSize="13"
@@ -186,12 +157,7 @@
                 FontFamily="RAJDHANI-REGULAR.TTF"
                 Margin="10,0"
                 VerticalOptions="End"
-<<<<<<< HEAD
                 HorizontalOptions="Center"/>
-=======
-                HorizontalOptions="Center"/> 
-
->>>>>>> origin/XAML-TESTING-DAWID
 
 
             <Image Source="sedan_car.png" 
@@ -200,11 +166,8 @@
                  WidthRequest="999"
                  HeightRequest="60"/>
 
-<<<<<<< HEAD
-            <Label Text="Check-in"
-=======
+
            <Label Text="Check-in"
->>>>>>> origin/XAML-TESTING-DAWID
                 TextColor="#000000"
                 FontAttributes="Bold"    
                 FontSize="13"
@@ -213,11 +176,10 @@
                 FontFamily="RAJDHANI-REGULAR.TTF"
                 Margin="10,0"
                 VerticalOptions="End"
-<<<<<<< HEAD
+
                 HorizontalOptions="Center"/>
-=======
-                HorizontalOptions="Center"/> 
->>>>>>> origin/XAML-TESTING-DAWID
+
+
 
 
             <Image Source="person_icon.png" 
@@ -226,11 +188,10 @@
                  WidthRequest="999"
                  HeightRequest="40"/>
 
-<<<<<<< HEAD
-            <Label Text="Account"
-=======
+
+
+
          <Label Text="Account"
->>>>>>> origin/XAML-TESTING-DAWID
                 TextColor="#000000"
                 FontAttributes="Bold"    
                 FontSize="13"
@@ -239,11 +200,9 @@
                 FontFamily="RAJDHANI-REGULAR.TTF"
                 Margin="10,0"
                 VerticalOptions="End"
-<<<<<<< HEAD
                 HorizontalOptions="Center"/>
-=======
-                HorizontalOptions="Center"/> 
->>>>>>> origin/XAML-TESTING-DAWID
+
+
 
 
             <Image Source="settings_wheel.png" 
@@ -252,11 +211,9 @@
                  WidthRequest="999"
                  HeightRequest="40"/>
 
-<<<<<<< HEAD
-            <Label Text="Settings"
-=======
-         <Label Text="Settings"
->>>>>>> origin/XAML-TESTING-DAWID
+
+
+                <Label Text="Settings"
                 TextColor="#000000"
                 FontAttributes="Bold"    
                 FontSize="13"
@@ -265,11 +222,8 @@
                 FontFamily="RAJDHANI-REGULAR.TTF"
                 Margin="10,0"
                 VerticalOptions="End"
-<<<<<<< HEAD
-                HorizontalOptions="Center"/>
-=======
-                HorizontalOptions="Center"/> 
->>>>>>> origin/XAML-TESTING-DAWID
+                HorizontalOptions="Center"></Label>
+
 
         </Grid>
 

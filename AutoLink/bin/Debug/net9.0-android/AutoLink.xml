@@ -10,7 +10,7 @@
             <inheritdoc/>
         </member>
         <member name="P:AutoLink.ViewModel.LogonViewModel.Code">
-            <inheritdoc cref="F:AutoLink.ViewModel.LogonViewModel.code"/>
+            <inheritdoc cref="F:AutoLink.ViewModel.LogonViewModel._Code"/>
         </member>
         <member name="F:AutoLink.ViewModel.LogonViewModel.attemptLoginCommand">
             <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand"/>.</summary>
@@ -23,6 +23,15 @@
         </member>
         <member name="P:AutoLink.ViewModel.LogonViewModel.ByPassLoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.ByPassLogin"/>.</summary>
+        </member>
+        <member name="T:AutoLink.ViewModel.MainPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:AutoLink.ViewModel.MainPageViewModel._attemptApiCallCommand">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.MainPageViewModel.attemptApiCallCommand"/>.</summary>
+        </member>
+        <member name="P:AutoLink.ViewModel.MainPageViewModel.attemptApiCallCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.MainPageViewModel.attemptApiCall"/>.</summary>
         </member>
         <member name="T:AutoLink.Resource">
             <summary>

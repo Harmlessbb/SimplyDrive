@@ -15,10 +15,8 @@ public partial class LogonViewModel : ObservableObject
     private bool isBusy = false;
 
     [ObservableProperty]
-    private string code = "NULL1";
+    private string ?_Code;
 
-
-    UserDetails userDetails = new UserDetails();
     LoginService LoginService;
 
 	public LogonViewModel(LoginService loginService)
@@ -32,18 +30,21 @@ public partial class LogonViewModel : ObservableObject
 	public async Task AttemptLogin()
     {
         Debug.WriteLine("Attempt Login Function Called");
-        await LoginService.attemptLogin();
-        Code = LoginService.authCode;
 
-        if (LoginService.authCode is not null)
+        await LoginService.attemptLogin();
+        Code = TokenModel.accessToken;
+        await Shell.Current.DisplayAlert("AuthCode", $"{Code}", "Ok");
+        if (Code is not null)
         {
             //If we get an access code, go to the main page
             await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+
         }
         else
         {
             //If we don't, restart the login page which will call this function again.
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            await Shell.Current.DisplayAlert("Error", "Authentication Failed: Result is null", "OK");
         }
     }
 

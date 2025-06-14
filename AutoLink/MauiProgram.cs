@@ -31,8 +31,13 @@ public static class MauiProgram
        builder.Services.AddTransient<NewBookingsViewModel>();
 
 
-	   //Build the Models
+	   //Build the Services
        builder.Services.AddTransient<LoginService>();
+	   builder.Services.AddTransient<MakeAnApiCallService>();
+
+
+        //Build the Models
+        builder.Services.AddTransient<TokenModel>();
 
 
 #if DEBUG

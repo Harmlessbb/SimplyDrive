@@ -11,11 +11,7 @@
     "deploy.result": "Success",
     "deploy.supports.fastdev": "True",
     "deploy.systemapp": "False",
-<<<<<<< HEAD
-    "deploy.duration.ms": "29553",
-=======
-    "deploy.duration.ms": "16241",
->>>>>>> origin/XAML-TESTING-DAWID
+    "deploy.duration.ms": "34548",
     "pii.deploy.error": "",
     "pii.deploy.file": ""
   }

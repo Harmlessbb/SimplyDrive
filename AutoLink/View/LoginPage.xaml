@@ -20,7 +20,6 @@
         </Border>
         <Grid ColumnDefinitions="auto,200,auto" RowDefinitions="50,*,500" Grid.Row="2" Grid.Column="1" Padding="10" ColumnSpacing="10">
             <Button Text="Login" HeightRequest="10" Grid.Row="2" Grid.Column="1" WidthRequest="100" Command="{Binding AttemptLoginCommand}"></Button>
-            <Button Text="Sign-Up" HeightRequest="10" Grid.Row="0" Grid.Column="2" WidthRequest="100" Command="{Binding GoToSignUpScreenCommand}"></Button>
             <Button Text="AdminLogin" HeightRequest="10" Grid.Row="0" Grid.Column="1" WidthRequest="150" Command="{Binding ByPassLoginCommand}"></Button>
         </Grid>
 
