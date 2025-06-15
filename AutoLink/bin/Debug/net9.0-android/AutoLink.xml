@@ -6,81 +6,12 @@
     <members>
         <member name="T:AutoLink.ViewModel.LogonViewModel">
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
         </member>
-        <member name="F:AutoLink.ViewModel.LogonViewModel.attemptLoginCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand"/>.</summary>
+        <member name="F:AutoLink.ViewModel.LogonViewModel._goToMainPageCommand">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.goToMainPageCommand"/>.</summary>
         </member>
-        <member name="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.AttemptLogin"/>.</summary>
-        </member>
-        <member name="F:AutoLink.ViewModel.LogonViewModel.goToSignUpScreenCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.GoToSignUpScreenCommand"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.LogonViewModel.GoToSignUpScreenCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.GoToSignUpScreen"/>.</summary>
-        </member>
-        <member name="F:AutoLink.ViewModel.LogonViewModel.byPassLoginCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.ByPassLoginCommand"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.LogonViewModel.ByPassLoginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.ByPassLogin"/>.</summary>
-        </member>
-        <member name="T:AutoLink.ViewModel.MainPageViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:AutoLink.ViewModel.MainPageViewModel.DisplayRegistration">
-            <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.displayRegistration"/>
-        </member>
-        <member name="P:AutoLink.ViewModel.MainPageViewModel.DisplayName">
-            <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.displayName"/>
-        </member>
-        <member name="F:AutoLink.ViewModel.MainPageViewModel.displayAllUserInfoCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.MainPageViewModel.DisplayAllUserInfoCommand"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.MainPageViewModel.DisplayAllUserInfoCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.MainPageViewModel.DisplayAllUserInfo"/>.</summary>
-        </member>
-        <member name="F:AutoLink.ViewModel.MainPageViewModel.loadCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.MainPageViewModel.LoadCommand"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.MainPageViewModel.LoadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.MainPageViewModel.Load"/>.</summary>
-        </member>
-        <member name="T:AutoLink.ViewModel.NewBookingsViewModel">
-            <inheritdoc/>
-        </member>
-        <member name="F:AutoLink.ViewModel.NewBookingsViewModel._toggleServiceCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.NewBookingsViewModel.toggleServiceCommand"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.NewBookingsViewModel.toggleServiceCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.NewBookingsViewModel.toggleService"/>.</summary>
-        </member>
-        <member name="T:AutoLink.ViewModel.SignUpViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="F:AutoLink.ViewModel.SignUpViewModel.attemptSignUpPhase1Command">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase1Command"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase1Command">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase1"/>.</summary>
-        </member>
-        <member name="F:AutoLink.ViewModel.SignUpViewModel.attemptSignUpPhase2Command">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase2Command"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase2Command">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.SignUpViewModel.AttemptSignUpPhase2"/>.</summary>
-        </member>
-        <member name="F:AutoLink.ViewModel.SignUpViewModel.returnToMenuCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.SignUpViewModel.ReturnToMenuCommand"/>.</summary>
-        </member>
-        <member name="P:AutoLink.ViewModel.SignUpViewModel.ReturnToMenuCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.SignUpViewModel.ReturnToMenu"/>.</summary>
+        <member name="P:AutoLink.ViewModel.LogonViewModel.goToMainPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.goToMainPage"/>.</summary>
         </member>
         <member name="T:AutoLink.Resource">
             <summary>
@@ -207,30 +138,6 @@
             <param name = "easing">The easing function to be used in the animation</param>
             <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
             <returns>Value indicating if the animation completed successfully or not</returns>
-        </member>
-        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
-            <summary>
-            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
-            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
-            </summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayRegistration">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayRegistration" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayName">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayName" generated properties.</summary>
-        </member>
-        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
-            <summary>
-            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
-            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
-            </summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayRegistration">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayRegistration" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayName">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayName" generated properties.</summary>
         </member>
     </members>
 </doc>

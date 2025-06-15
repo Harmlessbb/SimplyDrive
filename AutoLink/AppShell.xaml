@@ -4,7 +4,6 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AutoLink"
-    xmlns:views="clr-namespace:AutoLink.View"
     Title="AutoLink"
     Shell.FlyoutBehavior="Disabled">
     
@@ -16,11 +15,7 @@
         Route="LoginPage" 
         />
 
-    <ShellContent
-        Title="SignUpPage"
-        ContentTemplate="{DataTemplate views:SignUpPage}"
-        Route="SignUpPage" 
-        />
+    
 
 
     <TabBar>
