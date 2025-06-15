@@ -1,11 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using AutoLink.Service;
-using CommunityToolkit.Mvvm.Input;
-using System.Diagnostics;
-using AutoLink.Model;
-using System.Net.Security;
-using System.ComponentModel;
-using System.Collections.ObjectModel;
 
 
 namespace AutoLink.ViewModel;
@@ -14,6 +8,9 @@ namespace AutoLink.ViewModel;
 
 public partial class MainPageViewModel : ObservableObject
 {
+
+    [ObservableProperty]
+    string userName = string.Empty;
 
     LogonViewModel logonViewModel;
     LoginService loginService;
@@ -24,17 +21,29 @@ public partial class MainPageViewModel : ObservableObject
 
         this.loginService = loginService;
         this.logonViewModel = new LogonViewModel(loginService);
-
         this.makeAnApiCallService = makeAnApiCallService;
 
+        _ = Initialize();
     }
 
-    [RelayCommand]
-    async Task attemptApiCall()
+    private async Task Initialize()
     {
-        string _token = TokenModel.accessToken;
+ 
+        string _token = await SecureStorage.Default.GetAsync("accessToken");
+
+        await loginService.getUserInfo(_token);
         await makeAnApiCallService.MakeApiCallAsync(_token);
-        await Shell.Current.DisplayAlert("API Call", $"Access token: {_token}, Value Returned: {makeAnApiCallService.apiResponse}", "OK");
+
+        if (loginService.UserInfo != null)
+        {
+            UserName = loginService.UserInfo.firstName;
+
+        }
+        else
+        {
+            await Shell.Current.DisplayAlert("Error", "User info not loaded.", "OK");
+        }
+
     }
 
 }

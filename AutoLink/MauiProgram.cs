@@ -37,7 +37,7 @@ public static class MauiProgram
 
 
         //Build the Models
-        builder.Services.AddTransient<TokenModel>();
+        builder.Services.AddTransient<UserModel>();
 
 
 #if DEBUG

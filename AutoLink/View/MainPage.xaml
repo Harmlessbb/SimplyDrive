@@ -22,7 +22,7 @@
                 BackgroundColor="#211D4A"
                 Shadow="#000000 0 0.1"/>
 
-            <Label Text="Hello, Bob!"
+            <Label Text="{Binding UserName, StringFormat='{}Hello, {0}!'}"
                 TextColor="#FFFFFF"
                 FontAttributes="Bold"    
                 FontSize="32"
@@ -123,7 +123,7 @@
                 <Button
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Command="{Binding attemptApiCallCommand}" />
+                />
 
 
 

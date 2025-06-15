@@ -15,18 +15,27 @@ namespace AutoLink.Service
 
         public async Task MakeApiCallAsync(string accessToken)
         {
-            // Ensure you have the access token from Keycloak
-            if (string.IsNullOrEmpty(accessToken))
+            try
             {
-                throw new ArgumentException("Access token cannot be null or empty.", nameof(accessToken));
+                // Ensure you have the access token from Keycloak
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new ArgumentException("Access token cannot be null or empty.", nameof(accessToken));
+                }
+
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://api.simplydrive.app/");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+
+                var response = await client.GetAsync("api/AuthTest");
+                apiResponse = await response.Content.ReadAsStringAsync();
             }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", $"{ex}", "ok");
+            }
+        }
+    }
 
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("http://10.0.2.2:5298/");
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-
-
-            var response = await client.GetAsync("api/endpoint");
-            apiResponse = await response.Content.ReadAsStringAsync();
-        } }
 }

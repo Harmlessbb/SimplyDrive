@@ -8,20 +8,20 @@ using System.Diagnostics;
 using AutoLink.Model;
 using AutoLink.View;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
+
 
 public partial class LogonViewModel : ObservableObject
 {
+    [ObservableProperty]
     private bool isBusy = false;
 
-    [ObservableProperty]
-    private string ?_Code;
+
+    private string Code;
 
     LoginService LoginService;
 
 	public LogonViewModel(LoginService loginService)
 	{
-
 		this.LoginService = loginService;
 	}
 
@@ -29,11 +29,14 @@ public partial class LogonViewModel : ObservableObject
 	[RelayCommand]
 	public async Task AttemptLogin()
     {
+
+        IsBusy = true;
+
         Debug.WriteLine("Attempt Login Function Called");
 
         await LoginService.attemptLogin();
-        Code = TokenModel.accessToken;
-        await Shell.Current.DisplayAlert("AuthCode", $"{Code}", "Ok");
+        Code = await SecureStorage.Default.GetAsync("accessToken");
+
         if (Code is not null)
         {
             //If we get an access code, go to the main page
@@ -44,19 +47,12 @@ public partial class LogonViewModel : ObservableObject
         {
             //If we don't, restart the login page which will call this function again.
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-            await Shell.Current.DisplayAlert("Error", "Authentication Failed: Result is null", "OK");
+
         }
+
+        IsBusy = false;
     }
 
-
-
-
-    [RelayCommand]
-
-    async Task ByPassLogin() //Remove this once login is implimented
-    {
-        await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
-    }
 
 
 
