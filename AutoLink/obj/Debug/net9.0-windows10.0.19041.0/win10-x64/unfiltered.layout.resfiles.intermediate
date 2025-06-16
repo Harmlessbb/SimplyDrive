@@ -64,11 +64,11 @@ dotnet_bot.scale-150.png
 dotnet_bot.scale-200.png
 dotnet_bot.scale-400.png
 hamburger_bar.scale-100.jpg
-home_icon.scale-100.png
-home_icon.scale-125.png
-home_icon.scale-150.png
-home_icon.scale-200.png
-home_icon.scale-400.png
+home.scale-100.png
+home.scale-125.png
+home.scale-150.png
+home.scale-200.png
+home.scale-400.png
 person_icon.scale-100.png
 person_icon.scale-125.png
 person_icon.scale-150.png

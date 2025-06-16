@@ -6,9 +6,8 @@
     xmlns:local="clr-namespace:AutoLink"
     Title="AutoLink"
     Shell.FlyoutBehavior="Disabled">
+
     
-
-
     <ShellContent
         Title="SignUpPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
@@ -22,17 +21,29 @@
 
         <ShellContent
             
-        Title="MainPage"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage"        
-    />
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage"
+            Icon="home.png"/>
 
-        <!--  <ShellContent
-            Title="NewBookingsPage"
-            ContentTemplate="{DataTemplate views:NewBookingsPage}"
-            Route="NewBookingsPage">
-            
-        </ShellContent> -->
+
+
+
+        <ShellContent
+            Title="Check-in"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="NewBookingsPage"
+            Icon="sedan_car.png">
+
+        </ShellContent>
+
+        <ShellContent
+            Title="Account"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="NewBookingsPage"
+            Icon="person_icon.png">
+
+        </ShellContent>
 
     </TabBar>
     

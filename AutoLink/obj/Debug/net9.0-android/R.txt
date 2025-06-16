@@ -3091,7 +3091,7 @@ int drawable design_password_eye 0x7f070087
 int drawable design_snackbar_background 0x7f070088
 int drawable dotnet_bot 0x7f070089
 int drawable hamburger_bar 0x7f07008a
-int drawable home_icon 0x7f07008b
+int drawable home 0x7f07008b
 int drawable ic_arrow_back_black_24 0x7f07008c
 int drawable ic_call_answer 0x7f07008d
 int drawable ic_call_answer_low 0x7f07008e

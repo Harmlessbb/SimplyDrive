@@ -135,6 +135,8 @@
         </Grid>
 
         <Grid ColumnDefinitions="1*,1*,1*,1*" RowDefinitions="*" Grid.Row="2" Grid.Column="0" BackgroundColor="#FFFFFF">
+            <!-- 
+            
             <Border 
                  Grid.Row="0"
                  Grid.Column="0"
@@ -213,7 +215,7 @@
                 Margin="10,0"
                 VerticalOptions="End"
                 HorizontalOptions="Center"/> 
-
+            -->
         </Grid>
 
 

@@ -11802,7 +11802,7 @@ public final class R {
     public static final int design_snackbar_background=0x7f070088;
     public static final int dotnet_bot=0x7f070089;
     public static final int hamburger_bar=0x7f07008a;
-    public static final int home_icon=0x7f07008b;
+    public static final int home=0x7f07008b;
     public static final int ic_arrow_back_black_24=0x7f07008c;
     public static final int ic_call_answer=0x7f07008d;
     public static final int ic_call_answer_low=0x7f07008e;
