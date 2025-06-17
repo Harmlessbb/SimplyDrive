@@ -19,7 +19,7 @@ namespace AutoLink.Service
 
         public async Task attemptLogin()
         {
-                             #pragma warning disable CA1416
+
             if (DeviceInfo.Platform != DevicePlatform.WinUI) 
             {
                 await getAccessToken();
@@ -118,7 +118,7 @@ namespace AutoLink.Service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
 
-                var response = await client.GetAsync("api/User/whoami");
+                var response = await client.GetAsync("Api/User/Whoami");
                 string apiResponse = await response.Content.ReadAsStringAsync();
 
                 Debug.WriteLine($"API RESPONSE: {apiResponse}");

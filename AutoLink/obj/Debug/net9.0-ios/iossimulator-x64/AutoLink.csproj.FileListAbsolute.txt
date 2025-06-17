@@ -337,3 +337,4 @@ L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\refint\AutoLink.dl
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.pdb
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.genruntimeconfig.cache
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\ref\AutoLink.dll
+L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature

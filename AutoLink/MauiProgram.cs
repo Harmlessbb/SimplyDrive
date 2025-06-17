@@ -33,7 +33,7 @@ public static class MauiProgram
 
 	   //Build the Services
        builder.Services.AddTransient<LoginService>();
-	   builder.Services.AddTransient<MakeAnApiCallService>();
+	   builder.Services.AddTransient<ActiveBookingService>();
 
 
         //Build the Models

@@ -1,6 +1,8 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using AutoLink.Service;
-
+using System.Collections.ObjectModel;
+using AutoLink.Model;
+using CommunityToolkit.Mvvm.Input;
 
 namespace AutoLink.ViewModel;
 
@@ -12,16 +14,17 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     string userName = string.Empty;
 
-    LogonViewModel logonViewModel;
-    LoginService loginService;
-    MakeAnApiCallService makeAnApiCallService;
+    public ObservableCollection<ActiveBookings> ActiveBookings { get; } = new();
 
-    public MainPageViewModel(LoginService loginService, MakeAnApiCallService makeAnApiCallService)
+
+    LoginService loginService;
+    ActiveBookingService activeBookingService;
+
+    public MainPageViewModel(LoginService loginService, ActiveBookingService activeBookingService)
     {
 
         this.loginService = loginService;
-        this.logonViewModel = new LogonViewModel(loginService);
-        this.makeAnApiCallService = makeAnApiCallService;
+        this.activeBookingService = activeBookingService;
 
         _ = Initialize();
     }
@@ -32,12 +35,11 @@ public partial class MainPageViewModel : ObservableObject
         string _token = await SecureStorage.Default.GetAsync("accessToken");
 
         await loginService.getUserInfo(_token);
-        await makeAnApiCallService.MakeApiCallAsync(_token);
+        await RetrieveActiveBookings();
 
         if (loginService.UserInfo != null)
         {
             UserName = loginService.UserInfo.firstName;
-
         }
         else
         {
@@ -46,4 +48,24 @@ public partial class MainPageViewModel : ObservableObject
 
     }
 
+    [RelayCommand]
+    async Task RetrieveActiveBookings()
+    {
+        try
+        {
+            var bookings = await activeBookingService.GetActiveBookingsAsync();
+
+            foreach (var booking in bookings)
+            {
+                ActiveBookings.Add(booking);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Error", $"Failed to retrieve active bookings: {ex.Message}", "OK");
+        }
+
+    }
+     
 }
