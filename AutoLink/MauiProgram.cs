@@ -1,5 +1,4 @@
 ﻿using AutoLink.Model;
-using AutoLink.Service;
 using AutoLink.ViewModel;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -28,6 +27,7 @@ public static class MauiProgram
 	   //Build the ViewModels
        builder.Services.AddSingleton<LogonViewModel>();
 	   builder.Services.AddTransient<MainPageViewModel>();
+<<<<<<< HEAD
        builder.Services.AddTransient<NewBookingsViewModel>();
 
 
@@ -39,6 +39,12 @@ public static class MauiProgram
         //Build the Models
         builder.Services.AddTransient<UserModel>();
 
+=======
+
+
+	   //Build the Models
+       
+>>>>>>> origin/XAML-TESTING-DAWID
 
 #if DEBUG
         builder.Logging.AddDebug();

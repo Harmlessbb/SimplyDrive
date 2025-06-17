@@ -56,7 +56,7 @@
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 		<MauiImage Update="Resources\Images\bell_transparent.png" Resize="True" BaseSize="376,678" />
-		<MauiImage Update="Resources\Images\home_icon.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\home.png" Resize="True" BaseSize="300,185" />
 		<MauiImage Update="Resources\Images\person_icon.png" Resize="True" BaseSize="376,678" />
 		<MauiImage Update="Resources\Images\sedan_car.png" Resize="True" BaseSize="300,185" />
 		<MauiImage Update="Resources\Images\settings_wheel.png" Resize="True" BaseSize="376,678" />
@@ -99,9 +99,16 @@
 	  <MauiXaml Update="View\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+<<<<<<< HEAD
 	  <MauiXaml Update="View\NewBookingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+=======
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Service\" />
+>>>>>>> origin/XAML-TESTING-DAWID
 	</ItemGroup>
 
 </Project>

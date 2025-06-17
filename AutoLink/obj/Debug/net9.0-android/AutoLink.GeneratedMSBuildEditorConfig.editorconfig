@@ -58,9 +58,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AutoLink.View.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+<<<<<<< HEAD
 
 [L:/SimplyDrive/AutoLink/View/NewBookingsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AutoLink.View.NewBookingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\NewBookingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\NewBookingsPage.xaml
+=======
+>>>>>>> origin/XAML-TESTING-DAWID

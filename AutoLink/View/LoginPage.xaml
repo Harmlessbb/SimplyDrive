@@ -7,11 +7,20 @@
              x:DataType="ViewModel:LogonViewModel"
              BackgroundColor="#211D4A">
 
+<<<<<<< HEAD
     <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*" Padding="5">
 
         <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Fill" VerticalOptions="Center" Grid.RowSpan="1" Grid.ColumnSpan="1" Color="White"></ActivityIndicator>
         
+=======
+    <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*">
+
+        <Button Grid.Row="1" Grid.Column="1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Command="{Binding goToMainPageCommand}" />
+
+>>>>>>> origin/XAML-TESTING-DAWID
     </Grid>
-    
     
 </ContentPage>
