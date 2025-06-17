@@ -22,10 +22,7 @@ namespace AutoLink
         protected override void OnAppearing()
         {
             base.OnAppearing();
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/XAML-TESTING-DAWID
+
         }
 
     }

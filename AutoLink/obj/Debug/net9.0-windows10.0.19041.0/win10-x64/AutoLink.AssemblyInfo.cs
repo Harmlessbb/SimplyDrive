@@ -18,11 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoLink")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d572b719255017fe45efee5f03c1380ffd9c11b5")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+33715eaae5d95099d45559686a68c014be9d160d")]
->>>>>>> origin/XAML-TESTING-DAWID
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f9144b1d66a523f5d60f6feac9a5e1c5f7c83935")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoLink")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoLink")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

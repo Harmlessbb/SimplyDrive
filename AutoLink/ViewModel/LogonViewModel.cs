@@ -1,23 +1,21 @@
 namespace AutoLink.ViewModel;
-
+using AutoLink.Service;
 using AutoLink.Model;
 using AutoLink.ViewModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Networking;
 using System.Diagnostics;
-<<<<<<< HEAD
-using AutoLink.Model;
+
 using AutoLink.View;
 using CommunityToolkit.Mvvm.ComponentModel;
-=======
+
 using System.Threading.Tasks;
 
->>>>>>> origin/XAML-TESTING-DAWID
 
 
 public partial class LogonViewModel : ObservableObject
 {
-<<<<<<< HEAD
+
     [ObservableProperty]
     private bool isBusy = false;
 
@@ -58,13 +56,5 @@ public partial class LogonViewModel : ObservableObject
 
         IsBusy = false;
     }
-
-=======
-    [RelayCommand]
-    public async Task goToMainPage()
-    {
-        await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
-    }
->>>>>>> origin/XAML-TESTING-DAWID
 
 }

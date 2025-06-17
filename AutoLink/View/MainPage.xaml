@@ -1,6 +1,7 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AutoLink.MainPage"
+             xmlns:model="clr-namespace:AutoLink.Model"
              xmlns:ViewModel ="clr-namespace:AutoLink.ViewModel"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:DataType="ViewModel:MainPageViewModel"
@@ -58,7 +59,7 @@
                     Grid.Row="2"    
                     Grid.Column="0"
                     Grid.RowSpan="2"    
-                    ItemSource="{Binding AidenPutItHereR}"
+                    ItemsSource="{Binding ActiveBookings}"
                     SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:ActiveBookings">
@@ -248,7 +249,7 @@
 =======
                 HorizontalOptions="Center"/> 
             -->
->>>>>>> origin/XAML-TESTING-DAWID
+            
         </Grid>
 
 

@@ -6,30 +6,29 @@
     <members>
         <member name="T:AutoLink.ViewModel.LogonViewModel">
             <inheritdoc/>
-<<<<<<< HEAD
             <inheritdoc/>
         </member>
         <member name="P:AutoLink.ViewModel.LogonViewModel.IsBusy">
             <inheritdoc cref="F:AutoLink.ViewModel.LogonViewModel.isBusy"/>
-=======
->>>>>>> origin/XAML-TESTING-DAWID
         </member>
-        <member name="F:AutoLink.ViewModel.LogonViewModel._goToMainPageCommand">
-            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.goToMainPageCommand"/>.</summary>
+        <member name="F:AutoLink.ViewModel.LogonViewModel.attemptLoginCommand">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand"/>.</summary>
         </member>
-<<<<<<< HEAD
         <member name="P:AutoLink.ViewModel.LogonViewModel.AttemptLoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.AttemptLogin"/>.</summary>
         </member>
         <member name="T:AutoLink.ViewModel.MainPageViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:AutoLink.ViewModel.MainPageViewModel.UserName">
             <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.userName"/>
-=======
-        <member name="P:AutoLink.ViewModel.LogonViewModel.goToMainPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.LogonViewModel.goToMainPage"/>.</summary>
->>>>>>> origin/XAML-TESTING-DAWID
+        </member>
+        <member name="F:AutoLink.ViewModel.MainPageViewModel.retrieveActiveBookingsCommand">
+            <summary>The backing field for <see cref="P:AutoLink.ViewModel.MainPageViewModel.RetrieveActiveBookingsCommand"/>.</summary>
+        </member>
+        <member name="P:AutoLink.ViewModel.MainPageViewModel.RetrieveActiveBookingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AutoLink.ViewModel.MainPageViewModel.RetrieveActiveBookings"/>.</summary>
         </member>
         <member name="T:AutoLink.Resource">
             <summary>
@@ -157,7 +156,6 @@
             <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
             <returns>Value indicating if the animation completed successfully or not</returns>
         </member>
-<<<<<<< HEAD
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
@@ -182,7 +180,5 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
         </member>
-=======
->>>>>>> origin/XAML-TESTING-DAWID
     </members>
 </doc>

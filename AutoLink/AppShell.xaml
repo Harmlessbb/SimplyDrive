@@ -7,19 +7,12 @@
     Title="AutoLink"
     Shell.FlyoutBehavior="Disabled">
 
-    
+
     <ShellContent
         Title="SignUpPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" 
         />
-
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> origin/XAML-TESTING-DAWID
-
     <TabBar>
 
         <ShellContent

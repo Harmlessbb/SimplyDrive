@@ -1,13 +1,12 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-<<<<<<< HEAD
+
 using AutoLink.Service;
-=======
+
 using CommunityToolkit.Mvvm.Input;
 using System.Diagnostics;
 using AutoLink.Model;
 using System.Net.Security;
 using System.ComponentModel;
->>>>>>> origin/XAML-TESTING-DAWID
 using System.Collections.ObjectModel;
 using AutoLink.Model;
 using CommunityToolkit.Mvvm.Input;
@@ -19,7 +18,7 @@ namespace AutoLink.ViewModel;
 public partial class MainPageViewModel : ObservableObject
 {
 
-<<<<<<< HEAD
+
     [ObservableProperty]
     string userName = string.Empty;
 
@@ -76,7 +75,5 @@ public partial class MainPageViewModel : ObservableObject
         }
 
     }
-     
-=======
->>>>>>> origin/XAML-TESTING-DAWID
+
 }

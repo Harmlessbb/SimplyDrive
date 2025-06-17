@@ -99,16 +99,15 @@
 	  <MauiXaml Update="View\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-<<<<<<< HEAD
+
 	  <MauiXaml Update="View\NewBookingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-=======
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Service\" />
->>>>>>> origin/XAML-TESTING-DAWID
+
 	</ItemGroup>
 
 </Project>
