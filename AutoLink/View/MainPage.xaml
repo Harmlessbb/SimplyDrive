@@ -53,6 +53,28 @@
                     Aspect="AspectFill"/>
             </Border>
 
+            <CollectionView BackgroundColor = "#E1E0EB"
+                    Grid.Row="2"    
+                    Grid.Column="0"
+                    Grid.RowSpan="2"    
+                    ItemSource="{Binding AidenPutItHereR}"
+                    SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:ActiveBookings">
+                        
+                    </DataTemplate>
+                    
+                    
+                </CollectionView.ItemTemplate>    
+
+
+
+
+
+            </CollectionView>
+            
+            
+            
             <Grid ColumnDefinitions="0.25*,4*,1*,0.75*,0.5*" RowDefinitions="1*,1*" Grid.Row="1" Grid.Column="0">
 
                 <Label Text="Due Appointments for "
@@ -81,12 +103,7 @@
 
 
 
-            <BoxView 
-                Color="#E1E0EB" 
-                Grid.Row="2"
-                Grid.Column="0"
-                BackgroundColor = "#E1E0EB"
-            />
+   
 
 
 
