@@ -8,8 +8,6 @@ using AutoLink.Model;
 using System.Net.Security;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
-using AutoLink.Model;
-using CommunityToolkit.Mvvm.Input;
 
 namespace AutoLink.ViewModel;
 
@@ -18,12 +16,16 @@ namespace AutoLink.ViewModel;
 public partial class MainPageViewModel : ObservableObject
 {
 
-
     [ObservableProperty]
     string userName = string.Empty;
 
     public ObservableCollection<ActiveBookings> ActiveBookings { get; } = new();
 
+    [ObservableProperty]
+    public bool thereAreBookings = false;
+
+    [ObservableProperty]
+    public bool noBookings = true;
 
     LoginService loginService;
     ActiveBookingService activeBookingService;
@@ -35,11 +37,16 @@ public partial class MainPageViewModel : ObservableObject
         this.activeBookingService = activeBookingService;
 
         _ = Initialize();
+
+  
     }
+
+
 
     private async Task Initialize()
     {
- 
+
+
         string _token = await SecureStorage.Default.GetAsync("accessToken");
 
         await loginService.getUserInfo(_token);
@@ -54,6 +61,16 @@ public partial class MainPageViewModel : ObservableObject
             await Shell.Current.DisplayAlert("Error", "User info not loaded.", "OK");
         }
 
+        if (ActiveBookings.Count == 0)
+        {
+            ThereAreBookings = false;
+            NoBookings = true;
+        }
+        else
+        {
+            ThereAreBookings = true;
+            NoBookings = false;
+        }
     }
 
     [RelayCommand]
@@ -77,3 +94,6 @@ public partial class MainPageViewModel : ObservableObject
     }
 
 }
+
+
+

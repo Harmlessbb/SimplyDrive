@@ -13,7 +13,6 @@ namespace AutoLink.Service
 {
     public class ActiveBookingService
     {
-
         List<ActiveBookings> ActiveBookings { get; set; } = new ();
 
         public async Task <List<ActiveBookings>> GetActiveBookingsAsync()

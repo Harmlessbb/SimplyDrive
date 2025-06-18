@@ -13,7 +13,7 @@
 
     <Grid ColumnDefinitions="*" RowDefinitions="0.6*,11*,1*">
 
-        <Grid ColumnDefinitions="*,40,10" RowDefinitions="*,0,0" Grid.Row="0" Grid.Column="0">
+        <Grid ColumnDefinitions="*,40,10" RowDefinitions="*,0,0" Grid.Row="0" Grid.Column="0" >
 
             <BoxView 
                 Color="#211D4A" 
@@ -44,60 +44,76 @@
 
         </Grid>
         
-        <Grid ColumnDefinitions="*" RowDefinitions="2.5*,2*,2*,2*,2*,1.5*" Grid.Row="1" Grid.Column="0">
+        <Grid ColumnDefinitions="0.05*,1*,0.05*" RowDefinitions="2.5*,2*,2*,2*,2*,1.5*" Grid.Row="1" Grid.Column="0">
 
             <Border Stroke="#000000"
-                    BackgroundColor="Black"
-                StrokeThickness="3">
+                BackgroundColor="Black"
+                StrokeThickness ="3"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="3">
                 <Image Source="cart.jpg" 
-                    Grid.Row="0" 
-                    Grid.Column="0"
                     Aspect="AspectFill"/>
             </Border>
 
-            <CollectionView BackgroundColor = "#E1E0EB"
+            <CollectionView IsVisible="{Binding ThereAreBookings}" BackgroundColor = "#E1E0EB"
                     Grid.Row="2"    
-                    Grid.Column="0"
+                    Grid.Column="1"
                     Grid.RowSpan="2"    
+                                                
                     ItemsSource="{Binding ActiveBookings}"
-                    SelectionMode="Single">
+                    SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:ActiveBookings">
-                        
+                        <Grid Padding="10">
+                            <Border HeightRequest="100">
+                                <Label Text="{Binding dealerReference}">
+                                    
+                                </Label>
+                                
+                            
+                            </Border>    
+                        </Grid>
                     </DataTemplate>
                     
                     
                 </CollectionView.ItemTemplate>    
-
-
-
-
-
+                
             </CollectionView>
-            
-            
-            
-            <Grid ColumnDefinitions="0.25*,4*,1*,0.75*,0.5*" RowDefinitions="1*,1*" Grid.Row="1" Grid.Column="0">
 
-                <Label Text="Due Appointments for "
+            <Label Text="You have no scheduled appointments. Please make a booking below." IsVisible = "{Binding NoBookings}"
+                TextColor="#696969"
+                FontAttributes="Bold"    
+                FontSize="24"
+                Grid.Row="2"
+                Grid.Column="1"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                  />
+
+
+            <Grid ColumnDefinitions="0.25*,4*,1*,0.75*,0.5*" RowDefinitions="1*,1*" Grid.Row="1" Grid.Column="1" IsVisible = "{Binding ThereAreBookings}">
+
+                <Label Text="Due Appointments for " 
                     TextColor="#000000"
                     FontAttributes="Bold"    
-                    FontSize="28"
+                    FontSize="24"
                     Grid.Row="0"
                     Grid.Column="1"
                     VerticalOptions="End"                                         
                     FontFamily="RAJDHANI-REGULAR.TTF"
                       />
 
-                <Border Grid.Row="0" Grid.Column="1">
+                <Border Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2">
 
 
-                    <Label Text="AB24 CDE" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
+                    <Label Text="AB24 CDE" 
                             TextColor="#000000"
                             BackgroundColor="#FFFF00"   
                             MaxLines="1"
                             FontAttributes="Bold"    
-                            FontSize="28"
+                            FontSize="24"
                             FontFamily="RAJDHANI-REGULAR.TTF"
                           />
 
@@ -107,14 +123,7 @@
 
 
 
-   
-
-
-
-
-
-
-            <Grid ColumnDefinitions="*,2.6*,*" RowDefinitions="*,2.6*,*" Grid.Row="5" Grid.Column="0">
+            <Grid ColumnDefinitions="*,2.6*,*" RowDefinitions="*,2.6*,*" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
 
 
                 <BoxView 
@@ -152,103 +161,7 @@
         </Grid>
 
         <Grid ColumnDefinitions="1*,1*,1*,1*" RowDefinitions="*" Grid.Row="2" Grid.Column="0" BackgroundColor="#FFFFFF">
-            <!-- 
-            
-            <Border 
-                 Grid.Row="0"
-                 Grid.Column="0"
-                 Grid.ColumnSpan="4"
-                 BackgroundColor="#FFFFFF"
-                 Shadow="#000000 0 6"/>
-
-            <Image Source="home_icon.png" 
-                Grid.Row="0" 
-                Grid.Column="0" 
-                WidthRequest="999"
-                HeightRequest="40"/>
-
-        <Label Text="Home"
-
-                TextColor="#000000"
-                FontAttributes="Bold"    
-                FontSize="13"
-                Grid.Row="0"
-                Grid.Column="0"   
-                FontFamily="RAJDHANI-REGULAR.TTF"
-                Margin="10,0"
-                VerticalOptions="End"
-                HorizontalOptions="Center"/>
-
-
-            <Image Source="sedan_car.png" 
-                 Grid.Row="0" 
-                 Grid.Column="1" 
-                 WidthRequest="999"
-                 HeightRequest="60"/>
-
-
-           <Label Text="Check-in"
-                TextColor="#000000"
-                FontAttributes="Bold"    
-                FontSize="13"
-                Grid.Row="0"
-                Grid.Column="1"   
-                FontFamily="RAJDHANI-REGULAR.TTF"
-                Margin="10,0"
-                VerticalOptions="End"
-
-                HorizontalOptions="Center"/>
-
-
-
-
-            <Image Source="person_icon.png" 
-                 Grid.Row="0" 
-                 Grid.Column="2" 
-                 WidthRequest="999"
-                 HeightRequest="40"/>
-
-
-
-
-         <Label Text="Account"
-                TextColor="#000000"
-                FontAttributes="Bold"    
-                FontSize="13"
-                Grid.Row="0"
-                Grid.Column="2"   
-                FontFamily="RAJDHANI-REGULAR.TTF"
-                Margin="10,0"
-                VerticalOptions="End"
-                HorizontalOptions="Center"/>
-
-
-
-
-            <Image Source="settings_wheel.png" 
-                 Grid.Row="0" 
-                 Grid.Column="3" 
-                 WidthRequest="999"
-                 HeightRequest="40"/>
-
-
-
-                <Label Text="Settings"
-                TextColor="#000000"
-                FontAttributes="Bold"    
-                FontSize="13"
-                Grid.Row="0"
-                Grid.Column="3"   
-                FontFamily="RAJDHANI-REGULAR.TTF"
-                Margin="10,0"
-                VerticalOptions="End"
-<<<<<<< HEAD
-                HorizontalOptions="Center"></Label>
-
-
-=======
-                HorizontalOptions="Center"/> 
-            -->
+           
             
         </Grid>
 
