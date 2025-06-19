@@ -1,13 +1,13 @@
-using CommunityToolkit.Mvvm.ComponentModel;
-
-using AutoLink.Service;
-
-using CommunityToolkit.Mvvm.Input;
-using System.Diagnostics;
 using AutoLink.Model;
-using System.Net.Security;
-using System.ComponentModel;
+using AutoLink.Service;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Net.Security;
+using System.Xml.Linq;
+
 
 namespace AutoLink.ViewModel;
 
@@ -71,6 +71,8 @@ public partial class MainPageViewModel : ObservableObject
             ThereAreBookings = true;
             NoBookings = false;
         }
+
+
     }
 
     [RelayCommand]

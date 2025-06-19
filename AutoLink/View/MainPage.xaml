@@ -57,10 +57,10 @@
             </Border>
 
             <CollectionView IsVisible="{Binding ThereAreBookings}" BackgroundColor = "#E1E0EB"
-                    Grid.Row="2"    
+                Grid.Row="2"    
                     Grid.Column="1"
                     Grid.RowSpan="2"    
-                                                
+                                      
                     ItemsSource="{Binding ActiveBookings}"
                     SelectionMode="None">
                 <CollectionView.ItemTemplate>
@@ -105,24 +105,67 @@
                     FontFamily="RAJDHANI-REGULAR.TTF"
                       />
 
-                <Border Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2">
+                <!--
+                <Label  Text= "test"
+                    Grid.Row="0"    
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"    
+                    TextColor="#000000"
+                    BackgroundColor="#FFFF00"   
+                    MaxLines="1"
+                    FontAttributes="Bold"    
+                    FontSize="24"
+                    FontFamily="RAJDHANI-REGULAR.TTF"
+                    />
+                -->
 
-
-                    <Label Text="AB24 CDE" 
+                <Grid BindableLayout.ItemsSource="{Binding ActiveBookings}" 
+                      Grid.Row="0"    
+                      Grid.Column="2">
+                    
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="model:ActiveBookings">
+                            <Label Text= "{Binding vehicleId}"
                             TextColor="#000000"
                             BackgroundColor="#FFFF00"   
                             MaxLines="1"
                             FontAttributes="Bold"    
                             FontSize="24"
-                            FontFamily="RAJDHANI-REGULAR.TTF"
-                          />
+                            FontFamily="RAJDHANI-REGULAR.TTF"       />
 
-                </Border>
+
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+
+                </Grid>   
+                    <!--
+                
+                <CollectionView IsVisible="{Binding ThereAreBookings}" BackgroundColor = "#E1E0EB" 
+                            ItemsSource="{Binding ActiveBookings}"
+                            SelectionMode="Single"
+                            VerticalScrollBarVisibility="Never"
+                            HeightRequest="100">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:ActiveBookings">
+                            <Grid>
+
+                                <Label  Text= "{Binding vehicleId}"
+                                            TextColor="#000000"
+                                            BackgroundColor="#FFFF00"   
+                                            MaxLines="1"
+                                            FontAttributes="Bold"    
+                                            FontSize="72"
+                                            FontFamily="RAJDHANI-REGULAR.TTF"
+                                            />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+                -->
 
             </Grid>
-
-
-
+                
             <Grid ColumnDefinitions="*,2.6*,*" RowDefinitions="*,2.6*,*" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
 
 
@@ -166,6 +209,6 @@
         </Grid>
 
 
-
+    
     </Grid>
 </ContentPage>
