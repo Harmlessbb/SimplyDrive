@@ -41,9 +41,6 @@ namespace AutoLink.Service
                 }
 
 
-
-                await Shell.Current.DisplayAlert("Response", $"{ActiveBookings}", "ok");
-
                 return ActiveBookings;
 
             }

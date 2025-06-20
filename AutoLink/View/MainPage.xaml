@@ -95,7 +95,7 @@
 
             <Grid ColumnDefinitions="0.25*,4*,1*,0.75*,0.5*" RowDefinitions="1*,1*" Grid.Row="1" Grid.Column="1" IsVisible = "{Binding ThereAreBookings}">
 
-                <Label Text="Due Appointments for " 
+                <Label Text="{Binding Registration}" 
                     TextColor="#000000"
                     FontAttributes="Bold"    
                     FontSize="24"
@@ -124,8 +124,9 @@
                       Grid.Column="2">
                     
                     <BindableLayout.ItemTemplate>
-                        <DataTemplate x:DataType="model:ActiveBookings">
-                            <Label Text= "{Binding vehicleId}"
+                        
+                        <DataTemplate x:DataType="model:VehicleModel">
+                            <Label Text= "{Binding registration}"
                             TextColor="#000000"
                             BackgroundColor="#FFFF00"   
                             MaxLines="1"
@@ -135,6 +136,7 @@
 
 
                         </DataTemplate>
+                        
                     </BindableLayout.ItemTemplate>
 
                 </Grid>   
@@ -193,6 +195,7 @@
                 <Button
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
+                Command="{Binding RetrieveVehiclesCommand}"
                 />
 
 

@@ -259,7 +259,6 @@ L:\SimplyDrive\AutoLink\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 L:\SimplyDrive\AutoLink\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
-L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.inputs
@@ -679,3 +678,4 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.csproj.Up2Date
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.genruntimeconfig.cache
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\ref\AutoLink.dll
+L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
