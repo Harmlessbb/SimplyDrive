@@ -22,6 +22,8 @@ public partial class MainPageViewModel : ObservableObject
 
     public ObservableCollection<ActiveBookings> ActiveBookings { get; } = new();
 
+    public ObservableCollection<VehicleModel> VehicleModel { get; } = new();
+
     [ObservableProperty]
     public bool thereAreBookings = false;
 
@@ -129,7 +131,9 @@ public partial class MainPageViewModel : ObservableObject
             if (vehicles != null)
             {
                 Registration = vehicles.registration;
-            }
+                VehicleModel.Add(vehicles);
+
+            }   
             else
             {
                 await Shell.Current.DisplayAlert("Error", "No vehicle information retrieved.", "OK");

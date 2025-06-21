@@ -44,7 +44,7 @@
 
         </Grid>
         
-        <Grid ColumnDefinitions="0.05*,1*,0.05*" RowDefinitions="2.5*,2*,2*,2*,2*,1.5*" Grid.Row="1" Grid.Column="0">
+        <Grid ColumnDefinitions="0.05*,1*,0.05*" RowDefinitions="2.5*,1*,2*,2*,2*,1.5*" Grid.Row="1" Grid.Column="0">
 
             <Border Stroke="#000000"
                 BackgroundColor="Black"
@@ -56,31 +56,84 @@
                     Aspect="AspectFill"/>
             </Border>
 
-            <CollectionView IsVisible="{Binding ThereAreBookings}" BackgroundColor = "#E1E0EB"
-                Grid.Row="2"    
-                    Grid.Column="1"
-                    Grid.RowSpan="2"    
-                                      
-                    ItemsSource="{Binding ActiveBookings}"
-                    SelectionMode="None">
+
+            <CollectionView  Grid.Row="2" Grid.Column="1"  Grid.RowSpan="3"
+         ItemsSource="{Binding ActiveBookings}"
+         SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:ActiveBookings">
-                        <Grid Padding="10">
-                            <Border HeightRequest="100">
-                                <Label Text="{Binding dealerReference}">
-                                    
-                                </Label>
+                        <Border HeightRequest="100" Margin="0,0,0,24" 
+                                Stroke ="#000000" StrokeThickness="1.5" 
+                                StrokeShape="RoundRectangle 8,8,8,8"
+                                BackgroundColor="#E1E0EB">
+                            <Grid ColumnDefinitions="0.1*,0.7*,2*" RowDefinitions="0.3*,1.8*,0.1*,0.05*,0.7*,0.15*">
                                 
-                            
-                            </Border>    
-                        </Grid>
+
+                                <Image Source="spanner.png" Grid.Row="1" Grid.Column="1" />
+                                
+                                <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" StrokeShape="RoundRectangle 1,1,1,1">
+                                    <Label  Text= "AB24 CDE" 
+                                        TextColor="#000000"
+                                            BackgroundColor="#FFFF00"
+                                        MaxLines="1"
+                                        FontAttributes="Bold"    
+                                        FontSize="20"
+                                        FontFamily="RAJDHANI-REGULAR.TTF"
+                                        HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                        />
+                                </Border>
+
+                                <BoxView HeightRequest="1" Color="Red"/>
+                            </Grid>
+
+                        </Border>
                     </DataTemplate>
-                    
-                    
-                </CollectionView.ItemTemplate>    
-                
+                </CollectionView.ItemTemplate>
             </CollectionView>
 
+        <Grid ColumnDefinitions="*" RowDefinitions="0.5*,*,*,*" Grid.Row="1" Grid.Column="1" IsVisible = "{Binding ThereAreBookings}">
+
+            <Label Text="Due Appointments" 
+                TextColor="#000000"
+                FontAttributes="Bold"    
+                FontSize="40"
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="3"
+                HorizontalTextAlignment="Center"
+                FontFamily="RAJDHANI-REGULAR.TTF"
+                    />
+
+
+
+                <!--
+            <CollectionView IsVisible="{Binding ThereAreBookings}" BackgroundColor = "#E1E0EB" Grid.Row="2" Grid.Column="1"  Grid.RowSpan="2"
+                ItemsSource="{Binding VehicleModel}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:VehicleModel">
+
+                        <CollectionView BackgroundColor = "#E1E0EB" Grid.Row="2" Grid.Column="1"  Grid.RowSpan="2"
+                        ItemsSource="{Binding ActiveBookings}"
+                        SelectionMode="None">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="model:ActiveBookings">
+                                    <Grid Padding="10">
+                                        <Border HeightRequest="100">
+                                            <Label Text="{Binding dealerReference}">
+                                            </Label>
+                                        </Border>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+-->
             <Label Text="You have no scheduled appointments. Please make a booking below." IsVisible = "{Binding NoBookings}"
                 TextColor="#696969"
                 FontAttributes="Bold"    
@@ -90,38 +143,16 @@
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
                 FontFamily="RAJDHANI-REGULAR.TTF"
-                  />
+                    />
 
 
-            <Grid ColumnDefinitions="0.25*,4*,1*,0.75*,0.5*" RowDefinitions="1*,1*" Grid.Row="1" Grid.Column="1" IsVisible = "{Binding ThereAreBookings}">
-
-                <Label Text="{Binding Registration}" 
-                    TextColor="#000000"
-                    FontAttributes="Bold"    
-                    FontSize="24"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    VerticalOptions="End"                                         
-                    FontFamily="RAJDHANI-REGULAR.TTF"
-                      />
+ 
 
                 <!--
-                <Label  Text= "test"
-                    Grid.Row="0"    
-                    Grid.Column="2"
-                    Grid.ColumnSpan="2"    
-                    TextColor="#000000"
-                    BackgroundColor="#FFFF00"   
-                    MaxLines="1"
-                    FontAttributes="Bold"    
-                    FontSize="24"
-                    FontFamily="RAJDHANI-REGULAR.TTF"
-                    />
-                -->
-
-                <Grid BindableLayout.ItemsSource="{Binding ActiveBookings}" 
-                      Grid.Row="0"    
-                      Grid.Column="2">
+                
+                <Grid BindableLayout.ItemsSource="{Binding VehicleModel}" 
+                        Grid.Row="0"    
+                        Grid.Column="2">
                     
                     <BindableLayout.ItemTemplate>
                         
@@ -138,9 +169,11 @@
                         </DataTemplate>
                         
                     </BindableLayout.ItemTemplate>
-
-                </Grid>   
-                    <!--
+    
+                </Grid>
+                         -->   
+      
+            <!--
                 
                 <CollectionView IsVisible="{Binding ThereAreBookings}" BackgroundColor = "#E1E0EB" 
                             ItemsSource="{Binding ActiveBookings}"

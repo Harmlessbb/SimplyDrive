@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,5 +24,7 @@ namespace AutoLink.Model
         public DateOnly last_service_date { get; set; }
         public DateOnly next_service_date { get; set; }
         public DateOnly mot_due_date { get; set; }
+
+        
     }
 }

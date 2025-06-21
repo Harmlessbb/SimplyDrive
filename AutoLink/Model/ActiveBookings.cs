@@ -19,5 +19,7 @@ namespace AutoLink.Model
         public bool isOtherJobType { get; set; }
         public bool isWarrenty { get; set; }
         public int dealerReference { get; set; }
+
+
     }
 }
