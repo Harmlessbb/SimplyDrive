@@ -22,6 +22,8 @@ public partial class MainPageViewModel : ObservableObject
 
     public ObservableCollection<ActiveBookings> ActiveBookings { get; } = new();
 
+    public ObservableCollection<ActiveBookingMainPageDTO> ActiveBookingDTOs { get; } = new();
+
     public ObservableCollection<VehicleModel> VehicleModel { get; } = new();
 
     [ObservableProperty]
@@ -88,19 +90,37 @@ public partial class MainPageViewModel : ObservableObject
     {
         try
         {
-            int idflag;
+            string _token = await SecureStorage.Default.GetAsync("accessToken");
             var bookings = await activeBookingService.GetActiveBookingsAsync();
 
             foreach (var booking in bookings)
             {
-                ActiveBookings.Add(booking);
-                idflag = booking.vehicleId;
-                await IdToRegistraion(booking.vehicleId);
-                if(idflag != booking.vehicleId)
+                var vehicleService = new VehicleService();
+                await vehicleService.getVehicleInfo(_token, booking.vehicleId);
+
+                var vehicle = vehicleService.VehicleInfo;
+
+
+                if (vehicle != null)
                 {
-                    Shell.Current.DisplayAlert("WOW!", "You found Aidens Secret Bug Which He Can't Fix rn cuz he's in bulgaria!", "Yay");
+                    ActiveBookingDTOs.Add(new ActiveBookingMainPageDTO
+                    {
+                        BookingId = booking.bookingId,
+                        VehicleId = vehicle.id,
+                        VehicleRegistration = vehicle.registration,
+                        BookingDate = DateOnly.FromDateTime(booking.bookingDate),
+                        BookingTime = TimeOnly.Parse(booking.bookingTime),
+                        IsService = booking.isService,
+                        IsMot = booking.isMot,
+                        IsDiagnostics = booking.isDiagnostics
+                    });
                 }
+
+                await Shell.Current.DisplayAlert("Vehicle Info", $"Booking Time: {booking.bookingDate}, Time: {booking.bookingTime}", "OK");
             }
+
+            ThereAreBookings = ActiveBookingDTOs.Any();
+            NoBookings = !ThereAreBookings;
 
         }
         catch (Exception ex)
@@ -133,7 +153,7 @@ public partial class MainPageViewModel : ObservableObject
                 Registration = vehicles.registration;
                 VehicleModel.Add(vehicles);
 
-            }   
+            }
             else
             {
                 await Shell.Current.DisplayAlert("Error", "No vehicle information retrieved.", "OK");

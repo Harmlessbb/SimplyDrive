@@ -679,3 +679,4 @@ C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\AutoLink.genruntimeconfig.cache
 C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\ref\AutoLink.dll
 L:\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
+C:\Users\Dawid\source\repos\Harmlessbb\SimplyDrive\AutoLink\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\spanner.png
