@@ -73,13 +73,15 @@ public partial class MainPageViewModel : ObservableObject
 
         if (ActiveBookings.Count == 0)
         {
-            ThereAreBookings = false;
-            NoBookings = true;
+            ThereAreBookings = true;
+            NoBookings = false;
+            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookings.Count}", "ok");
         }
         else
         {
             ThereAreBookings = true;
             NoBookings = false;
+            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookings.Count}", "ok");
         }
 
 
