@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\view\\newbookingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:view\\newbookingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F20FA289-6879-4C82-94B2-0903BAF9E9E3}|AutoLink.csproj|c:\\users\\dawid\\source\\repos\\harmlessbb\\simplydrive\\autolink\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,31 +69,26 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewBookingsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\NewBookingsPage.xaml",
+              "RelativeDocumentMoniker": "View\\NewBookingsPage.xaml",
+              "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\NewBookingsPage.xaml",
+              "RelativeToolTip": "View\\NewBookingsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T23:31:21.098Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NewBookingsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\NewBookingsPage.xaml",
-              "RelativeDocumentMoniker": "View\\NewBookingsPage.xaml",
-              "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\NewBookingsPage.xaml*",
-              "RelativeToolTip": "View\\NewBookingsPage.xaml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-04T23:31:21.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
               "RelativeDocumentMoniker": "View\\MainPage.xaml",
               "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\View\\MainPage.xaml",
               "RelativeToolTip": "View\\MainPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC4AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-17T20:49:10.358Z",
               "EditorCaption": ""
@@ -108,18 +103,17 @@
               "RelativeToolTip": "View\\MainPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T03:23:06.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T03:23:06.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
               "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Harmlessbb\\SimplyDrive\\AutoLink\\AppShell.xaml",
               "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-21T00:21:17.725Z",
               "EditorCaption": ""
@@ -134,8 +128,7 @@
               "RelativeToolTip": "App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-21T00:21:14.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T00:21:14.413Z"
             },
             {
               "$type": "Document",
@@ -147,8 +140,7 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:20:52.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T00:20:52.126Z"
             },
             {
               "$type": "Document",
@@ -160,8 +152,7 @@
               "RelativeToolTip": "Model\\ActiveBookingMainPageDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T19:56:46.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T19:56:46.621Z"
             },
             {
               "$type": "Document",
@@ -173,8 +164,7 @@
               "RelativeToolTip": "Model\\ActiveBookings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T19:04:16.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T19:04:16.839Z"
             },
             {
               "$type": "Document",
@@ -186,8 +176,7 @@
               "RelativeToolTip": "ViewModel\\MainPageViewModel.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAIwEcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T22:30:11.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T22:30:11.414Z"
             },
             {
               "$type": "Document",
