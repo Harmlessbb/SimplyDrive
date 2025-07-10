@@ -19,5 +19,6 @@ namespace AutoLink.Model
         public bool IsMot { get; set; }
         public bool IsDiagnostics { get; set; }
 
+        public string BookingTypeString { get; set; } = string.Empty;
     }
 }

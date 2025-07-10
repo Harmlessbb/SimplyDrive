@@ -15,7 +15,7 @@ namespace AutoLink.ViewModel
 {
     public partial class NewBookingsViewModel
     {
-
+        
     }
 
 }

@@ -96,7 +96,7 @@
 
                                 <Grid ColumnDefinitions="*,auto,*" RowDefinitions="0.15*,0.3*,0.1*,0.1*,0.3*" Grid.Column="1" >
 
-                                    <Label  Text= "Oxford Motors" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"
+                                    <Label  Text= "{Binding DealerName}" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"
                                         TextColor="#000000"
                                         MaxLines="1"
                                         FontAttributes="Bold"
@@ -105,13 +105,19 @@
                                         />
 
 
-                                    <Label  Text= "19/06/2025 - Engine check" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                    <Label 
+                                        Text="{Binding BookingTypeString}" 
+                                        Grid.Row="3" 
+                                        Grid.Column="1" 
+                                        Grid.RowSpan="2" 
+                                        Grid.ColumnSpan="2"
                                         TextColor="#000000"
                                         MaxLines="1"
                                         FontAttributes="Bold"
                                         FontSize="16"
-                                        FontFamily="RAJDHANI-REGULAR.TTF"
-                                                />
+                                        FontFamily="RAJDHANI-REGULAR.TTF" 
+                                        WidthRequest="200"/>
+
 
 
                                 </Grid>

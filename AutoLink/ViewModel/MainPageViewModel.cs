@@ -71,17 +71,17 @@ public partial class MainPageViewModel : ObservableObject
             await Shell.Current.DisplayAlert("Error", "User info not loaded.", "OK");
         }
 
-        if (ActiveBookings.Count == 0)
+        if (ActiveBookingDTOs.Count == 0)
         {
             ThereAreBookings = true;
             NoBookings = false;
-            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookings.Count}", "ok");
+            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookingDTOs.Count}", "ok");
         }
         else
         {
             ThereAreBookings = true;
             NoBookings = false;
-            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookings.Count}", "ok");
+            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookingDTOs.Count}", "ok");
         }
 
 
@@ -100,7 +100,11 @@ public partial class MainPageViewModel : ObservableObject
                 var vehicleService = new VehicleService();
                 await vehicleService.getVehicleInfo(_token, booking.vehicleId);
 
+                var dealershipService = new DealershipService();
+                await dealershipService.getDealershipInfo(_token, booking.dealerId);
+
                 var vehicle = vehicleService.VehicleInfo;
+                var dealership = dealershipService.DealershipInfo;
 
 
                 if (vehicle != null)
@@ -110,15 +114,20 @@ public partial class MainPageViewModel : ObservableObject
                         BookingId = booking.bookingId,
                         VehicleId = vehicle.id,
                         VehicleRegistration = vehicle.registration,
+                        //DealerId = dealership.id, // Accessing the first dealership's id
+                        DealerName = dealership.dealername,
                         BookingDate = DateOnly.FromDateTime(booking.bookingDate),
-                        BookingTime = TimeOnly.Parse(booking.bookingTime),
+                        BookingTime = TimeOnly.Parse(booking.bookingTime), 
                         IsService = booking.isService,
                         IsMot = booking.isMot,
-                        IsDiagnostics = booking.isDiagnostics
+                        IsDiagnostics = booking.isDiagnostics,
+                        BookingTypeString = $"{(booking.bookingDate):yyyy-MM-dd} - " +
+                        (booking.isService ? "Service" :
+                         booking.isMot ? "MOT" :
+                         booking.isDiagnostics ? "Diagnostics" : "Unknown")
                     });
                 }
 
-                await Shell.Current.DisplayAlert("Vehicle Info", $"Booking Time: {booking.bookingDate}, Time: {booking.bookingTime}", "OK");
             }
 
             ThereAreBookings = ActiveBookingDTOs.Any();
@@ -132,42 +141,4 @@ public partial class MainPageViewModel : ObservableObject
 
     }
 
-    async Task IdToRegistraion(int vehicleId)
-    {
-        string? _token = await SecureStorage.Default.GetAsync("accessToken");
-
-
-        if (string.IsNullOrEmpty(_token))
-        {
-            await Shell.Current.DisplayAlert("Error", "Access token is null or empty.", "OK");
-            return;
-        }
-
-        try
-        {
-            var vehicleService = new VehicleService();
-
-            await vehicleService.getVehicleInfo(_token, vehicleId);
-
-            var vehicles = vehicleService.VehicleInfo;
-            if (vehicles != null)
-            {
-                Registration = vehicles.registration;
-                VehicleModel.Add(vehicles);
-
-            }
-            else
-            {
-                await Shell.Current.DisplayAlert("Error", "No vehicle information retrieved.", "OK");
-            }
-        }
-        catch (Exception ex)
-        {
-            await Shell.Current.DisplayAlert("Error", $"Failed to retrieve vehicles: {ex.Message}", "OK");
-        }
-
-    }
 }
-
-
-
