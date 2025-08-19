@@ -1,8 +1,8 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "AutoLink.dll" comes first in this list. */
-		"AutoLink.dll",
+		/* We need to ensure that "SimplyDrive.dll" comes first in this list. */
+		"SimplyDrive.dll",
 		"CommunityToolkit.Maui.dll",
 		"CommunityToolkit.Maui.Core.dll",
 		"CommunityToolkit.Mvvm.dll",

@@ -1,6 +1,7 @@
 ﻿using Foundation;
+using SimplyDrive;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.iOS;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

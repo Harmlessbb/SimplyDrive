@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.iOS;
 
 public class Program
 {

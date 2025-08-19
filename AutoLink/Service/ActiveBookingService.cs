@@ -5,11 +5,11 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using AutoLink.Model;
+using SimplyDrive.Model;
 using System.Net.Http.Json;
 
 
-namespace AutoLink.Service
+namespace SimplyDrive.Service
 {
     public class ActiveBookingService
     {
@@ -17,6 +17,7 @@ namespace AutoLink.Service
 
         public async Task <List<ActiveBookings>> GetActiveBookingsAsync()
         {
+
             try
             {
                 string? accessToken = await SecureStorage.Default.GetAsync("accessToken");

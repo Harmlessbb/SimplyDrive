@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.MacCatalyst;
 
 public class Program
 {

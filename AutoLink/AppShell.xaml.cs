@@ -1,4 +1,4 @@
-﻿namespace AutoLink
+﻿namespace SimplyDrive
 {
     public partial class AppShell : Shell
     {

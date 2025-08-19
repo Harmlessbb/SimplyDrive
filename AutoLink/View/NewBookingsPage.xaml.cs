@@ -1,4 +1,4 @@
-namespace AutoLink.View;
+namespace SimplyDrive.View;
 
 public partial class NewBookingsPage : ContentPage
 {

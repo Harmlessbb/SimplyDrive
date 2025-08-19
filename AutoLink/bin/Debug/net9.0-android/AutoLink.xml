@@ -33,6 +33,9 @@
         <member name="P:AutoLink.ViewModel.MainPageViewModel.Registration">
             <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.registration"/>
         </member>
+        <member name="P:AutoLink.ViewModel.MainPageViewModel.IsLoaded">
+            <inheritdoc cref="F:AutoLink.ViewModel.MainPageViewModel.isLoaded"/>
+        </member>
         <member name="F:AutoLink.ViewModel.MainPageViewModel.retrieveActiveBookingsCommand">
             <summary>The backing field for <see cref="P:AutoLink.ViewModel.MainPageViewModel.RetrieveActiveBookingsCommand"/>.</summary>
         </member>
@@ -186,6 +189,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Registration">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Registration" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoaded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoaded" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -206,6 +212,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Registration">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Registration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoaded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoaded" generated properties.</summary>
         </member>
     </members>
 </doc>

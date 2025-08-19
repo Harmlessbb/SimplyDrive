@@ -1,15 +1,16 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
+using SimplyDrive;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.Android;
 
 
 
 [Application]
 public class MainApplication : MauiApplication
 {
-	public MainApplication(IntPtr handle, JniHandleOwnership ownership)
+	public MainApplication(nint handle, JniHandleOwnership ownership)
 		: base(handle, ownership)
 	{
 	}

@@ -1,6 +1,7 @@
 ﻿using Foundation;
+using SimplyDrive;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.MacCatalyst;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

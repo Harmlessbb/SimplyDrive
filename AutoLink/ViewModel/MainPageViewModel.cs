@@ -1,21 +1,17 @@
-using AutoLink.Model;
-using AutoLink.Service;
+using SimplyDrive.Service;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using SimplyDrive.Model;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Net.Security;
-using System.Runtime.Serialization;
-using System.Xml.Linq;
 
 
-namespace AutoLink.ViewModel;
+namespace SimplyDrive.ViewModel;
 
 
 
 public partial class MainPageViewModel : ObservableObject
 {
+    
 
     [ObservableProperty]
     string userName = string.Empty;
@@ -36,6 +32,8 @@ public partial class MainPageViewModel : ObservableObject
     string registration = string.Empty;
 
 
+    [ObservableProperty]
+    public bool isLoaded = false;
 
     LoginService loginService;
     ActiveBookingService activeBookingService;
@@ -46,21 +44,23 @@ public partial class MainPageViewModel : ObservableObject
         this.loginService = loginService;
         this.activeBookingService = activeBookingService;
 
-        _ = Initialize();
-
-
     }
 
 
 
-    private async Task Initialize()
+    public async Task Initialize()
     {
-
+        IsLoaded = false;
 
         string _token = await SecureStorage.Default.GetAsync("accessToken");
 
         await loginService.getUserInfo(_token);
+
+
         await RetrieveActiveBookings();
+
+
+
 
         if (loginService.UserInfo != null)
         {
@@ -73,38 +73,45 @@ public partial class MainPageViewModel : ObservableObject
 
         if (ActiveBookingDTOs.Count == 0)
         {
-            ThereAreBookings = true;
-            NoBookings = false;
-            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookingDTOs.Count}", "ok");
+            ThereAreBookings = false;
+            NoBookings = true;
         }
         else
         {
             ThereAreBookings = true;
             NoBookings = false;
-            await Shell.Current.DisplayAlert("DEBUG", $"{ActiveBookingDTOs.Count}", "ok");
         }
 
-
+        IsLoaded = true;
     }
 
     [RelayCommand]
     async Task RetrieveActiveBookings()
     {
+
+        ActiveBookingDTOs.Clear();
+
         try
         {
+
             string _token = await SecureStorage.Default.GetAsync("accessToken");
             var bookings = await activeBookingService.GetActiveBookingsAsync();
 
+
             foreach (var booking in bookings)
             {
-                var vehicleService = new VehicleService();
-                await vehicleService.getVehicleInfo(_token, booking.vehicleId);
 
+                var vehicleService = new VehicleService();
                 var dealershipService = new DealershipService();
-                await dealershipService.getDealershipInfo(_token, booking.dealerId);
+
+                var vehicleTask = vehicleService.getVehicleInfo(_token, booking.vehicleId);
+                var dealerTask = dealershipService.getDealershipInfo(_token, booking.dealerId);
+
+                await Task.WhenAll(vehicleTask, dealerTask);
 
                 var vehicle = vehicleService.VehicleInfo;
                 var dealership = dealershipService.DealershipInfo;
+
 
 
                 if (vehicle != null)
@@ -136,7 +143,7 @@ public partial class MainPageViewModel : ObservableObject
         }
         catch (Exception ex)
         {
-            await Shell.Current.DisplayAlert("Error", $"Failed to retrieve active bookings: {ex.Message}", "OK");
+            await Shell.Current.DisplayAlert("Error", $"Failed to retrieve active bookings", "OK");
         }
 
     }

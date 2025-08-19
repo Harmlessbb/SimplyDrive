@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="AutoLink.AppShell"
+    x:Class="SimplyDrive.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AutoLink"
-    xmlns:View="clr-namespace:AutoLink.View"
-    Title="AutoLink"
+    xmlns:local="clr-namespace:SimplyDrive"
+    xmlns:View="clr-namespace:SimplyDrive.View"
+    Title="SimplyDrive"
     Shell.FlyoutBehavior="Disabled"
     Shell.TabBarBackgroundColor="White">
-
+    
  
     <ShellContent
         Title="SignUpPage"
-        ContentTemplate="{DataTemplate local:LoginPage}"
+        ContentTemplate="{DataTemplate View:LoginPage}"
         Route="LoginPage" 
         />
     <TabBar>
@@ -20,7 +20,7 @@
         <ShellContent
             
             Title="Home"
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate View:MainPage}"
             Route="MainPage"
             Icon="home.png"/>
 
@@ -37,7 +37,7 @@
 
         <ShellContent
             Title="Account"
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate View:MainPage}"
             Route="NewBookingsPage"
             Icon="person_icon.png">
 

@@ -28741,9 +28741,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
-      "projectName": "AutoLink",
-      "projectPath": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
+      "projectUniqueName": "L:\\SimplyDrive\\AutoLink\\SimplyDrive.csproj",
+      "projectName": "SimplyDrive",
+      "projectPath": "L:\\SimplyDrive\\AutoLink\\SimplyDrive.csproj",
       "packagesPath": "C:\\Users\\aiden\\.nuget\\packages\\",
       "outputPath": "L:\\SimplyDrive\\AutoLink\\obj\\",
       "projectStyle": "PackageReference",

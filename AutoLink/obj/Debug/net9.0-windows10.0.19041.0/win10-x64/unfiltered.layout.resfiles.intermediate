@@ -74,8 +74,6 @@ person_icon.scale-125.png
 person_icon.scale-150.png
 person_icon.scale-200.png
 person_icon.scale-400.png
-renaultcliosideprof.scale-100.png
-renaultlogo.scale-100.png
 sedan_car.scale-100.png
 sedan_car.scale-125.png
 sedan_car.scale-150.png
@@ -87,9 +85,5 @@ settings_wheel.scale-150.png
 settings_wheel.scale-200.png
 settings_wheel.scale-400.png
 spanner.scale-100.png
-autoaidelogo1SplashScreen.scale-100.png
-autoaidelogo1SplashScreen.scale-125.png
-autoaidelogo1SplashScreen.scale-150.png
-autoaidelogo1SplashScreen.scale-200.png
-autoaidelogo1SplashScreen.scale-400.png
+splash.scale-100.png
 AboutAssets.txt

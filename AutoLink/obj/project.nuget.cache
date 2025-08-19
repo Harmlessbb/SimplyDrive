@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T3PRgLAHCR0=",
+  "dgSpecHash": "RhS+Yawxu0M=",
   "success": true,
-  "projectFilePath": "L:\\SimplyDrive\\AutoLink\\AutoLink.csproj",
+  "projectFilePath": "L:\\SimplyDrive\\AutoLink\\SimplyDrive.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aiden\\.nuget\\packages\\communitytoolkit.maui\\11.2.0\\communitytoolkit.maui.11.2.0.nupkg.sha512",
     "C:\\Users\\aiden\\.nuget\\packages\\communitytoolkit.maui.core\\11.2.0\\communitytoolkit.maui.core.11.2.0.nupkg.sha512",

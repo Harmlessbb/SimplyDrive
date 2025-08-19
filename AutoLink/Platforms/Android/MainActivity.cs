@@ -1,10 +1,10 @@
 ﻿using Android.App;
 using Android.Content.PM;
-using Android.OS;       
+using Android.OS;
 using Android.Content;
 using Microsoft.Maui.ApplicationModel;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.Android;
 
 [Activity(
     Theme = "@style/Maui.SplashTheme",
@@ -24,7 +24,7 @@ public class MainActivity : MauiAppCompatActivity
     protected override void OnCreate(Bundle? savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        Microsoft.Maui.ApplicationModel.Platform.Init(this, savedInstanceState);
+        Platform.Init(this, savedInstanceState);
 
     }
 
@@ -34,7 +34,6 @@ public class MainActivity : MauiAppCompatActivity
         Platform.OnNewIntent(intent);
 
         string? data = intent?.DataString;
-        Android.Util.Log.Debug("AutoLink", $"[DEBUG] OnNewIntent received data: {data ?? "null"}");
 
     }
 }

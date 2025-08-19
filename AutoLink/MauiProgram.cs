@@ -1,11 +1,11 @@
-﻿using AutoLink.Model;
-using AutoLink.ViewModel;
+﻿using SimplyDrive.ViewModel;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using CommunityToolkit.Maui;
-using AutoLink.Service;
+using SimplyDrive.Service;
+using SimplyDrive.Model;
 
-namespace AutoLink;
+namespace SimplyDrive;
 
 public static class MauiProgram
 {

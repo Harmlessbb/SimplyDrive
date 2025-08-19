@@ -1,6 +1,6 @@
-﻿using AutoLink.ViewModel;
+﻿using SimplyDrive.ViewModel;
 
-namespace AutoLink
+namespace SimplyDrive.View
 {
     public partial class MainPage : ContentPage
     {
@@ -14,15 +14,10 @@ namespace AutoLink
             InitializeComponent();
         }
 
-        async void OnButtonClicked(object sender, EventArgs args)
-        {
-            await label.RelRotateTo(360, 1000);
-        }
-
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-
+            await viewModel.Initialize();
         }
 
     }

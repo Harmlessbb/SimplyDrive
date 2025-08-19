@@ -6,7 +6,7 @@
 using System;
 using System.CodeDom.Compiler;
 
-namespace AutoLink {
+namespace SimplyDrive {
 	#pragma warning disable IDE0002
 	/// <summary>
 	/// Android Resource Designer class.

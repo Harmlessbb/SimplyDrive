@@ -1,17 +1,15 @@
-namespace AutoLink.ViewModel;
-using AutoLink.Service;
-using AutoLink.Model;
-using AutoLink.ViewModel;
+namespace SimplyDrive.ViewModel;
+using SimplyDrive.Model;
+using SimplyDrive.ViewModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Networking;
 using System.Diagnostics;
 
-using AutoLink.View;
+using SimplyDrive.View;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 using System.Threading.Tasks;
-
-
+using SimplyDrive.Service;
 
 public partial class LogonViewModel : ObservableObject
 {
@@ -19,42 +17,35 @@ public partial class LogonViewModel : ObservableObject
     [ObservableProperty]
     private bool isBusy = false;
 
+    [ObservableProperty]
+    private bool isConnected; 
 
     private string Code;
 
-    LoginService LoginService;
 
-	public LogonViewModel(LoginService loginService)
+	public LogonViewModel()
 	{
-		this.LoginService = loginService;
+
 	}
 
 
 	[RelayCommand]
-	public async Task AttemptLogin()
+	public async Task ValidateLogin() //Handles page Navigation after login
     {
 
-        IsBusy = true;
 
-        Debug.WriteLine("Attempt Login Function Called");
-
-        await LoginService.attemptLogin();
         Code = await SecureStorage.Default.GetAsync("accessToken");
 
         if (Code is not null)
         {
-            //If we get an access code, go to the main page
             await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
-
         }
         else
         {
-            //If we don't, restart the login page which will call this function again.
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-
         }
 
-        IsBusy = false;
+
     }
 
 }

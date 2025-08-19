@@ -1,16 +1,16 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Microsoft.Maui.Authentication;
 
-namespace AutoLink;
+namespace SimplyDrive.Platforms.Android;
 
 [Activity(LaunchMode = LaunchMode.SingleTop, Exported = true)]
 [IntentFilter(
-    new[] { Android.Content.Intent.ActionView },
+    new[] { Intent.ActionView },
     Categories = new[] {
-    Android.Content.Intent.CategoryDefault,
-        Android.Content.Intent.CategoryBrowsable },
-
+        Intent.CategoryDefault,
+        Intent.CategoryBrowsable },
     DataScheme = "maui",
     DataHost = "callback")]
 

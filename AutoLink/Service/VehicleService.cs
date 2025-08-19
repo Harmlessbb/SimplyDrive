@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutoLink.Model;
-using System.Net.Http.Headers; 
+using System.Net.Http.Headers;
 using System.Text.Json;
+using SimplyDrive.Model;
 
 
-namespace AutoLink.Service
+namespace SimplyDrive.Service
 {
     public class VehicleService
     {
