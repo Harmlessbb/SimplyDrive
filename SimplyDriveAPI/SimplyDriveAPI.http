@@ -1,0 +1,6 @@
+@SimplyDriveAPI_HostAddress = http://localhost:5298
+
+GET {{SimplyDriveAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
