@@ -53,7 +53,7 @@ builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(7270, listenOptions =>
     {
-        //listenOptions.UseHttps();
+        listenOptions.UseHttps();
     });
 });
 

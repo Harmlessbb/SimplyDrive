@@ -78,8 +78,6 @@ namespace SimplyDrive.View
 
             Debug.WriteLine($"accessToken: {accessToken}");
 
-            await SecureStorage.Default.SetAsync("accessToken", $"{accessToken}");
-
             _logonViewModel.ValidateLogin();
 
         }
