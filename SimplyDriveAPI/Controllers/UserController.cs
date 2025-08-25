@@ -6,7 +6,7 @@ using System.Security.Claims;
 
 namespace SimplyDriveAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("Api/[controller]")]
     public class UserController : ControllerBase
@@ -24,13 +24,14 @@ namespace SimplyDriveAPI.Controllers
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
 
-
+            var userID = claimsIdentity?.FindFirst("sub")?.Value;
             var email = claimsIdentity?.FindFirst(ClaimTypes.Email)?.Value;
             var givenName = claimsIdentity?.FindFirst(ClaimTypes.GivenName)?.Value;
             var familyName = claimsIdentity?.FindFirst(ClaimTypes.Surname)?.Value;
 
             return Ok(new
             {
+                UserID = userID,
                 Email = email,
                 FirstName = givenName,
                 LastName = familyName
