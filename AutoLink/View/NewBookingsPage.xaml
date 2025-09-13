@@ -5,7 +5,9 @@
              Title="NewBookingsPage"
              BackgroundColor="#000000">
 
-    <WebView Source="https://learn.microsoft.com/dotnet/maui" />
+    <Grid ColumnDefinitions="*,*,*" RowDefinitions="20,*,*,*,*,20">
+
+    </Grid>
 
 
 </ContentPage>

@@ -8,4 +8,4 @@ File=Resources\Images\sedan_car.png;Link=;BaseSize=300,185;Resize=True;TintColor
 File=Resources\Images\settings_wheel.png;Link=;BaseSize=376,678;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\spanner.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\splash.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\AppIcon\appicon.svg;Link=;BaseSize=;Resize=;TintColor=;Color=#93C9C3;IsAppIcon=True;ForegroundScale=;ForegroundFile=Resources\AppIcon\appicon.svg
+File=Resources\AppIcon\appicon.svg;Link=;BaseSize=;Resize=;TintColor=;Color=#000000;IsAppIcon=True;ForegroundScale=;ForegroundFile=Resources\AppIcon\appicon.svg

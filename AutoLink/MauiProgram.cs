@@ -30,15 +30,15 @@ public static class MauiProgram
 	   builder.Services.AddTransient<MainPageViewModel>();
 
        builder.Services.AddTransient<NewBookingsViewModel>();
-
+	   builder.Services.AddTransient<DevPage1ViewModel>();
 
 	   //Build the Services
        builder.Services.AddTransient<LoginService>();
 	   builder.Services.AddTransient<ActiveBookingService>();
-
+	   builder.Services.AddTransient<VehicleService>();
 
         //Build the Models
-        builder.Services.AddTransient<UserModel>();
+       builder.Services.AddTransient<UserModel>();
 
 
 

@@ -24,7 +24,7 @@ namespace SimplyDriveAPI.Controllers
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
 
-            var userID = claimsIdentity?.FindFirst("sub")?.Value;
+            var userID = claimsIdentity?.FindFirst(ClaimTypes.NameIdentifier)?.Value;            
             var email = claimsIdentity?.FindFirst(ClaimTypes.Email)?.Value;
             var givenName = claimsIdentity?.FindFirst(ClaimTypes.GivenName)?.Value;
             var familyName = claimsIdentity?.FindFirst(ClaimTypes.Surname)?.Value;
@@ -50,21 +50,22 @@ namespace SimplyDriveAPI.Controllers
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized("User ID claim missing");
 
-            var activeBookings = await _context.BookingData.Where(b => b.UserId == userId).ToListAsync();
+            var activeBookings = await _context.BookingData.Where(b => b.userid == userId).ToListAsync();
 
             var response = activeBookings.Select(b => new
             {
-                BookingId = b.BookingId,
-                BookingDate = b.BookingDate,
-                BookingTime = b.BookingTime,
-                VehicleId = b.VehicleId,
-                DealerId = b.DealerId,
-                IsService = b.IsService,
-                IsMot = b.IsMot,
-                IsDiagnostics = b.IsDiagnostics,
-                IsOtherJobType = b.IsOtherJobType,
-                IsWarrenty = b.IsWarrenty,
-                DealerReference = b.DealerReference
+                b.bookingid,
+                b.userid,
+                b.dealerid,
+                b.vehicleid,
+                b.date,
+                b.time,
+                b.timeslot,
+                b.jobcodes,
+                b.totallabour,
+                b.status,
+                //b.createdAt,
+                b.reference
             });
 
 

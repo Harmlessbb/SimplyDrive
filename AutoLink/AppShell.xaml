@@ -29,8 +29,8 @@
 
         <ShellContent
             Title="Check-in"
-            ContentTemplate="{DataTemplate View:NewBookingsPage}"
-            Route="NewBookingsPage"
+            ContentTemplate="{DataTemplate View:DevPage1}"
+            Route="DevPage1"
             Icon="sedan_car.png">
 
         </ShellContent>

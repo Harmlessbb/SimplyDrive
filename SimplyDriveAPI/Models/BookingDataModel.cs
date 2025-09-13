@@ -1,50 +1,34 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SimplyDriveAPI.Models
 {
+    public enum BookingStatusEnum
+    {
+        upcoming,
+        awaitingcheckin,
+        onsite,
+        awaitingparts,
+        inworkshop,
+        awaitingauthorisation,
+        awaitingwarrantyresponse,
+        completed,
+    }
     public class BookingDataModel
     {
-        [Column("bookingid")]
-        public int BookingId { get; set; }
+        [Key]
+        public int bookingid { get; set; } 
+        public string userid { get; set; }
+        public int dealerid { get; set; }
+        public int vehicleid { get; set; }
+        public DateTime date { get; set; }
+        public TimeSpan time { get; set; }
+        public int timeslot { get; set; }
+        public int[] jobcodes { get; set; }
+        public double totallabour { get; set; }
+        public BookingStatusEnum status { get; set; }
+        public string reference { get; set; }
 
-        [Column("userid")]
-        public string UserId { get; set; } = string.Empty;
-
-        [Column("vehicleid")]
-        public int VehicleId { get; set; }
-
-        [Column("dealerid")]
-        public int DealerId { get; set; }
-
-        [Column("bookingdate")]
-        public DateTime BookingDate { get; set; }
-
-        [Column("bookingtime")]
-        public TimeSpan BookingTime { get; set; }
-
-        [Column("createdat")]
-        public DateTime CreatedAt { get; set; }
-
-        [Column("timepaidfor")]
-        public int TimePaidFor { get; set; }
-
-        [Column("ismot")]
-        public bool IsMot { get; set; }
-
-        [Column("isservice")]
-        public bool IsService { get; set; }
-
-        [Column("isdiagnostics")]
-        public bool IsDiagnostics { get; set; }
-
-        [Column("isotherjobtype")]
-        public bool IsOtherJobType { get; set; }
-
-        [Column("iswarrenty")]
-        public bool IsWarrenty { get; set; }
-
-        [Column("dealerreference")]
-        public int DealerReference { get; set; }
     }
 }
 

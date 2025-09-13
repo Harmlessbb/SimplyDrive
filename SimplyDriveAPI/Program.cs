@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Npgsql;
 using SimplyDriveAPI.Models;
+using SimplyDriveAPI.Services;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,11 +13,37 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), o =>
+    {
+        //MAP ENUMS HERE
+        o.MapEnum<DealerTagEnum>();
+        o.MapEnum<BrandEnum>();
+        o.MapEnum<TechSkillEnum>();
+        o.MapEnum<fuelEnum>();
+        o.MapEnum<MakeEnum>();
+        o.MapEnum<ModelEnum>();
+        o.MapEnum<JobTypeEnum>();
+        o.MapEnum<BookingStatusEnum>();
+    }));
 
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "SimplyDrive API", Version = "v1" });
+    c.SupportNonNullableReferenceTypes();
+    c.UseAllOfToExtendReferenceSchemas();
+
+    // Show enums as strings in SwaggerUI
+    c.MapType<DealerTagEnum>(() => new Microsoft.OpenApi.Models.OpenApiSchema
+    {
+        Type = "string",
+        Enum = Enum.GetNames(typeof(DealerTagEnum))
+            .Select(n => new Microsoft.OpenApi.Any.OpenApiString(n))
+            .ToList<Microsoft.OpenApi.Any.IOpenApiAny>()
+    });
+});
+
 
 
 builder.Services.AddAuthentication("Bearer")
@@ -56,6 +83,9 @@ builder.WebHost.ConfigureKestrel(options =>
         listenOptions.UseHttps();
     });
 });
+
+builder.Services.AddScoped<DealerServices>();
+
 
 var app = builder.Build();
 

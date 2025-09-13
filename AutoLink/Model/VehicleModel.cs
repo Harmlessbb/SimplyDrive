@@ -25,6 +25,5 @@ namespace SimplyDrive.Model
         public DateOnly next_service_date { get; set; }
         public DateOnly mot_due_date { get; set; }
 
-        
     }
 }
