@@ -17,7 +17,8 @@ namespace SimplyDriveAPI.Models
     public class BookingDataModel
     {
         [Key]
-        public int bookingid { get; set; } 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int bookingid { get; set; }
         public string userid { get; set; }
         public int dealerid { get; set; }
         public int vehicleid { get; set; }

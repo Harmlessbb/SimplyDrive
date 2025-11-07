@@ -24,7 +24,8 @@ namespace SimplyDriveAPI.Controllers
         }
 
 
-        [HttpGet("DealershipData")]
+
+        [HttpGet("RetrieveAllDealerships")]
         public async Task<IActionResult> GetDealershipDetails()
         {
 
@@ -35,11 +36,18 @@ namespace SimplyDriveAPI.Controllers
 
         }
 
+        [HttpGet("RetrieveDealershipData")]
+        public async Task<IActionResult> GetDealerInfo(int dealerID)
+        {
+            var dealershipDataResult = await _context.Set<DealershipDataModel>().Where(d => d.dealerid == dealerID).ToListAsync();
+            return Ok(dealershipDataResult);
+        }
+
         [HttpPost("CreateDealer")]
         public async Task<IActionResult> CreateDealer(string dealerName, string addressLine1, string addressLine2, string postcode, double latitude, double longitude, string phoneNumber)
         {
 
-        var dealerModel = new DealershipDataModel
+            var dealerModel = new DealershipDataModel
             {
                 dealername = dealerName,
                 addressline1 = addressLine1,
@@ -112,7 +120,7 @@ namespace SimplyDriveAPI.Controllers
                 return Ok(new { message = "Tag added successfully." });
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, new { message = $"An error occurred while adding the tag. {ex}" });
             }
@@ -185,7 +193,7 @@ namespace SimplyDriveAPI.Controllers
         }
 
         [HttpPost("AddTechnician")]
-        public async Task<IActionResult> AddTechnicianToDealer(int dealerID,string firstName, string lastName, TechSkillEnum[] techSkill, bool isActive)
+        public async Task<IActionResult> AddTechnicianToDealer(int dealerID, string firstName, string lastName, TechSkillEnum[] techSkill, bool isActive)
         {
             var dealer = await _context.DealershipData.FindAsync(dealerID);
             if (dealer == null)
@@ -229,6 +237,13 @@ namespace SimplyDriveAPI.Controllers
             _context.technicianModel.Remove(technicianModel);
             await _context.SaveChangesAsync();
             return Ok(new { message = "Technician removed successfully." });
+        }
+
+        [HttpGet("RetrieveTechnicians")]
+        public async Task<IActionResult> GetTechnicians(int dealerID)
+        {
+            var technicianResult = await _context.Set<TechnitianModel>().Where(d => d.dealerid == dealerID).ToListAsync();
+            return Ok(technicianResult);
         }
 
         [HttpPost("AddJobToDealer")]
@@ -283,19 +298,19 @@ namespace SimplyDriveAPI.Controllers
         }
 
         [HttpPost("AddBay")]
-        public async Task<IActionResult> AddBayToDealer([FromBody] AddBayRequest request)
+        public async Task<IActionResult> AddBayToDealer(string bayname, int dealerID)
         {
-            if (string.IsNullOrWhiteSpace(request.Name))
+            if (string.IsNullOrWhiteSpace(bayname))
                 return BadRequest(new { message = "Bay name cannot be empty." });
 
-            var dealer = await _context.DealershipData.FindAsync(request.DealerID);
+            var dealer = await _context.DealershipData.FindAsync(dealerID);
             if (dealer == null)
                 return NotFound(new { message = "Dealership not found." });
 
             var baysDataModel = new BaysDataModel
             {
-                bayname = request.Name,
-                dealerid = request.DealerID
+                bayname = bayname,
+                dealerid = dealerID
             };
 
             try
@@ -309,5 +324,30 @@ namespace SimplyDriveAPI.Controllers
                 return StatusCode(500, new { message = $"An error occurred while adding the bay. {ex.Message}" });
             }
         }
+
+        [HttpDelete("RemoveBay")]
+        public async Task<IActionResult> RemoveBayFromDealer(int dealerID, int bayID)
+        {
+            var baysDataModel = await _context.BaysDataModel
+            .FirstOrDefaultAsync(d => d.dealerid == dealerID && d.bayid == bayID);
+
+            if (baysDataModel == null)
+            {
+                return NotFound(new { message = "Bay not found for the specified dealership." });
+            }
+
+            _context.BaysDataModel.Remove(baysDataModel);
+            await _context.SaveChangesAsync();
+            return Ok(new { message = "Bay removed successfully." });
+        }
+
+        [HttpGet("RetrieveBays")]
+        public async Task<IActionResult> GetBays(int dealerID)
+        {
+            var bayDataResult = await _context.Set<BaysDataModel>().Where(d => d.dealerid == dealerID).ToListAsync();
+            return Ok(bayDataResult);
+        }
     }
+
+
 }

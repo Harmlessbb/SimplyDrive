@@ -17,6 +17,7 @@ namespace SimplyDriveAPI.Models
         public DbSet<TechnitianModel> technicianModel { get; set; }
         public DbSet<DealerOpeningTimesModel> openinghours { get; set; }
         public DbSet<JobCodeModel> JobCodes { get; set; }
+        public DbSet<QRCodeModel> QRCodeModel { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -50,6 +51,9 @@ namespace SimplyDriveAPI.Models
 
             modelBuilder.Entity<BaysDataModel>().ToTable("vehiclebays");
             modelBuilder.Entity<BaysDataModel>().HasKey(t => t.dealerid);
+
+            modelBuilder.Entity<QRCodeModel>().ToTable("booking_qrcodes");
+            modelBuilder.Entity<QRCodeModel>().HasKey(q => q.qrid);
 
             modelBuilder.Entity<DealerOpeningTimesModel>()
             .Property(d => d.total30minslots)

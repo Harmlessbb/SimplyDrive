@@ -94,6 +94,7 @@ builder.WebHost.ConfigureKestrel(options =>
 });
 
 builder.Services.AddScoped<DealerServices>();
+builder.Services.AddScoped<QRServices>();
 
 
 var app = builder.Build();

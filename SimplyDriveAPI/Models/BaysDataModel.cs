@@ -2,12 +2,13 @@
 {
     public class BaysDataModel
     {
-        public string bayname;
+        public int bayid { get; set; }
+        public string bayname { get; set; }
 
-        public int dealerid;
+        public int dealerid { get; set; }
 
-        public int? assignedjob;
+        public int? assignedjob { get; set; }
 
-        public int? assignedtechnician;
+        public int? assignedtechnician { get; set; }
     }
 }

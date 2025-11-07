@@ -3,6 +3,8 @@ using SimplyDriveAPI.Models;
 using SimplyDriveAPI.Services;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using System;
 
 namespace SimplyDriveAPI.Controllers
 {
@@ -12,9 +14,12 @@ namespace SimplyDriveAPI.Controllers
     {
         private readonly AppDbContext _context;
         private readonly DealerServices _dealerServices;
-
-        public BookingsController(DealerServices dealerServices, AppDbContext context)
+        private readonly QRServices _qrServices;
+        private readonly QRController _QRController;
+        public BookingsController(DealerServices dealerServices, AppDbContext context, QRServices qrServices)
         {
+            _QRController = new QRController(qrServices, context);
+            _qrServices = qrServices;
             _dealerServices = dealerServices;
             _context = context;
         }
@@ -28,6 +33,7 @@ namespace SimplyDriveAPI.Controllers
                 return NotFound(new { message = "Dealership not found." });
             }
 
+            // Core booking model creation
             var bookingsModel = new BookingDataModel
             {
                 userid = userID,
@@ -42,11 +48,22 @@ namespace SimplyDriveAPI.Controllers
                 reference = reference
             };
 
+
             try
             {
                 _context.BookingData.Add(bookingsModel);
-                await _context.SaveChangesAsync();
-                return Ok(new { message = "Booking added successfully." });
+                await _context.SaveChangesAsync();   // Booking saved to database, next we want to generate the QR code
+
+                int bookingId = bookingsModel.bookingid;
+
+                await _QRController.generateQRCode(bookingId, userID);
+
+                return Ok(new 
+                {
+                    message = "Booking added successfully." ,
+                    bookingId = bookingId
+                    
+                });
 
             }
             catch (Exception ex)
