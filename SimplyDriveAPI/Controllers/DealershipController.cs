@@ -4,6 +4,7 @@ using SimplyDriveAPI.Models;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using SimplyDriveAPI.Services;
+using SimplyDriveAPI.Dtos;
 
 namespace SimplyDriveAPI.Controllers
 {
@@ -279,6 +280,34 @@ namespace SimplyDriveAPI.Controllers
             _context.JobCodes.Remove(jobCodeModel);
             await _context.SaveChangesAsync();
             return Ok(new { message = "Job Code removed successfully." });
+        }
+
+        [HttpPost("AddBay")]
+        public async Task<IActionResult> AddBayToDealer([FromBody] AddBayRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Name))
+                return BadRequest(new { message = "Bay name cannot be empty." });
+
+            var dealer = await _context.DealershipData.FindAsync(request.DealerID);
+            if (dealer == null)
+                return NotFound(new { message = "Dealership not found." });
+
+            var baysDataModel = new BaysDataModel
+            {
+                bayname = request.Name,
+                dealerid = request.DealerID
+            };
+
+            try
+            {
+                _context.BaysDataModel.Add(baysDataModel);
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Bay added successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"An error occurred while adding the bay. {ex.Message}" });
+            }
         }
     }
 }

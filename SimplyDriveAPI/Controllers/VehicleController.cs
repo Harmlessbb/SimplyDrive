@@ -6,7 +6,7 @@ using System.Text.Json;
 
 namespace SimplyDriveAPI.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("Api/[controller]")]
     public class VehicleController : Controller

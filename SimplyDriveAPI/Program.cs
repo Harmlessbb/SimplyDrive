@@ -6,11 +6,15 @@ using Npgsql;
 using SimplyDriveAPI.Models;
 using SimplyDriveAPI.Services;
 using System.Security.Claims;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options => 
+{
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), o =>
@@ -42,9 +46,14 @@ builder.Services.AddSwaggerGen(c =>
             .Select(n => new Microsoft.OpenApi.Any.OpenApiString(n))
             .ToList<Microsoft.OpenApi.Any.IOpenApiAny>()
     });
+    c.MapType<BookingStatusEnum>(() => new Microsoft.OpenApi.Models.OpenApiSchema
+    {
+        Type = "string",
+        Enum = Enum.GetNames(typeof(BookingStatusEnum))
+        .Select(n => new Microsoft.OpenApi.Any.OpenApiString(n))
+        .ToList<Microsoft.OpenApi.Any.IOpenApiAny>()
+    });
 });
-
-
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>

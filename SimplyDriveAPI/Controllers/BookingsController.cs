@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SimplyDriveAPI.Models;
 using SimplyDriveAPI.Services;
+using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace SimplyDriveAPI.Controllers
 {
@@ -74,5 +76,42 @@ namespace SimplyDriveAPI.Controllers
 
         }
 
+        [HttpGet("DealerBookings")]
+        public async Task<IActionResult> GetDealershipBookings(int dealerID) 
+        { 
+            var dealerBookingsReferenceData = await _context.Set<BookingDataModel>().Where(b => b.dealerid == dealerID).ToListAsync();
+
+            var status = dealerBookingsReferenceData.Select(v => v.status).ToList();
+            var vehicleIds = dealerBookingsReferenceData.Select(v => v.vehicleid).ToList();
+
+            var vehicles = await _context.Set<VehicleDataModel>()
+                .Where(v => vehicleIds.Contains(v.id))
+                .ToListAsync();
+
+            var vehicleRegistrations = vehicles.Select(v => v.registration).ToList();
+
+            var dealerBookingsMapped = dealerBookingsReferenceData.Select(b => new
+            {
+                b.bookingid,
+                b.userid,
+                b.dealerid,
+                b.vehicleid,
+                b.date,
+                b.time,
+                b.timeslot,
+                b.jobcodes,
+                b.totallabour,
+                b.status,
+                b.reference,
+                registration = vehicles.FirstOrDefault(v => v.id == b.vehicleid)?.registration
+            }).ToList();
+
+            return Ok(dealerBookingsMapped);
+
+
+        }
+
     }
+
+
 }

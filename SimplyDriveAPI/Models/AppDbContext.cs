@@ -8,7 +8,7 @@ namespace SimplyDriveAPI.Models
             : base(options)
         {
         }
-
+        public DbSet<BaysDataModel> BaysDataModel { get; set; }
         public DbSet<BookingDataModel> BookingData { get; set; }
         public DbSet<DealershipDataModel> DealershipData { get; set; }
         public DbSet<VehicleOwnersDataModel> VehicleOwners { get; set; }
@@ -47,6 +47,9 @@ namespace SimplyDriveAPI.Models
 
             modelBuilder.Entity<JobCodeModel>().ToTable("jobcodes");
             modelBuilder.Entity<JobCodeModel>().HasKey(t => t.id);
+
+            modelBuilder.Entity<BaysDataModel>().ToTable("vehiclebays");
+            modelBuilder.Entity<BaysDataModel>().HasKey(t => t.dealerid);
 
             modelBuilder.Entity<DealerOpeningTimesModel>()
             .Property(d => d.total30minslots)
