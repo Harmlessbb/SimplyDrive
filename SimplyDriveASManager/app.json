@@ -1,9 +1,10 @@
 {
   "expo": {
+    "scheme": "SimplyDriveASManager",
     "name": "SimplyDriveASManager",
     "slug": "SimplyDriveASManager",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
@@ -24,6 +25,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
