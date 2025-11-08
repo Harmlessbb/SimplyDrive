@@ -10,8 +10,21 @@ const Checkin = () => {
   };
 
   const _onHiddenTextChangeText = (text) => {
-    console.log("TEXT INPUTTED", text);
-  };
+      console.log("TEXT INPUTTED", text);
+
+    if (text.includes('$')) {
+
+        const [userID, bookingID, passcodePart] = text.split('@');
+        const passcode = passcodePart.replace('$', '');
+
+        console.log({ userID, bookingID, passcode });
+
+        if (userID, bookingID, passcode = !null)
+        {
+            
+        }
+  }
+  }; 
 
   return (
     <View style={styles.container}>
