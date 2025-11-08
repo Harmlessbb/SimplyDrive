@@ -53,7 +53,7 @@ namespace SimplyDriveAPI.Controllers
             }
         }
 
-        [HttpGet("getQRCode")]
+        [HttpGet("getQRCode")] //Probably shouldn't have this in prod
         public async Task<IActionResult> returnQRCode(int bookingID)
         {
             var qrCode = await _context.QRCodeModel.FirstOrDefaultAsync(q => q.bookingid == bookingID && q.active == true);
@@ -63,6 +63,20 @@ namespace SimplyDriveAPI.Controllers
             }
             return Ok(new
             {
+                qrCode
+            });
+        }
+        [HttpGet("VarifyQRCode")]
+        public async Task<IActionResult> varifyQRCode(string userID, int bookingID, string QRpasscode)
+        {
+            var qrCode = await _context.QRCodeModel.FirstOrDefaultAsync(q => q.bookingid == bookingID && q.userid == userID && q.passcode == QRpasscode && q.active == true);
+            if (qrCode == null)
+            {
+                return NotFound(new { message = "QR Code not valid." });
+            }
+            return Ok(new
+            {
+                message = "QR Code valid.",
                 qrCode
             });
         }

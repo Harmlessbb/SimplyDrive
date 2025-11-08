@@ -128,6 +128,38 @@ namespace SimplyDriveAPI.Controllers
 
         }
 
+
+        [HttpGet("BookingsByID")]
+        public async Task<IActionResult> GetDealershipBookingByID(int bookingID)
+        {
+            var booking = await _context.Set<BookingDataModel>()
+                .FirstOrDefaultAsync(b => b.bookingid == bookingID);
+
+            if (booking == null)
+                return NotFound(new { message = "Booking not found." });
+
+            var vehicle = await _context.Set<VehicleDataModel>()
+                .FirstOrDefaultAsync(v => v.id == booking.vehicleid);
+
+            var result = new
+            {
+                booking.bookingid,
+                booking.userid,
+                booking.dealerid,
+                booking.vehicleid,
+                booking.date,
+                booking.time,
+                booking.timeslot,
+                booking.jobcodes,
+                booking.totallabour,
+                booking.status,
+                booking.reference,
+                registration = vehicle?.registration
+            };
+
+            return Ok(result);
+        }
+
     }
 
 
