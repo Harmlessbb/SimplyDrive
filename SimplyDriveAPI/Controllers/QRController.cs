@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SimplyDriveAPI.Models;
 using SimplyDriveAPI.Services;
+using SimplyDriveAPI.Controllers;
 
 namespace SimplyDriveAPI.Controllers
 {
@@ -13,9 +14,11 @@ namespace SimplyDriveAPI.Controllers
 
         private readonly AppDbContext _context;
         private readonly QRServices _qrServices;
+        private readonly BookingsController _bookingsController;
 
-        public QRController(QRServices qrServices, AppDbContext context)
+        public QRController(QRServices qrServices, AppDbContext context, BookingsController bookingsController)
         {
+            _bookingsController = bookingsController;
             _qrServices = qrServices;
             _context = context;
         }
@@ -70,14 +73,20 @@ namespace SimplyDriveAPI.Controllers
         public async Task<IActionResult> varifyQRCode(string userID, int bookingID, string QRpasscode)
         {
             var qrCode = await _context.QRCodeModel.FirstOrDefaultAsync(q => q.bookingid == bookingID && q.userid == userID && q.passcode == QRpasscode && q.active == true);
+
+
             if (qrCode == null)
             {
                 return NotFound(new { message = "QR Code not valid." });
             }
+
+            var bookingDetails = await _bookingsController.GetDealershipBookingByID(bookingID);
+
             return Ok(new
             {
                 message = "QR Code valid.",
-                qrCode
+                qrCode,
+                bookingDetails
             });
         }
 

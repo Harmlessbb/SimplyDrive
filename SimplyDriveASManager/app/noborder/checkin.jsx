@@ -9,6 +9,28 @@ const Checkin = () => {
     router.push('/live')
   };
 
+  async function validateQR(userID, bookingID, passcode)
+  {
+    try 
+    {
+      const url = `https://api.simplydrive.app/Api/QR/VarifyQRCode?userID=${userID}&bookingID=${bookingID}&QRpasscode=${passcode}`;
+
+      console.log("FETCHING:", url);
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+      console.log("API RESPONSE:", data);
+
+      if (data.success) {
+        console.log("VALID QR")
+      }
+  } catch (err) {
+    console.error("QR validation failed:", err);
+  }
+
+  }
+
   const _onHiddenTextChangeText = (text) => {
       console.log("TEXT INPUTTED", text);
 
@@ -21,7 +43,7 @@ const Checkin = () => {
 
         if (userID, bookingID, passcode = !null)
         {
-            
+            validateQR(userID, bookingID, passcode)           
         }
   }
   }; 

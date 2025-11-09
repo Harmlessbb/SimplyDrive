@@ -16,12 +16,14 @@ namespace SimplyDriveAPI.Controllers
         private readonly DealerServices _dealerServices;
         private readonly QRServices _qrServices;
         private readonly QRController _QRController;
-        public BookingsController(DealerServices dealerServices, AppDbContext context, QRServices qrServices)
+        private readonly BookingsController _bookingsController;
+        public BookingsController(DealerServices dealerServices, AppDbContext context, QRServices qrServices, BookingsController bookingsController)
         {
-            _QRController = new QRController(qrServices, context);
+            _QRController = new QRController(qrServices, context, bookingsController);
             _qrServices = qrServices;
             _dealerServices = dealerServices;
             _context = context;
+            _bookingsController = bookingsController;
         }
 
         [HttpPost("CreateBooking")]
