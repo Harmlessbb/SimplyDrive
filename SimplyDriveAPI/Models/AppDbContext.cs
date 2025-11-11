@@ -24,8 +24,12 @@ namespace SimplyDriveAPI.Models
             modelBuilder.Entity<BookingDataModel>().ToTable("bookings");
             modelBuilder.Entity<BookingDataModel>().HasKey(b => b.bookingid);
 
+            modelBuilder.Entity<QRCodeModel>().ToTable("booking_qrcodes");
+            modelBuilder.Entity<QRCodeModel>().HasKey(q => q.qrid);
+
             modelBuilder.Entity<VehicleDataModel>().ToTable("vehicles");
             modelBuilder.Entity<VehicleDataModel>().HasKey(v => v.id);
+
 
             //Dealership Models
             modelBuilder.Entity<VehicleOwnersDataModel>().ToTable("vehicleowners");
@@ -51,9 +55,6 @@ namespace SimplyDriveAPI.Models
 
             modelBuilder.Entity<BaysDataModel>().ToTable("vehiclebays");
             modelBuilder.Entity<BaysDataModel>().HasKey(t => t.dealerid);
-
-            modelBuilder.Entity<QRCodeModel>().ToTable("booking_qrcodes");
-            modelBuilder.Entity<QRCodeModel>().HasKey(q => q.qrid);
 
             modelBuilder.Entity<DealerOpeningTimesModel>()
             .Property(d => d.total30minslots)

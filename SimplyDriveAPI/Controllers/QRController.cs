@@ -14,11 +14,13 @@ namespace SimplyDriveAPI.Controllers
 
         private readonly AppDbContext _context;
         private readonly QRServices _qrServices;
+        private readonly BookingService _bookingService;
         private readonly BookingsController _bookingsController;
+        
 
-        public QRController(QRServices qrServices, AppDbContext context, BookingsController bookingsController)
+        public QRController(QRServices qrServices, AppDbContext context, BookingService bookingService)
         {
-            _bookingsController = bookingsController;
+            _bookingService = bookingService;
             _qrServices = qrServices;
             _context = context;
         }
@@ -70,7 +72,7 @@ namespace SimplyDriveAPI.Controllers
             });
         }
         [HttpGet("VarifyQRCode")]
-        public async Task<IActionResult> varifyQRCode(string userID, int bookingID, string QRpasscode)
+        public async Task<IActionResult> verifyQRCode(string userID, int bookingID, string QRpasscode)
         {
             var qrCode = await _context.QRCodeModel.FirstOrDefaultAsync(q => q.bookingid == bookingID && q.userid == userID && q.passcode == QRpasscode && q.active == true);
 
@@ -80,7 +82,7 @@ namespace SimplyDriveAPI.Controllers
                 return NotFound(new { message = "QR Code not valid." });
             }
 
-            var bookingDetails = await _bookingsController.GetDealershipBookingByID(bookingID);
+            var bookingDetails = await _bookingService.GetDealershipBookingByID(bookingID);
 
             return Ok(new
             {

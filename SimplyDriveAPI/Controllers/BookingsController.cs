@@ -15,15 +15,13 @@ namespace SimplyDriveAPI.Controllers
         private readonly AppDbContext _context;
         private readonly DealerServices _dealerServices;
         private readonly QRServices _qrServices;
-        private readonly QRController _QRController;
-        private readonly BookingsController _bookingsController;
-        public BookingsController(DealerServices dealerServices, AppDbContext context, QRServices qrServices, BookingsController bookingsController)
+
+
+        public BookingsController(DealerServices dealerServices, AppDbContext context, QRServices qrServices, BookingService bookingService)
         {
-            _QRController = new QRController(qrServices, context, bookingsController);
             _qrServices = qrServices;
             _dealerServices = dealerServices;
             _context = context;
-            _bookingsController = bookingsController;
         }
 
         [HttpPost("CreateBooking")]
@@ -35,7 +33,7 @@ namespace SimplyDriveAPI.Controllers
                 return NotFound(new { message = "Dealership not found." });
             }
 
-            // Core booking model creation
+            // Core booking model creation6a
             var bookingsModel = new BookingDataModel
             {
                 userid = userID,
@@ -58,7 +56,7 @@ namespace SimplyDriveAPI.Controllers
 
                 int bookingId = bookingsModel.bookingid;
 
-                await _QRController.generateQRCode(bookingId, userID);
+                await _qrServices.generateQRCode(bookingId, userID);
 
                 return Ok(new 
                 {

@@ -39,9 +39,9 @@ const Checkin = () => {
         const [userID, bookingID, passcodePart] = text.split('@');
         const passcode = passcodePart.replace('$', '');
 
-        console.log({ userID, bookingID, passcode });
+        console.log({ userID, bookingID, passcode});
 
-        if (userID, bookingID, passcode = !null)
+        if (userID && bookingID && passcode)
         {
             validateQR(userID, bookingID, passcode)           
         }

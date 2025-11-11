@@ -89,12 +89,13 @@ builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(7270, listenOptions =>
     {
-        //listenOptions.UseHttps();
+        listenOptions.UseHttps();
     });
 });
 
 builder.Services.AddScoped<DealerServices>();
 builder.Services.AddScoped<QRServices>();
+builder.Services.AddScoped<BookingService>();
 
 
 var app = builder.Build();
