@@ -22,11 +22,13 @@ const Checkin = () => {
 
       console.log("API RESPONSE:", data);
 
-      if (data.success) {
+      if (data.message === "QR Code valid.") {
         console.log("VALID QR")
+        validStringFlagSent = true;
       }
   } catch (err) {
     console.error("QR validation failed:", err);
+    validStringFlagSent = false; 
   }
 
   }
@@ -35,15 +37,17 @@ const Checkin = () => {
       console.log("TEXT INPUTTED", text);
 
     if (text.includes('$')) {
-
-        const [userID, bookingID, passcodePart] = text.split('@');
+        
+        let validStringFlagSent = false;
+        const [bookingID, userID, passcodePart] = text.split('@');
         const passcode = passcodePart.replace('$', '');
 
         console.log({ userID, bookingID, passcode});
 
-        if (userID && bookingID && passcode)
+        if (userID && bookingID && passcode && !validStringFlagSent)
         {
-            validateQR(userID, bookingID, passcode)           
+            validStringFlagSent = true; 
+            validateQR(userID, bookingID, passcode)                     
         }
   }
   }; 
