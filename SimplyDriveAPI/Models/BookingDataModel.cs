@@ -22,6 +22,8 @@ namespace SimplyDriveAPI.Models
         public string userid { get; set; }
         public int dealerid { get; set; }
         public int vehicleid { get; set; }
+
+        [Column(TypeName = "timestamp without time zone")]
         public DateTime date { get; set; }
         public TimeSpan time { get; set; }
         public int timeslot { get; set; }

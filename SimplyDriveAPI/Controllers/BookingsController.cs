@@ -160,6 +160,35 @@ namespace SimplyDriveAPI.Controllers
             return Ok(result);
         }
 
+        [HttpPut("UpdateStatus")]
+        public async Task<IActionResult> UpdateStatus(int bookingID, BookingStatusEnum newStatus)
+        {
+            var booking = await _context.BookingData.FindAsync(bookingID);
+
+            if (booking == null)
+            {
+                return NotFound(new { message = "Booking not found." });
+            }
+
+            try
+            {
+                booking.status = newStatus;
+                _context.BookingData.Update(booking);
+                await _context.SaveChangesAsync();
+
+                return Ok(new
+                {
+                    message = "Booking status updated successfully.",
+                    bookingID = booking.bookingid,
+                    newStatus = booking.status.ToString()
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"An error occurred while updating the booking status. {ex.Message}" });
+            }
+        }
+
     }
 
 
