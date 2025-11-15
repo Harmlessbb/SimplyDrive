@@ -183,12 +183,14 @@ namespace SimplyDriveAPI.Controllers
                 if (!bookingsByStatus.Any())
                     return NotFound(new { message = "No bookings found." });
 
-                var results = bookingsByStatus.Select(async booking =>
+                var results = new List<object>();
+
+                foreach (var booking in bookingsByStatus)
                 {
                     var vehicle = await _context.Set<VehicleDataModel>()
                         .FirstOrDefaultAsync(v => v.id == booking.vehicleid);
 
-                    return new
+                    results.Add(new
                     {
                         booking.bookingid,
                         booking.userid,
@@ -202,10 +204,10 @@ namespace SimplyDriveAPI.Controllers
                         booking.status,
                         booking.reference,
                         registration = vehicle?.registration
-                    };
-                });
+                    });
+                }
 
-                return Ok(await Task.WhenAll(results));
+                return Ok(results);
             }
             catch (Exception ex)
             {
