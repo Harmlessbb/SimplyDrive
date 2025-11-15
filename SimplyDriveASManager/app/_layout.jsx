@@ -10,6 +10,7 @@ const RootLayout = () => {
 
   const goToLivePage = () => router.push('/live');
   const goToWorkshopPage = () => router.push('/workshop');
+  const goToTechnicianPage = () => router.push('/technicians');
 
   return (
     <View style={styles.container}>
@@ -24,6 +25,11 @@ const RootLayout = () => {
           <TouchableOpacity style={styles.navigationbutton} onPress={goToWorkshopPage}>
             <Text style={styles.buttonText}>Workshop</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity style={styles.navigationbutton} onPress={goToTechnicianPage}>
+            <Text style={styles.buttonText}>Technicians</Text>
+          </TouchableOpacity>
+
         </View>
       )}
 

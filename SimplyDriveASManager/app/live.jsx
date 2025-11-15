@@ -15,6 +15,7 @@ const Live = () => {
       const response = await fetch(url);
       if (!response.ok) {
         const text = await response.text();
+        console.log("Is the VPN on? - Fix to loopback error")
         throw new Error(`Error ${response.status} - ${response.statusText}\nResponse: ${text}`);
       }
 
