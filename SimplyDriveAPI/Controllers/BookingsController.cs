@@ -160,6 +160,62 @@ namespace SimplyDriveAPI.Controllers
             return Ok(result);
         }
 
+        [HttpGet("BookingsByStatus")]
+        public async Task<IActionResult> GetDealershipBookingByStatus(int? dealerID, BookingStatusEnum bookingStatus)
+        {
+            try
+            {
+                List<BookingDataModel> bookingsByStatus;
+
+                if (dealerID is not null)
+                {
+                    bookingsByStatus = await _context.Set<BookingDataModel>()
+                        .Where(b => b.dealerid == dealerID && b.status == bookingStatus)
+                        .ToListAsync();
+                }
+                else
+                {
+                    bookingsByStatus = await _context.Set<BookingDataModel>()
+                        .Where(b => b.status == bookingStatus)
+                        .ToListAsync();
+                }
+
+                if (!bookingsByStatus.Any())
+                    return NotFound(new { message = "No bookings found." });
+
+                var results = bookingsByStatus.Select(async booking =>
+                {
+                    var vehicle = await _context.Set<VehicleDataModel>()
+                        .FirstOrDefaultAsync(v => v.id == booking.vehicleid);
+
+                    return new
+                    {
+                        booking.bookingid,
+                        booking.userid,
+                        booking.dealerid,
+                        booking.vehicleid,
+                        booking.date,
+                        booking.time,
+                        booking.timeslot,
+                        booking.jobcodes,
+                        booking.totallabour,
+                        booking.status,
+                        booking.reference,
+                        registration = vehicle?.registration
+                    };
+                });
+
+                return Ok(await Task.WhenAll(results));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"An error occurred while retrieving bookings. {ex.Message}" });
+            }
+        }
+
+
+
+
         [HttpPut("UpdateStatus")]
         public async Task<IActionResult> UpdateStatus(int bookingID, BookingStatusEnum newStatus)
         {

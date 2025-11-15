@@ -347,6 +347,9 @@ namespace SimplyDriveAPI.Controllers
             var bayDataResult = await _context.Set<BaysDataModel>().Where(d => d.dealerid == dealerID).ToListAsync();
             return Ok(bayDataResult);
         }
+
+         
+
     }
 
 
