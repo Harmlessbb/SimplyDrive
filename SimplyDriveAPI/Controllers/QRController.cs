@@ -83,6 +83,7 @@ namespace SimplyDriveAPI.Controllers
             }
 
             var bookingDetails = await _bookingService.GetDealershipBookingByID(bookingID);
+            _bookingService.UpdateStatus(bookingID, BookingStatusEnum.onsite);
 
             return Ok(new
             {

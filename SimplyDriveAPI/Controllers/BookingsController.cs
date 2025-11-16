@@ -33,7 +33,7 @@ namespace SimplyDriveAPI.Controllers
                 return NotFound(new { message = "Dealership not found." });
             }
 
-            // Core booking model creation6a
+            // Core booking model creation
             var bookingsModel = new BookingDataModel
             {
                 userid = userID,

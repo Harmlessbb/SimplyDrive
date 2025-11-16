@@ -16,11 +16,13 @@ namespace SimplyDriveAPI.Controllers
 
         private readonly AppDbContext _context;
         private readonly DealerServices _dealerServices;
+        private readonly BookingService _bookingServices;
 
-        public DealershipController(DealerServices dealerServices, AppDbContext context)
+        public DealershipController(DealerServices dealerServices, AppDbContext context, BookingService bookingService)
         {
             _dealerServices = dealerServices;
             _context = context;
+            _bookingServices = bookingService;
         }
 
 
@@ -348,7 +350,47 @@ namespace SimplyDriveAPI.Controllers
             return Ok(bayDataResult);
         }
 
-         
+        [HttpPut("AssignJobToBay")] 
+        public async Task<IActionResult> assignJobToBay(int? newJobAssigned, int bayID)
+        {
+            var bay = await _context.Set<BaysDataModel>().Where(b => b.bayid == bayID).FirstOrDefaultAsync();
+
+            if (bay == null)
+            {
+                return NotFound(new { message = "Bay not found." });
+            }
+
+            try
+            {
+                if(bay.assignedjob.HasValue) 
+                {
+                    await _bookingServices.UpdateStatus(bay.assignedjob.Value, BookingStatusEnum.onsite);
+                }
+
+
+                bay.assignedjob = newJobAssigned;
+                _context.BaysDataModel.Update(bay);
+                await _context.SaveChangesAsync();
+
+                if(newJobAssigned.HasValue)
+                {
+                    await _bookingServices.UpdateStatus(newJobAssigned.Value, BookingStatusEnum.inworkshop);
+                }
+                
+
+                return Ok(new
+                {
+                    message = "Assigned Job to bay successfully.",
+                    bayID = bay.bayid,
+                    dealerID = bay.dealerid,
+                    newJobAssigned = bay.assignedjob
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"An error occurred while updating the booking status. {ex.Message}" });
+            }
+        }
 
     }
 

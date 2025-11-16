@@ -40,5 +40,35 @@ namespace SimplyDriveAPI.Services
                 registration = vehicle?.registration
             };
         }
+
+        public async Task<object> UpdateStatus(int bookingID, BookingStatusEnum newStatus)
+        {
+            var booking = await _context.BookingData.FindAsync(bookingID);
+
+            if (booking == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                booking.status = newStatus;
+                _context.BookingData.Update(booking);
+                await _context.SaveChangesAsync();
+
+                return new
+                {
+                    message = "Booking status updated successfully.",
+                    bookingID = booking.bookingid,
+                    newStatus = booking.status.ToString()
+                };
+            }
+            catch (Exception ex)
+            {
+                return ex;
+            }
+        }
+
+
     }
 }
