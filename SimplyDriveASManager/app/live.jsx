@@ -42,7 +42,7 @@ const Live = () => {
 
           {isLoading ? (
             <Text>Loading...</Text>
-          ) : (
+          ) :( 
             bookings.map((item, i) => (
               <View key={i} style={styles.jobItemContainer}>
                 <View style={styles.jobItemContainerLeft}>

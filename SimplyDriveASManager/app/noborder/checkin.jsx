@@ -14,6 +14,7 @@ const Checkin = () => {
   const [qrData, setQrData] = useState(null);
   let validStringFlagSent = false;
 
+
   async function validateQR(userID, bookingID, passcode)
   {
     try 
@@ -62,7 +63,22 @@ const Checkin = () => {
   }
   }; 
 
+  async function setBookingStatusToOnsite(bookingID)
+  {
 
+   console.log(`Sending ${bookingID}`) 
+    const numericBookingID = Number(bookingID);
+    const url = `https://api.simplydrive.app/Api/Bookings/UpdateStatus?bookingID=${numericBookingID}&newStatus=onsite`;
+
+
+    fetch(url, { method: "PUT" })
+        .then(res => res.json())
+        .then(data => console.log("Response:", data))
+        .catch(err => console.error("Error:", err));  
+
+    goToLivePage()
+    
+  }
 
   
   return (
@@ -110,7 +126,7 @@ const Checkin = () => {
 
                 <TouchableOpacity
                   style={[styles.button, { backgroundColor: '#17b26a' }, {marginVertical: 65}, {marginRight: 10}]}
-                  onPress={() => setOverlayVisible(false)}
+                  onPress={() => setBookingStatusToOnsite(qrData.bookingDetails.bookingid)}
                 >
                   <Text style={styles.buttonText}>Confirm</Text>
                 </TouchableOpacity>  
