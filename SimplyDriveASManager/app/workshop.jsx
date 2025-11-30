@@ -1,31 +1,13 @@
 import { StyleSheet, Text, View, ScrollView, Image, Button, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState, } from 'react';
-
+import * as bayService from '../services/bayService';
 
 const Workshop = () => {
 
     const [bays, setBays] = useState([]);
+    const [isLoading, setLoading] = useState(true);
 
-  async function getData() {
-    const url = "https://api.simplydrive.app/Api/Dealership/RetrieveBays?dealerID=1";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        const text = await response.text();
-        console.log("Is the VPN on? - Fix to loopback error")
-        throw new Error(`Error ${response.status} - ${response.statusText}\nResponse: ${text}`);
-      }
-
-      const result = await response.json();
-      setBays(result);
-    } catch (error) {
-      console.error(error.message);
-    } finally {
-      //setLoading(false);
-    }
-  }
-
-  const Bay = () => (
+  const Bay = ({ item }) => (
     <View style={styles.bayContainer}>
       <View style={styles.upperBayContainer}>
         <View style={{
@@ -37,7 +19,7 @@ const Workshop = () => {
           flexShrink: 0,
           width: '110%',
          }}>
-          <Text style={[styles.componentText, {}]}>BAY TITLE</Text>
+          <Text style={[styles.componentText, {}]}>{item.bayname}</Text>
 
 
           <View style={styles.statusInfoBlock}>
@@ -61,7 +43,7 @@ const Workshop = () => {
           </View>
 
           <View style={{ padding: 10, justifyContent: 'center' }}>
-            <Text style={[styles.componentText, { textAlign: 'left' }]}>TECHNICIAN NAME</Text>
+            <Text style={[styles.componentText, { textAlign: 'left' }]}>{item.assignedtechnician}</Text>
             <Text style={[styles.componentText, { fontSize: 10, textAlign: 'left' }]}>TECHNICIAN NAME</Text>
           </View>
 
@@ -109,7 +91,7 @@ const Workshop = () => {
           alignItems: 'center'
           }}> 
             <View style={styles.registrationInfoBlock}>
-               <Text style={styles.componentText}>REG HERE</Text>      
+               <Text style={styles.componentText}>{item.bookingData.registration}</Text>      
              </View>
           </View>
         </View>
@@ -145,20 +127,39 @@ const Workshop = () => {
  </View>
  );
 
- useEffect(() => {
-    getData();
-  }, []);  
+ const OnsiteVehicleCard = () => 
+  (
+    <View style={styles.onsiteBookingContainer}>
+    </View>
+  );
+
+
+
+useEffect(() => {
+  async function loadBayInfo() {
+    try {
+      const data = await bayService.getBayData();
+      setBays(data);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  loadBayInfo();
+}, []);
 
   return (
     <View style={styles.container}>
       <View style={styles.upperContainer}>
         <ScrollView horizontal={true} contentContainerStyle={{ alignItems: 'center' }}>
 
-          <Bay></Bay>
-          <Bay></Bay>
-          <Bay></Bay>
-          <Bay></Bay>
-          <Bay></Bay>
+        {isLoading ? (
+          <Text>Loading...</Text>
+        ) : (
+          bays.map((item, i) => <Bay key={i} item={item} />)
+        )}
 
         </ScrollView>
       </View>
@@ -168,14 +169,7 @@ const Workshop = () => {
         <View style={styles.lowerLeftContainer}>
             <ScrollView horizontal={true} contentContainerStyle={{ alignItems: 'flex-end' }}>
 
-                <View style={styles.onsiteBookingContainer}>
-
-                  
-                  
-                </View>
-                <View style={styles.onsiteBookingContainer}></View>
-                <View style={styles.onsiteBookingContainer}></View>
-                <View style={styles.onsiteBookingContainer}></View>
+                <OnsiteVehicleCard></OnsiteVehicleCard>
 
             </ScrollView>
 

@@ -154,7 +154,7 @@ namespace SimplyDriveAPI.Controllers
                 booking.totallabour,
                 booking.status,
                 booking.reference,
-                registration = vehicle?.registration
+                vehicle?.registration
             };
 
             return Ok(result);

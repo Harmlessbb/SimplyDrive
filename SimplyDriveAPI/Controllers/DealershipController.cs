@@ -5,6 +5,7 @@ using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using SimplyDriveAPI.Services;
 using SimplyDriveAPI.Dtos;
+using Microsoft.AspNetCore.SignalR.Protocol;
 
 namespace SimplyDriveAPI.Controllers
 {
@@ -346,53 +347,67 @@ namespace SimplyDriveAPI.Controllers
         [HttpGet("RetrieveBays")]
         public async Task<IActionResult> GetBays(int dealerID)
         {
-            var bayDataResult = await _context.Set<BaysDataModel>().Where(d => d.dealerid == dealerID).ToListAsync();
-            return Ok(bayDataResult);
+            var bayDataResult = await _context.BaysDataModel
+                .AsNoTracking()
+                .Where(d => d.dealerid == dealerID)
+                .ToListAsync();
+
+            var assignedBookingData = new List<object>();
+            var result = new List<object>();
+
+            foreach (var bay in bayDataResult)
+            {
+                var bookingData = await _bookingServices.GetDealershipBookingByID(bay.bayid);
+                assignedBookingData.Add(bookingData);
+
+                var bayResult = new
+                {
+                    bay.bayid,
+                    bay.bayname,
+                    bay.assignedjob,
+                    bookingData,
+                    bay.assignedtechnician,
+                };
+
+                result.Add(bayResult);
+            }
+
+            return Ok(result);
         }
 
-        [HttpPut("AssignJobToBay")] 
+        [HttpPut("AssignJobToBay")] //this is disgusting
         public async Task<IActionResult> assignJobToBay(int? newJobAssigned, int bayID)
         {
-            var bay = await _context.Set<BaysDataModel>().Where(b => b.bayid == bayID).FirstOrDefaultAsync();
+
+            var bay = await _context.BaysDataModel
+                .FirstOrDefaultAsync(b => b.bayid == bayID);
 
             if (bay == null)
-            {
                 return NotFound(new { message = "Bay not found." });
-            }
 
             try
             {
-                if(bay.assignedjob.HasValue) 
-                {
-                    await _bookingServices.UpdateStatus(bay.assignedjob.Value, BookingStatusEnum.onsite);
-                }
 
+                var rowsAffected = await _context.BaysDataModel
+                    .Where(b => b.bayid == bayID)
+                    .ExecuteUpdateAsync(setters => setters.SetProperty(b => b.assignedjob, newJobAssigned));
 
-                bay.assignedjob = newJobAssigned;
-                _context.BaysDataModel.Update(bay);
-                await _context.SaveChangesAsync();
+                if (rowsAffected == 0)
+                    return NotFound(new { message = "Bay not found." });
 
-                if(newJobAssigned.HasValue)
-                {
+                // Then call UpdateStatus safely
+                if (newJobAssigned.HasValue)
                     await _bookingServices.UpdateStatus(newJobAssigned.Value, BookingStatusEnum.inworkshop);
-                }
-                
 
-                return Ok(new
-                {
-                    message = "Assigned Job to bay successfully.",
-                    bayID = bay.bayid,
-                    dealerID = bay.dealerid,
-                    newJobAssigned = bay.assignedjob
-                });
+                return Ok(new { message = "Assigned Job to bay successfully.", bayID, newJobAssigned });
+
             }
-            catch (Exception ex)
+            catch (DbUpdateConcurrencyException ex)
             {
-                return StatusCode(500, new { message = $"An error occurred while updating the booking status. {ex.Message}" });
+                return StatusCode(500, new { message = $"Concurrency error: {ex.Message}" });
             }
         }
 
+
     }
-
-
 }

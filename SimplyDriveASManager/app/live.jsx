@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import React, { useState, useEffect } from 'react';
+import { getBookings } from "../services/bookingService";
 
 const Live = () => {
   const router = useRouter();
@@ -9,28 +10,62 @@ const Live = () => {
   const [bookings, setBookings] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
-  async function getData() {
-    const url = "https://api.simplydrive.app/Api/Bookings/DealerBookings?dealerID=1";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        const text = await response.text();
-        console.log("Is the VPN on? - Fix to loopback error")
-        throw new Error(`Error ${response.status} - ${response.statusText}\nResponse: ${text}`);
-      }
-
-      const result = await response.json();
-      setBookings(result);
-    } catch (error) {
-      console.error(error.message);
-    } finally {
-      setLoading(false);
-    }
-  }
 
   useEffect(() => {
-    getData();
+    async function loadBookings() {
+      try {
+        const data = await getBookings();
+        setBookings(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadBookings();
   }, []);
+
+const JobBlock = ({ item }) => (
+  <View style={styles.jobItemContainer}>
+    <View style={styles.jobItemContainerLeft}>
+      <View style={styles.jobItemBlockLeft}>
+        <View style={styles.jobItemBlockLeftContainer}>
+          <View style={styles.customerInfoBlock}>
+            <Text style={styles.componentText}>{item.userid}</Text>
+          </View>
+        </View>
+
+        <View style={styles.jobItemBlockLeftContainer}>
+          <View style={styles.registrationInfoBlock}>
+            <Text style={styles.componentText}>{item.registration}</Text>
+          </View>
+          <View style={styles.statusInfoBlock}>
+            <Text style={styles.componentText}>{item.status}</Text>
+          </View>
+        </View>
+      </View>
+
+      <View style={styles.jobItemContainerLeftLower}>
+        <TouchableOpacity
+          style={styles.detailsButton}
+          onPress={() => console.log(item)}
+        >
+          <Text> Details</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.chatButton}
+          onPress={() => router.push('/noborder/checkin')}
+        >
+          <Text> Open Chat</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+
+    <View style={styles.jobItemContainerRight}></View>
+  </View>
+);
+
 
   return (
     <View style={styles.container}>
@@ -40,43 +75,12 @@ const Live = () => {
             <View style={styles.livepanelheaderleftcontainer}></View>
           </View>
 
-          {isLoading ? (
-            <Text>Loading...</Text>
-          ) :( 
-            bookings.map((item, i) => (
-              <View key={i} style={styles.jobItemContainer}>
-                <View style={styles.jobItemContainerLeft}>
-                  <View style={styles.jobItemBlockLeft}>
-                    <View style={styles.jobItemBlockLeftContainer}>
-                      <View style={styles.customerInfoBlock}>
-                        <Text style={styles.componentText}>{item.userid}</Text>
-                      </View>
-                    </View>
+        {isLoading ? (
+          <Text>Loading...</Text>
+        ) : (
+          bookings.map((item, i) => <JobBlock key={i} item={item} />)
+        )}
 
-                    <View style={styles.jobItemBlockLeftContainer}>
-                      <View style={styles.registrationInfoBlock}>
-                        <Text style={styles.componentText}>{item.registration}</Text>
-                      </View>
-                      <View style={styles.statusInfoBlock}>
-                        <Text style={styles.componentText}>{item.status}</Text>
-                      </View>
-                    </View>
-                  </View>
-
-                  <View style={styles.jobItemContainerLeftLower}>
-                    <TouchableOpacity style={styles.detailsButton} onPress={() => console.log(item)}>
-                      <Text > Details</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.chatButton} onPress={goToCheckInPage}>
-                      <Text> Open Chat</Text>
-                    </TouchableOpacity>
-                  </View>
-                </View>
-
-                <View style={styles.jobItemContainerRight}></View>
-              </View>
-            ))
-          )}
         </ScrollView>
       </View>
 

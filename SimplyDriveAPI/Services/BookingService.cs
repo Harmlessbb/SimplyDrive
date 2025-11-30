@@ -37,7 +37,10 @@ namespace SimplyDriveAPI.Services
                 booking.totallabour,
                 booking.status,
                 booking.reference,
-                registration = vehicle?.registration
+                vehicle?.registration,
+                vehicle?.make,
+                vehicle?.model,
+
             };
         }
 
