@@ -7,7 +7,87 @@ const Workshop = () => {
     const [bays, setBays] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
-  const Bay = ({ item }) => (
+  const Bay = ({ item }) => {
+    if(!item.bookingData)
+      
+    {
+      return(
+      <View style={styles.bayContainer}>
+        <View style={styles.upperBayContainer}>
+          <View style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            marginTop: 10,
+            marginRight: 50,
+            flexShrink: 0,
+            width: '110%',
+          }}>
+
+            <Text style={[styles.componentText, {textAlign: "left"}]}>{item.bayname}</Text>
+
+            <View style={[styles.statusInfoBlock, {backgroundColor:"#1e2125"}]}>
+              <Text style={styles.componentText}></Text>
+            </View>
+          </View>
+        </View>
+        <View style={{
+                //backgroundColor:'yellow',
+          flex:0.15,
+          flexDirection:'row',
+          marginTop:10,
+          marginBottom:10
+          }}>
+            <View style={{width: 100, alignItems: 'center', justifyContent:'center' }}> 
+              <Image
+              source={require('../assets/placeholderPFP.png')}
+              style={{width: 60, height: 60}}
+              resizeMode="contain"
+              ></Image>
+            </View>
+
+            <View style={{ padding: 10, justifyContent: 'center' }}>
+              <Text style={[styles.componentText, { textAlign: 'left' }]}>{item.assignedtechnician}</Text>
+              <Text style={[styles.componentText, { fontSize: 10, textAlign: 'left' }]}>TECHNICIAN NAME</Text>
+            </View>
+
+        </View>
+        <View style={[styles.middleBayContainer, {flexDirection:'row'}, {padding:10}, {justifyContent:'space-evenly'}]}>
+
+          <Text style={[styles.componentText, {textAlignVertical:'center'}]}>No Job Assigned To Bay</Text>
+
+        </View>
+        <View style={styles.lowerBayContainer}>
+          <View style={{flex:0.34, flexDirection:'row', justifyContent:'space-evenly', alignContent:'center'}}>
+            <TouchableOpacity disabled={true} style={[styles.menuButtons, {marginTop:5},{backgroundColor:"#1e2125"}]}>
+              <Text style={[styles.componentText, {fontSize: 16}]}>Start Authorisation</Text>
+            </TouchableOpacity>
+            <TouchableOpacity disabled={true} style={[styles.menuButtons, {marginTop:5},{backgroundColor:"#1e2125"}]}>
+              <Text style={[styles.componentText, {fontSize: 16}]}>Open Chat</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{flex:0.34}}>
+            <TouchableOpacity style={[styles.menuButtons, {marginTop:5}, {flex:1}, {backgroundColor:'#e23d2c'}]}>
+              <Text style={[styles.componentText, {fontSize: 16}]}>Assign Bay</Text>
+            </TouchableOpacity>    
+          </View>
+
+          <View style={{flex:0.34}}>
+            <View style={{flex:0.34, flexDirection:'row', justifyContent:'space-evenly', alignContent:'center'}}>
+            <TouchableOpacity disabled={true} style={[styles.menuButtons, {marginTop:5},{backgroundColor:"#1e2125"}]}>
+              <Text style={[styles.componentText, {fontSize: 16}]}>Update Status</Text>
+            </TouchableOpacity>
+            <TouchableOpacity disabled={true} style={[styles.menuButtons, {marginTop:5},{backgroundColor:"#1e2125"}]}>
+              <Text style={[styles.componentText, {fontSize: 16}]}>Mark As Complete</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+  </View>
+    )}
+
+    return(
     <View style={styles.bayContainer}>
       <View style={styles.upperBayContainer}>
         <View style={{
@@ -91,7 +171,7 @@ const Workshop = () => {
           alignItems: 'center'
           }}> 
             <View style={styles.registrationInfoBlock}>
-               <Text style={styles.componentText}>{item.bookingData.registration}</Text>      
+               <Text style={styles.componentText}> {item.bookingData ? item.bookingData.registration : "N/A"}</Text>      
              </View>
           </View>
         </View>
@@ -125,7 +205,7 @@ const Workshop = () => {
       </View>
     </View>
  </View>
- );
+  )};
 
  const OnsiteVehicleCard = () => 
   (

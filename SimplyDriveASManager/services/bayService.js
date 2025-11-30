@@ -8,8 +8,7 @@ export async function getBayData() {
     throw new Error(`Error ${response.status}: ${text}`);
   }
 
-  const responseJson = response.json()
-  console.log(responseJson)
-  return await responseJson;
-
+  const responseJson = await response.json(); 
+  console.log(responseJson); 
+  return responseJson;
 }

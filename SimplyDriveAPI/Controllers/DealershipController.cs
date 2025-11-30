@@ -347,32 +347,50 @@ namespace SimplyDriveAPI.Controllers
         [HttpGet("RetrieveBays")]
         public async Task<IActionResult> GetBays(int dealerID)
         {
-            var bayDataResult = await _context.BaysDataModel
+            var bayDataResultNoAssignedJob = await _context.BaysDataModel
                 .AsNoTracking()
-                .Where(d => d.dealerid == dealerID)
+                .Where(d => d.dealerid == dealerID && d.assignedjob == null)
+                .ToListAsync();
+                        
+            
+            var bayDataResultAssignedJob = await _context.BaysDataModel
+                .AsNoTracking()
+                .Where(d => d.dealerid == dealerID &&  d.assignedjob.HasValue)
                 .ToListAsync();
 
+
             var assignedBookingData = new List<object>();
-            var result = new List<object>();
+            var bayDataResultAssignedJobWithDetail = new List<object>();
 
-            foreach (var bay in bayDataResult)
+            foreach (var bay in bayDataResultAssignedJob)
             {
-                var bookingData = await _bookingServices.GetDealershipBookingByID(bay.bayid);
-                assignedBookingData.Add(bookingData);
-
-                var bayResult = new
+                if(bay.assignedjob is not null) //If there is an assigned job load the extra data, if there isnt then delete it from the return
                 {
-                    bay.bayid,
-                    bay.bayname,
-                    bay.assignedjob,
-                    bookingData,
-                    bay.assignedtechnician,
-                };
+                    var bookingData = await _bookingServices.GetDealershipBookingByID(bay.bayid);
+                    assignedBookingData.Add(bookingData);
 
-                result.Add(bayResult);
+                    var bayResult = new
+                    {
+                        bay.bayid,
+                        bay.bayname,
+                        bay.assignedjob,
+                        bookingData,
+                        bay.assignedtechnician,
+                    };
+
+                    bayDataResultAssignedJobWithDetail.Add(bayResult);
+                }
+
             }
 
+            var result = new
+            {
+                BaysWithoutAssignedJobs = bayDataResultNoAssignedJob,
+                BaysWithAssignedJobs = bayDataResultAssignedJobWithDetail
+            };
+
             return Ok(result);
+
         }
 
         [HttpPut("AssignJobToBay")] //this is disgusting
@@ -396,10 +414,19 @@ namespace SimplyDriveAPI.Controllers
                     return NotFound(new { message = "Bay not found." });
 
                 // Then call UpdateStatus safely
+                
                 if (newJobAssigned.HasValue)
+                {
                     await _bookingServices.UpdateStatus(newJobAssigned.Value, BookingStatusEnum.inworkshop);
+                }
+                   
+                else 
+                {
+                    //Idk we want to change the enum of the now removed booking to onsite but idk how yet.
+                    //await _bookingServices.UpdateStatus(newJobAssigned.Value,  BookingStatusEnum.onsite
+                }
 
-                return Ok(new { message = "Assigned Job to bay successfully.", bayID, newJobAssigned });
+                    return Ok(new { message = "Assigned Job to bay successfully.", bayID, newJobAssigned });
 
             }
             catch (DbUpdateConcurrencyException ex)
