@@ -69,6 +69,7 @@ const JobBlock = ({ item }) => (
 
   return (
     <View style={styles.container}>
+
       <View style={styles.livepanel}>
         <ScrollView stickyHeaderIndices={[0]} contentContainerStyle={styles.livepanelscrollview}>
           <View style={styles.livepanelheader}>
@@ -85,6 +86,7 @@ const JobBlock = ({ item }) => (
       </View>
 
       <View style={styles.checkinbuttonpanel}>
+
         <TouchableOpacity style={styles.button} onPress={goToCheckInPage}>
           <Text style={styles.buttonText}> Check-In</Text>
         </TouchableOpacity>
@@ -130,7 +132,7 @@ const styles = StyleSheet.create({
     {
       flex: 1,
       borderRadius: 15,
-      backgroundColor: 'blue', 
+      backgroundColor: '#18181b', 
       justifyContent: 'center',
       alignItems: 'flex-start',
       width: 1000,
@@ -141,19 +143,21 @@ const styles = StyleSheet.create({
     {
       flex: 1,
       borderRadius: 20,
-      backgroundColor: 'orange', 
+      backgroundColor: '#0e1013', 
       justifyContent: 'center',
       alignItems: 'center',
       width: 290,
       height: 500,
-      margin: 5
+      margin: 5,
+      borderColor: '#b5abab',
+      borderWidth:2,
     },
 
     jobItemContainer:
     {
       flex:1,
       flexDirection: 'row',
-      backgroundColor: 'red',
+      //backgroundColor: 'red',
       width:'99%',
       height: 125,
       margin: 5,
@@ -165,17 +169,20 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'flex-start',
       alignContent: 'center',
-      backgroundColor: 'yellow',
+      backgroundColor: '#0e1013',
       width: 292.5,
       height: 70,
       margin: 1,
       borderRadius: 15,
+      borderColor: '#b5abab',
+      borderWidth:2,
     },
     jobItemBlockLeftContainer:
     {
+      justifyContent:'space-evenly',
       alignItems:'center',
       flex: 0.5,
-      backgroundColor: 'red',
+      //backgroundColor: 'red',
       width: 65,
       height: 80,
       margin: 2,
@@ -186,7 +193,7 @@ const styles = StyleSheet.create({
     {
 
       flex: 0.5,
-      backgroundColor: 'green',
+      //backgroundColor: 'green',
       width: 140,
       height: 80,
       margin: 2,
@@ -197,24 +204,27 @@ const styles = StyleSheet.create({
     {
 
       flex: 0.45,
-      backgroundColor: 'green',
-      width: 140,
+      backgroundColor: '#2b7fff',
+      width: 130,
       height: 80,
-      margin: 2,
+      margin: 5,
       borderRadius: 15,
     },
 
     registrationInfoBlock:
     {
 
-      flex: 0.6,
+      flex: 0.45,
       justifyContent: 'center',
       alignContent: 'center',
-      backgroundColor: 'green',
-      width: 140,
-      height: 80,
-      margin: 2,
-      borderRadius: 10,
+      backgroundColor: '#eabe13',
+      width: 130,
+      height: 50,
+      margin: 0,
+      borderRadius: 5,
+      borderColor: 'black',
+      borderWidth:1,
+
     },
 
     jobItemContainerLeftLower:
@@ -235,7 +245,7 @@ const styles = StyleSheet.create({
       flex: 0.3,
       justifyContent: 'center',
       alignContent: 'center',
-      backgroundColor: 'green',
+      //backgroundColor: 'green',
       //width: 300,
       height: '100%',
     },
@@ -245,7 +255,7 @@ const styles = StyleSheet.create({
       flex: 0.7,
       justifyContent: 'center',
       alignContent: 'center',
-      backgroundColor: 'orange',
+      backgroundColor: '#3a4149ff',
       //width: 300,
       height: '97.5%',
     },
@@ -255,7 +265,7 @@ const styles = StyleSheet.create({
         width: '55%',
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: 'yellow',
+        backgroundColor: '#3a4149ff',
         height: 35,
         margin: 5,
         borderRadius: 15,
@@ -266,7 +276,7 @@ const styles = StyleSheet.create({
         width: '40%',
         alignContent: 'center',
         justifyContent: 'center',
-        backgroundColor: 'yellow',
+        backgroundColor: '#bb522f',
         height: 35,
         margin: 5,
         borderRadius: 5,
@@ -274,7 +284,7 @@ const styles = StyleSheet.create({
 
     checkinbuttonpanel: 
     {
-        flex: 0.35,
+        flex: 0.10,
         borderRadius: 20,
         justifyContent: 'flex-end',
         alignItems: 'flex-end',

@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View, ScrollView, Image, Button, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState, } from 'react';
 import * as bayService from '../services/bayService';
+import * as bookingService from '../services/bookingService';
 
 const Workshop = () => {
 
+    const [onSiteBookings, setOnSiteBookings] = useState([]);
     const [bays, setBays] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
@@ -103,7 +105,7 @@ const Workshop = () => {
 
 
           <View style={styles.statusInfoBlock}>
-            <Text style={styles.componentText}>PROGRESS</Text>
+            <Text style={[styles.componentText, { textTransform: "uppercase" }]}>{item.bookingData.status}</Text>
           </View>
         </View>
       </View>
@@ -163,7 +165,7 @@ const Workshop = () => {
           justifyContent: 'center',
            alignContent: 'center'
           }}>
-              <Text style={styles.componentText}>Sandero</Text>
+              <Text style={styles.componentText}>{item.bookingData.model}</Text>
             </View>  
 
            <View style={{
@@ -171,7 +173,7 @@ const Workshop = () => {
           alignItems: 'center'
           }}> 
             <View style={styles.registrationInfoBlock}>
-               <Text style={styles.componentText}> {item.bookingData ? item.bookingData.registration : "N/A"}</Text>      
+               <Text style={[styles.componentText, {color:"black"}]}> {item.bookingData ? item.bookingData.registration : "N/A"}</Text>      
              </View>
           </View>
         </View>
@@ -207,27 +209,77 @@ const Workshop = () => {
  </View>
   )};
 
- const OnsiteVehicleCard = () => 
+ const OnsiteVehicleCard = ({ item }) => 
   (
-    <View style={styles.onsiteBookingContainer}>
-    </View>
+
+      <View
+        style={[
+
+          styles.onsiteBookingContainer,
+          {padding:2.5}
+        ]}
+      >
+
+        <View style={[styles.registrationInfoBlock, {marginBottom:2}]}>
+          <Text style={[styles.componentText, {color:"black"}]}>{item.registration}</Text>    
+        </View>
+        
+        <View style={[{flex:0.3},{ width:'90%' }, {backgroundColor:'#272b2c'}, {margin:2.5}]}>
+          <Text style={[styles.componentText, {color:"#b5abab"}, {fontSize:14}, {textAlign:'justify'}]}> Customer: </Text>    
+        </View>
+
+        <View style={[{flex:0.3},{ width:'90%' }, {backgroundColor:'#272b2c'}, {margin:2.5}, {}]}>
+          <Text style={[styles.componentText, {color:"#b5abab"}, {fontSize:14}, {textAlign:'justify'}]}> Job: </Text>  
+        </View>
+        
+      </View>
+
+
   );
 
 
 
 useEffect(() => {
-  async function loadBayInfo() {
+  async function loadInfo() {
     try {
-      const data = await bayService.getBayData();
-      setBays(data);
+      const baydata = await bayService.getBayData();
+
+
+      const combined = [
+        ...(baydata.baysWithAssignedJobs || []),
+        ...(baydata.baysWithoutAssignedJobs || [])
+      ];
+
+      setBays(combined);
+
     } catch (err) {
       console.error(err);
+      setBays([]);
     } finally {
       setLoading(false);
     }
+
+    try{
+      const onsiteBookingData = await bookingService.getBookingsOnsite();
+
+      setOnSiteBookings(onsiteBookingData);
+      console.log(onsiteBookingData);
+    } catch
+    {
+      console.error(err);
+      setOnSiteBookings([]);
+    } finally
+    {
+      setLoading(false);
+    }
+    
+
+
   }
 
-  loadBayInfo();
+
+
+  loadInfo();
 }, []);
 
   return (
@@ -247,9 +299,14 @@ useEffect(() => {
     <View style={styles.lowerContainer}>
 
         <View style={styles.lowerLeftContainer}>
-            <ScrollView horizontal={true} contentContainerStyle={{ alignItems: 'flex-end' }}>
 
-                <OnsiteVehicleCard></OnsiteVehicleCard>
+            <ScrollView horizontal={true} contentContainerStyle={[{ alignItems: 'flex-end' }, {flex:1}]}>
+
+              {isLoading ? (
+                <Text>Loading...</Text>
+              ) : (
+                onSiteBookings.map((item, i) => <OnsiteVehicleCard key={i} item={item} />)
+              )}
 
             </ScrollView>
 
@@ -274,7 +331,7 @@ const styles = StyleSheet.create({
     padding:5
   },
   upperContainer: {
-    flex: 0.7,
+    flex: 0.75,
     padding:5,
     margin:5,
     //backgroundColor: 'red',
@@ -282,7 +339,7 @@ const styles = StyleSheet.create({
 
   },
   lowerContainer: {
-    flex: 0.35,
+    flex: 0.30,
     flexDirection: "row",
     marginHorizontal:2.5 ,
     marginVertical:5,
@@ -318,6 +375,7 @@ const styles = StyleSheet.create({
     borderColor: '#b5abab',
     borderWidth:1,
   },
+
   upperBayContainer:
   {
     flex:0.125,
@@ -335,17 +393,17 @@ const styles = StyleSheet.create({
     flex:0.40,
     //backgroundColor:'yellow',
     width:'100%',
+    padding:5
   },          
   onsiteBookingContainer: {
     //backgroundColor: 'yellow',
-    backgroundColor:'#0e1013',
-    width: 250, 
-    height: 210,
-    marginHorizontal: 10,
-    borderRadius:15,
-    borderColor: '#b5abab',
-    borderWidth:1,
-    marginBottom:15,
+    height:'70%' ,
+    backgroundColor: "#39414c",
+    width: 250 ,
+    justifyContent: "center", 
+    alignItems: "center", 
+    borderRadius: 15,
+    margin: 10,
   },  
     componentText: {
     textAlign: 'center',
@@ -381,11 +439,15 @@ const styles = StyleSheet.create({
     //flex: 0.6,
     justifyContent: 'center',
     alignContent: 'center',
+    alignItems:'center',
     backgroundColor: '#eabe13',
-    width: 140,
-    height: 40,
+    borderColor:'black',
+    borderWidth:2,
+    width: 130,
+    height: 35,
     margin: 0,
     borderRadius: 7.5,
     marginTop: 5,
+
   },
 });

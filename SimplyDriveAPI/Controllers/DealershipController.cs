@@ -366,7 +366,7 @@ namespace SimplyDriveAPI.Controllers
             {
                 if(bay.assignedjob is not null) //If there is an assigned job load the extra data, if there isnt then delete it from the return
                 {
-                    var bookingData = await _bookingServices.GetDealershipBookingByID(bay.bayid);
+                    var bookingData = await _bookingServices.GetDealershipBookingByID(bay.assignedjob.Value);
                     assignedBookingData.Add(bookingData);
 
                     var bayResult = new

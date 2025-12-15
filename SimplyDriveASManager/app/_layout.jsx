@@ -1,16 +1,36 @@
 import { Slot, useRouter, usePathname } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View, StatusBar } from 'react-native';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import 'react-native-get-random-values';
+import * as SecureStore from 'expo-secure-store';
+import { v4 as uuidv4 } from 'uuid';
 
 const RootLayout = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const hideSidebar = pathname.startsWith('/noborder');
+  const autoHideSidebar = pathname.startsWith('/noborder');
+  const [sidebarHidden, setSidebarHidden] = useState(true);
+  const hideSidebar = autoHideSidebar || sidebarHidden;
 
-  const goToLivePage = () => router.push('/live');
-  const goToWorkshopPage = () => router.push('/workshop');
-  const goToTechnicianPage = () => router.push('/technicians');
+  const toggleSidebar = () => setSidebarHidden(prev => !prev);
+
+  // --------- DEVICE ID LOGIC ---------
+  const [deviceId, setDeviceId] = useState(null);
+
+  useEffect(() => {
+    async function getDeviceId() {
+      let id = await SecureStore.getItemAsync("deviceId");
+      if (!id) {
+        id = uuidv4(); // generate a new UUID
+        await SecureStore.setItemAsync("deviceId", id);
+      }
+      console.log("Device ID:", id);
+      setDeviceId(id);
+    }
+    getDeviceId();
+  }, []);
+  // -----------------------------------
 
   return (
     <View style={styles.container}>
@@ -18,27 +38,29 @@ const RootLayout = () => {
 
       {!hideSidebar && (
         <View style={styles.sideborder}>
-          <TouchableOpacity style={styles.navigationbutton} onPress={goToLivePage}>
+          <TouchableOpacity style={styles.navigationbutton} onPress={() => router.push('/live')}>
             <Text style={styles.buttonText}>Live</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.navigationbutton} onPress={goToWorkshopPage}>
+          <TouchableOpacity style={styles.navigationbutton} onPress={() => router.push('/workshop')}>
             <Text style={styles.buttonText}>Workshop</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.navigationbutton} onPress={goToTechnicianPage}>
+          <TouchableOpacity style={styles.navigationbutton} onPress={() => router.push('/technicians')}>
             <Text style={styles.buttonText}>Technicians</Text>
           </TouchableOpacity>
-
         </View>
       )}
 
       <View style={styles.background}>
-        <Slot />
+        <Slot deviceId={deviceId} />
       </View>
+
+      <TouchableOpacity style={styles.hamburgerItem} onPress={toggleSidebar} />
     </View>
   );
 };
+
 
 export default RootLayout;
 
@@ -73,6 +95,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 15,
     marginBottom: 10,
+  },
+  hamburgerItem:
+  {
+    position:'absolute',
+    top: 15,
+    left: 15,
+    width:65,
+    height:65,
+    backgroundColor:'white',
+    borderRadius: 15,
+    padding:5,
   },
   buttonText: {
     color: 'white',
