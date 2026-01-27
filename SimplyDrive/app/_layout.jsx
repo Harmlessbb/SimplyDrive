@@ -10,13 +10,18 @@ const RootLayout = () => {
     console.log(colorScheme)
 
     return (
-        <View style={{flex : 1}}> 
+
+    <View style={{flex : 1}}> 
+       
         <Slot />
-        <Text>RootLayout</Text>
-        </View>
+        
+    </View>
     )
 }
 
 export default RootLayout
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+
+})

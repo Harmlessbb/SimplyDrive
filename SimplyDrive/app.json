@@ -1,6 +1,8 @@
 {
   "expo": {
-    "scheme": "SimplyDrive",
+    "scheme": [
+      "simplydrive"
+    ],
     "name": "SimplyDrive",
     "slug": "SimplyDrive",
     "version": "1.0.0",
@@ -21,13 +23,15 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.anonymous.SimplyDrive"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-secure-store"
     ]
   }
 }
