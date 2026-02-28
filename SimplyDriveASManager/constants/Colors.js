@@ -1,4 +1,4 @@
-import ThemedCardSecondary from "../components/ThemedCardSecondary";
+//import ThemedCardSecondary from "../components/ThemedCardSecondary";
 
 export const Colors = 
 {

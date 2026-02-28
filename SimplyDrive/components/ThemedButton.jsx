@@ -1,6 +1,9 @@
 import { StyleSheet, Text, TouchableOpacity, useColorScheme } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Colors } from '../constants/Colors'
+
+import SatoshiReg from './SatoshiReg'
+
 import React from 'react'
 
 export default function ThemedButton({
@@ -38,9 +41,11 @@ export default function ThemedButton({
           style={[
             styles.text,
             tab && !selected && { color: '#555' },
+            
           ]}
           numberOfLines={1}
           adjustsFontSizeToFit
+          
         >
           {title}
         </Text>
@@ -48,7 +53,6 @@ export default function ThemedButton({
     </TouchableOpacity>
   )
 }
-
 
 
 const styles = StyleSheet.create({
@@ -61,7 +65,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontWeight: '600',
-    
+    fontWeight: 'Bold',
+    fontFamily: 'Satoshi-Variable',
   },
 })

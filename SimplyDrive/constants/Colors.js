@@ -8,6 +8,16 @@ export const Colors =
     dark:
     {
             //INSERT DARKMODE COLOUR SET HERE
+        headerColour: '#e6e6e8',
+        backgroundColour: '#ffffff',
+        deviderColour: '#bbbcc3',
+        buttonColourGradientA: '#FF6B35',
+        buttonColourGradientB: '#D62828',
+        themedCardSecondaryGradientA: '#222435',
+        themedCardSecondaryGradientB: '#515364',
+        cardColour: '#f2f2f7',
+        borderColour: '#bbbcc3',
+
     },
 
     light:

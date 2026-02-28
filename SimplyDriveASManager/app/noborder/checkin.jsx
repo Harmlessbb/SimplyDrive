@@ -1,8 +1,21 @@
 import { useRouter } from 'expo-router';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, Keyboard, Image, ImageBackground } from 'react-native';
 import React, { useState } from 'react';
-
+import "../../assets/calendar-icon.png"
+import "../../assets/location-icon.png"
+import UIDevider from '../../components/UIDevider'
 const Checkin = () => {
+
+const MOCK_QR_DATA = {
+  bookingDetails: {
+    bookingid: 123456,
+    registration: "AB12 CDE",
+    customerName: "John Smith",
+    vehicle: "Audi A4",
+    date: "2026-02-05",
+    time: "10:30",
+  },
+};
 
   const router = useRouter();
 
@@ -11,7 +24,7 @@ const Checkin = () => {
   };
 
   const [overlayVisible, setOverlayVisible] = useState(false);
-  const [qrData, setQrData] = useState(null);
+  const [qrData, setQrData] = useState(MOCK_QR_DATA);
   let validStringFlagSent = false;
 
 
@@ -63,12 +76,12 @@ const Checkin = () => {
   }
   }; 
 
-  async function setBookingStatusToOnsite(bookingID)
+  async function setBookingStatusToInWorkshop(bookingID)
   {
 
    console.log(`Sending ${bookingID}`) 
     const numericBookingID = Number(bookingID);
-    const url = `https://api.simplydrive.app/Api/Bookings/UpdateStatus?bookingID=${numericBookingID}&newStatus=onsite`;
+    const url = `https://api.simplydrive.app/Api/Bookings/UpdateStatus?bookingID=${numericBookingID}&newStatus=inworkshop`;
 
 
     fetch(url, { method: "PUT" })
@@ -83,78 +96,193 @@ const Checkin = () => {
   
   return (
 
-
       <View style={styles.container}>
 
         {overlayVisible &&(
 
           <View style={styles.containerCover}>
 
-            <View style={styles.bookingInfoContainer}>
-              <View style={styles.bookingInfoUpperContainer}>
+            <View style={{height:'80%', width:'100%', flexDirection:'row', justifyContent:'center', alignContent:'center'}}>
+              
+              <View style={{width:'30%', height:'90%', backgroundColor:'#ffffff', marginTop: 50, borderRadius: 25, overflow: 'hidden',}}>
+                <ImageBackground source={require('../../assets/car-placeholder-img.png')} style={{width:'100%', height:'100%'}} >
 
-                {/* VEHICLE INFORMATION CARD */}
-                <View style={styles.bookingInfoCard}>
-                  <View style={styles.registrationInfoBlock}>
-                    <Text style={[styles.componentText, { color: 'black' }, {fontSize: 50}]}>
-                      {qrData.bookingDetails.registration}
-                    </Text>
+                  <View style={{height:'60%'}}></View>
+                  <View style={{height:'40%', backgroundColor:'#0000006F', alignContent: 'flex-start', justifyContent:'flex-start', padding:15}}>
+                    <Text style={{fontSize: 35, color:'#FFFFFF'}}> 2020 Honda Civic </Text>
+
+                    <Text style={{fontSize: 20, color:'#FFFFFF', marginTop: 25}}> Silver • ABC-123 • 57,449 mi  </Text>  
+
+                    <Text style={{fontSize: 20, color:'#FFFFFF', marginTop: 5}}> Last check up: 22-05-2020  </Text>                                 
                   </View>
+                </ImageBackground>
+              </View>
+
+              <View style={{width:'30%', height:'90%', backgroundColor:'#EEEEF0', borderRadius: 25, borderColor:'#BBBCC3', borderWidth: 1, marginTop: 50, marginHorizontal: 20 }}>
+
+
+              </View>
+
+              <View style={{width:'30%', height:'90%', backgroundColor:'#ffffff', marginTop: 50, borderRadius: 25, overflow: 'hidden'}}>
+                
+                <ImageBackground source={require('../../assets/lightmodebg.jpg')} style={{width:'100%', height:'100%' , opacity: 0.8}} >
+                <View style={styles.bgOverlay} />
+
+                <View style={{height: 75, padding: 20}}>
+                  <Text style={{fontSize: 28, fontWeight:'bold'}}>Booking Summery</Text>
+
+                </View>
+                  <UIDevider/>
+                
+                <View style={{height: 75, flexDirection: 'row'}}>
+                    <View style={{flex: 0.25, alignItems:'center', justifyContent:'center'}}>
+                      <View style={{width: 40, height: 40, backgroundColor: '#FFFFFF', borderColor:'#BBBCC3', borderRadius:10, borderWidth: 1, alignItems: 'center', justifyContent:'center'}}>
+                        <Image
+                            source={require('../../assets/location-icon.png')}
+                            style={{width: '60%', height: '60%', resizeMode:'contain'}}
+                        ></Image>
+                      </View>
+                    </View>
+                    
+                    <View style={{flex: 0.75, alignContent: 'center', justifyContent: 'center'}}>
+                      <Text style={{fontSize:14, fontWeight:'bold',}}> Address </Text>
+                      <Text style={{fontSize:16,}}> 1234 Road Town, City Garage </Text>
+                    </View>
                 </View>
 
-                {/* CUSTOMER INFORMATION CARD */}
-                <View style={styles.bookingInfoCard}> 
-                  
-                </View>  
+                <View style={{height: 75, flexDirection: 'row'}}>
+                    <View style={{flex: 0.25, alignItems:'center', justifyContent:'center'}}>
+                      <View style={{width: 40, height: 40, backgroundColor: '#FFFFFF', borderColor:'#BBBCC3', borderRadius:10, borderWidth: 1, alignItems: 'center', justifyContent:'center'}}>
+                        <Image
+                            source={require('../../assets/calendar-icon.png')}
+                            style={{width: '60%', height: '60%', resizeMode:'contain'}}
+                        ></Image>
+                      </View>
+                    </View>
+                    
+                    <View style={{flex: 0.75, alignContent: 'center', justifyContent: 'center'}}>
+                      
+                      <Text style={{fontSize:14, fontWeight:'bold',}}> Date & Time </Text>
 
-                {/* BOOKING INFORMATION CARD */}
-                <View style={styles.bookingInfoCard}> 
-                  
-                </View>  
+                          <View
+                            style={{
+                              justifyContent: 'flex-start',
+                              alignContent: 'center'
+                            }}
+                          >
+                            <Text style={{ fontSize: 16 }}>
+                              September 16th 2026
+                            </Text>
 
+                            <Text style={{ fontSize: 16 }}>
+                              9:00 Check-In
+                            </Text>
+                          </View>
+
+                    </View>
+
+
+                </View>
+                
+                <UIDevider />                
+
+      <View style={{ flex: 0.95, justifyContent: 'flex-start', marginTop: 20 }}>
+        <View style={{ height: '10%', width: '100%', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-even'}}>
+          <Text
+            style={{
+              fontSize: 22,
+              fontWeight: 'bold',
+              marginLeft: 10,
+            }}
+          >
+            Oil Change
+          </Text>
+
+                    <Text
+            style={{
+              alignSelf: 'flex-start',
+              fontSize: 26,
+              fontWeight: 'bold',
+              marginLeft: 100,
+              
+            }}
+          >
+            £99.99
+          </Text>
+
+        </View>
+
+
+        <Text
+          style={{
+            fontSize: 14,
+            marginTop: 0,
+            marginLeft: 10,
+
+            color: '#666',
+          }}
+        >
+          Basic Oil and Filter Change
+        </Text>
+      </View>
+
+                </ImageBackground>          
+                
+                      
               </View>
+            </View>
 
-              <View style={styles.bookingInfoLowerContainer}>
+            <View style={{height:'30%', width:'100%', flexDirection: 'row', justifyContent:'center'}}>
+              
+              <TouchableOpacity style={[styles.button, {marginTop: 50, marginRight:40, elevation: 10, backgroundColor:'#ffffff' }]} onPress={() => router.replace('/')}>
+                <Text style={styles.buttonText}>Cancel</Text>
+              </TouchableOpacity>
 
-                <TouchableOpacity
-                  style={[styles.button, {marginVertical: 65}, {marginRight: 10}]}
-                  onPress={goToLivePage}
-                >
-                  
-                  <Text style={styles.buttonText}>Cancel</Text>
-                </TouchableOpacity>      
+              
+              <TouchableOpacity
+                style={[styles.button, { marginTop: 50,  elevation: 15, backgroundColor:'#FF6B35', borderColor:'#D62828' }]}
+                onPress={() => {setBookingStatusToInWorkshop(6); router.push('/');}}>
 
-                <TouchableOpacity
-                  style={[styles.button, { backgroundColor: '#17b26a' }, {marginVertical: 65}, {marginRight: 10}]}
-                  onPress={() => setBookingStatusToOnsite(qrData.bookingDetails.bookingid)}
-                >
-                  <Text style={styles.buttonText}>Confirm</Text>
-                </TouchableOpacity>  
+                <Text style={[styles.buttonText, {color:'#ffffff'}]}>Check-In</Text>
 
-              </View>
-            </View>  
+              </TouchableOpacity>
+
+            </View>
 
           </View>
 
          )}
         
+        
+        <View style={{height:'100%', width:'100%', alignItems:'center', justifyContent:'center'}}>
 
-        <Text style={styles.buttonText}>Awaiting QR Code...</Text>
+          <Text style={{color:'#404255', marginBottom: 50, fontSize: 44, fontWeight:'bold'}}> Awaiting QR Code... </Text>
 
-        <TouchableOpacity style={styles.button} onPress={goToLivePage}>
-          <Text style={styles.buttonText}>Cancel</Text>
-        </TouchableOpacity>
+          <View style={{height: 250, width: 250, borderRadius:250, borderColor: '#D5D5D9', borderWidth:1, backgroundColor:'#ffffff', justifyContent:'center', alignItems:'center', elevation:15 }}>
+              <Image
+                source={require('../../assets/Qr-Icon.png')}
+                style={{ width: '50%', height: '50%', alignSelf: 'center', marginBottom: 0, resizeMode:'contain' }}>
+                
+              </Image>
+          </View>
 
-        <View style={{ width: 0, height: 0 }}>
-          <TextInput
-            style={styles.hiddenInput}
-            autoFocus={true}
-            multiline
-            //onFocus={Keyboard.dismiss}
-            onChangeText={_onHiddenTextChangeText}
-            // value={state.hiddenInput}
-          />
+          <TouchableOpacity style={[styles.button, {marginTop: 50, }]} onPress={() => router.replace('/')}>
+            <Text style={styles.buttonText}>Cancel</Text>
+          </TouchableOpacity>
+
+          <View style={{ width: 0, height: 0 }}>
+            <TextInput
+              style={styles.hiddenInput}
+              autoFocus={true}
+              multiline
+              //onFocus={Keyboard.dismiss}
+              onChangeText={_onHiddenTextChangeText}
+              // value={state.hiddenInput}
+            />
+          </View>
+
         </View>
+
       </View>
   );
 };
@@ -245,13 +373,15 @@ const styles = StyleSheet.create({
     margin: 5,
     height: 70,
     width: 250,
-    backgroundColor: '#4c4c4e',
+    backgroundColor: '#fffff',
+    borderColor:'#FF7C7C',
+    borderWidth:1,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
   },
   buttonText: {
-    color: 'white',
+    color: '#FF7C7C',
     fontSize: 30,
     fontWeight: 'bold',
   },
@@ -265,5 +395,9 @@ componentText: {
   hiddenInput: {
     width: 0,
     height: 0,
+  },
+    bgOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(255,255,255,0.85)', // tweak this
   },
 });

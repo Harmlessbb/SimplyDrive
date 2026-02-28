@@ -1,11 +1,14 @@
 import { Slot, useRouter, usePathname } from 'expo-router';
-import { StyleSheet, Text, TouchableOpacity, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, StatusBar, Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
+import * as Font from 'expo-font';
 import 'react-native-get-random-values';
 import * as SecureStore from 'expo-secure-store';
 import { v4 as uuidv4 } from 'uuid';
 
 const RootLayout = () => {
+
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -18,45 +21,45 @@ const RootLayout = () => {
   // --------- DEVICE ID LOGIC ---------
   const [deviceId, setDeviceId] = useState(null);
 
-  useEffect(() => {
-    async function getDeviceId() {
-      let id = await SecureStore.getItemAsync("deviceId");
-      if (!id) {
-        id = uuidv4(); // generate a new UUID
-        await SecureStore.setItemAsync("deviceId", id);
-      }
-      console.log("Device ID:", id);
-      setDeviceId(id);
-    }
-    getDeviceId();
-  }, []);
+async function getDeviceId() {
+
+  let id = await SecureStore.getItemAsync("deviceId");
+  if (!id) {
+    id = uuidv4(); // generate a new UUID
+    await SecureStore.setItemAsync("deviceId", id);
+  }
+  console.log("Device ID:", id);
+  setDeviceId(id);
+}
+
+async function loadFonts() {
+  await Font.loadAsync({
+    'Michroma-Regular': require('../assets/fonts/Michroma-Regular.ttf'),
+    'Satoshi-Regular': require('../assets/fonts/Satoshi-Regular.otf'),
+    'Satoshi-Bold': require('../assets/fonts/Satoshi-Bold.otf'),
+    
+  });
+  //setFontsLoaded(true);
+}
+
+useEffect(() => {
+
+
+  loadFonts();
+  getDeviceId();
+
+}, []);
   // -----------------------------------
 
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
 
-      {!hideSidebar && (
-        <View style={styles.sideborder}>
-          <TouchableOpacity style={styles.navigationbutton} onPress={() => router.push('/live')}>
-            <Text style={styles.buttonText}>Live</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.navigationbutton} onPress={() => router.push('/workshop')}>
-            <Text style={styles.buttonText}>Workshop</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.navigationbutton} onPress={() => router.push('/technicians')}>
-            <Text style={styles.buttonText}>Technicians</Text>
-          </TouchableOpacity>
-        </View>
-      )}
 
       <View style={styles.background}>
         <Slot deviceId={deviceId} />
       </View>
 
-      <TouchableOpacity style={styles.hamburgerItem} onPress={toggleSidebar} />
+
     </View>
   );
 };
@@ -66,17 +69,12 @@ export default RootLayout;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
     flex: 1,
-    backgroundColor: '#18181b',
-    padding: 5,
   },
   background: {
     flex: 1,
     borderRadius: 20,
-    backgroundColor: '#242638',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#ffffff',
   },
   sideborder: {
     flexDirection: 'column',
@@ -99,11 +97,13 @@ const styles = StyleSheet.create({
   hamburgerItem:
   {
     position:'absolute',
-    top: 15,
-    left: 15,
+    top: 20,
+    left: 20,
     width:65,
     height:65,
-    backgroundColor:'white',
+    backgroundColor:'#ffffff',
+    borderColor:'#bbbcc3',
+    borderWidth:3,
     borderRadius: 15,
     padding:5,
   },

@@ -4,8 +4,8 @@ import React from 'react'
 
 const _layout = () => {
   return (
-    <View>
-      <Slot styles={styles.container} />
+    <View style={styles.container}>
+      <Slot />
     </View>
   )
 }

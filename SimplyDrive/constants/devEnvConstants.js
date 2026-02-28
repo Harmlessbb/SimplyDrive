@@ -2,7 +2,7 @@ export const devEnvConstants =
 {
 
     isDevEnv: true,
-    userID: "DEV_USER_999",
-    testDealerID: "16",
-    
+    userID: "01DEMO",
+    testDealerID: "17",
+    testBookingID: '6'
 }

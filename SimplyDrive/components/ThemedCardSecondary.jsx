@@ -10,19 +10,15 @@ export default function ThemedCardSecondary({
   style,
   selected = false,
   tab = false,
+  gradientColors, // <--- new
 }) {
   const colorScheme = useColorScheme()
   const theme = Colors[colorScheme] ?? Colors.light
 
-
-
   return (
     <View style={[styles.container, style]}>
       <LinearGradient
-        colors={[
-          theme.themedCardSecondaryGradientA,
-          theme.themedCardSecondaryGradientB,
-        ]}
+        colors={gradientColors ?? [theme.themedCardSecondaryGradientA, theme.themedCardSecondaryGradientB]}
         style={styles.gradient}
       >
         {children}
@@ -37,7 +33,7 @@ const styles = StyleSheet.create({
 
 container: {
     flex: 1,
-    overflow: 'hidden',
+    ThemedCardSecondary,
    },
 
   gradient: {

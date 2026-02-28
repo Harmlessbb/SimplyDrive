@@ -1,0 +1,26 @@
+import React from 'react';
+import { StyleSheet, Text, useColorScheme } from 'react-native';
+import { Colors } from '../constants/Colors';
+import { Fonts } from '../constants/Fonts';
+
+export default function SatoshiVar({ children, style, ...props }) {
+  const colorScheme = useColorScheme();
+  const theme = Colors[colorScheme] ?? Colors.light;
+  console.log('Fonts object:', Fonts);
+
+  return (
+    <Text
+      style={[styles.text, { color: theme.text }, style]}
+      {...props}
+    >
+      {children}
+    </Text>
+  );
+}
+
+const styles = StyleSheet.create({
+  text: {
+    fontFamily: 'Satoshi-Variable', 
+    fontSize: 22,
+  },
+});
