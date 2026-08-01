@@ -1,15 +1,68 @@
 # SimplyDrive
 
-Simply Drive is an Application that intends to be used as a bridge between customers looking to get their cars serviced, diagnosed, repaired, and MOT tested.
+Note: This read-me file has been adapted to give a technical breakdown of the software for the purposes of my university application, the main and most up to date build of the app is found under API-Development
+but you will also find a legacy version under DotNet archive, when I was attempting to use .NET MAUI as a framework instead of react, but later discontinued it because it was hard to work with.
 
-It hopes to achieve maximum convenience for both the service advisors at the dealership and the customers, who will be able to have the ability to make a booking at
-the click of a button, instead of having to wait hours at a time for a phone call. 
 
-This includes the function of a Live calendar, to make sure bookings are accurate, to avoid customers turning up at places that are overbooked.
+## Overview
 
-It will provide live updates as their car gets worked on. 
+SimplyDrive is a full-stack automotive service management platform inspired by Uber-Eats designed to simplify the process of booking, managing, and tracking vehicle servicing.
 
-We are a completely independent team, and we are not affiliated with any car dealerships or manufacturers. We are not responsible for any damages or issues that may arise from the use of this application.
+The platform connects customers with dealerships, allowing customers to schedule appointments while giving service advisors tools to manage vehicle progress throughout the repair process.
 
-Original Authors: Dawid Hojdysz, Aiden Lewis-Baker
+## Motivation
 
+The idea behind SimplyDrive came from observing inefficiencies in the current vehicle servicing process, particularly long waiting times for customers and manual processes used by dealerships.
+
+The goal was to create a system that improves communication, reduces administrative workload, and provides customers with real-time visibility of their vehicle.
+
+## Key Features
+
+- Customer vehicle management
+- Online service booking
+- Live appointment availability
+- Vehicle status tracking
+- Dealership management dashboard
+- QR-code based vehicle check-in
+- Secure authentication system
+
+## My Role
+
+This project was independently designed and developed by me.
+
+I was responsible for:
+- System architecture
+- Mobile application development
+- Backend API development
+- Database design
+- Server deployment
+- Authentication implementation
+- Testing and debugging
+
+## Technical Skills Demonstrated
+
+- Full-stack application development
+- REST API design
+- Database modelling
+- Authentication and security
+- Server deployment
+- Mobile development
+- Cloud/server infrastructure
+
+## Technology Used
+
+React Native  
+ASP.NET Core  
+PostgreSQL  
+Keycloak  
+Caddy Reverse Proxy  
+Stripe (planned)
+
+## Screenshots
+
+
+
+## Future Development
+
+- Production dealership integration
+- Payment processing
