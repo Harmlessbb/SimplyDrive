@@ -1,7 +1,7 @@
 # SimplyDrive
 
 Note: This read-me file has been adapted to give a technical breakdown of the software for the purposes of my university application, the main and most up to date build of the app is found under API-Development
-but you will also find a legacy version under DotNet archive, when I was attempting to use .NET MAUI as a framework instead of react, but later discontinued it because it was hard to work with.
+but you will also find a legacy version under DotNet archive, which includes the use of Keycloak as an authentication provider when I was attempting to use .NET MAUI as a framework instead of react, but later discontinued it because it was hard to work with.
 
 
 ## Overview
